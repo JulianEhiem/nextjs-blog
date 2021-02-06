@@ -1,0 +1,43 @@
+
+.imageSizer {
+    min-width: 25vw;
+    max-width: 100%;
+  }
+  .imageDiv {
+    margin: 0;
+    padding: 0;
+    width: 65vw;
+    max-width: 100%;
+  }
+  .MainFeaturedContainer {
+    display: flex;
+    flex-direction: column;
+    width: 65vw;
+    max-width: 350px;
+    /* background-color: green; */
+  }
+  .blogHeadDiv {
+    margin: 0;
+    padding: 0;
+    /* background-color: red; */
+  }
+  .blogHeadDiv h1 {
+    margin: 0;
+    padding: 0;
+    /* display: flex; */
+    text-align: left;
+    font-size: 1.7rem;
+  }
+  .blogBodyDiv {
+    margin: 0;
+    padding: 0;
+    /* background-color: yellow; */
+  }
+  .blogBodyDiv p {
+    margin: 0;
+    padding: 0.2rem 0.2rem 1rem 0;
+    /* background-color: yellow; */
+    text-align: left;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  }
