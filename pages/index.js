@@ -1,10 +1,12 @@
 import Head from 'next/head'
-import MyApp from './_app'
+import BlogPage from '../components/BlogPage'
+// import styles from '../styles/Home.modules.css'
+// import MyApp from './_app'
 
 export default function Home() {
   return (
     <div>
-      <MyApp/>
+      <BlogPage/>
     </div>
   )
 }
