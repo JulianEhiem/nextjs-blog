@@ -1,5 +1,4 @@
 import  Image from 'next/image';
-// import "../styles/MainFeatured.module.css";
 
 export default function MainFeatured() {
     return (
