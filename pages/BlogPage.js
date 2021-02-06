@@ -2,6 +2,9 @@ import LeftTop from './LeftTop';
 import RightTop from './RightTop';
 import MainFeatured from './MainFeatured';
 import MainTop from './MainTop';
+import RightBottom from './RightBottom';
+import MainBottom from './MainBottom';
+import LeftBottom from './LeftBottom';
 
 
 export default function BlogPage() {
@@ -11,6 +14,9 @@ export default function BlogPage() {
         <MainTop/>
         <LeftTop/>
         <RightTop/>
+        <RightBottom/>
+        <MainBottom/>
+        <LeftBottom/>
       </div>
     );
   }

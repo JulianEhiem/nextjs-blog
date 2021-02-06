@@ -23,7 +23,8 @@ a {
   display: grid;
   padding: 1vw;
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
+  background-color: #faf5ed;
   grid-gap: 1vw;
   /* grid-template-columns: repeat( 9, minmax(10vw, 1fr) ); */
   grid-template-columns: repeat( 9, 10vw);
@@ -66,9 +67,9 @@ a {
   grid-area: e;
   display: flex;
   flex-direction: column;
-  width: 32.25vw;
-  max-height: 80vh;
-  background-color: red;
+  width: 32vw;
+  max-height: 90vh;
+  /* background-color: red; */
   box-sizing: content-box;
 }
 .MfBlogHeadDiv {
@@ -84,7 +85,7 @@ a {
 .MfBlogBodyDiv {
   margin: 0;
   padding: 0;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 .MfBlogBodyDiv p {
   margin: 0;
@@ -117,7 +118,7 @@ a {
   display: flex;
   flex-direction: column;
   width: 21vw;
-  background-color: green;
+  /* background-color: green; */
 }
 .MtBlogHeadDiv {
   margin: 0.5rem 0.4rem 0.5rem 0;
@@ -132,7 +133,7 @@ a {
 .MtBlogBodyDiv {
   margin: 0;
   padding: 0;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 .MtBlogBodyDiv p {
   margin: 0;
@@ -150,7 +151,7 @@ a {
   display: flex;
   flex-direction: column;
   width: 21vw;
-  background-color: blue;
+  /* background-color: blue; */
 }
 .LtBlogHeadDiv {
   margin: 0 0.4rem 0.9rem 0;
@@ -167,7 +168,7 @@ a {
 .LtBlogBodyDiv {
   margin: 0;
   padding: 0;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 .LtBlogBodyDiv p {
   margin: 0;
@@ -186,7 +187,7 @@ a {
   display: flex;
   flex-direction: column;
   width: 21vw;
-  background-color: pink;
+  /* background-color: pink; */
 }
 .RtBlogHeadDiv {
   margin: 0.5rem 0.4rem 0.5rem 0;
@@ -201,9 +202,123 @@ a {
 .RtBlogBodyDiv {
   margin: 0;
   padding: 0;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 .RtBlogBodyDiv p {
+  margin: 0;
+  padding: 0.2rem 0.6rem 1rem 0;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+}
+/* ======================================================================== */
+/* ===========================Right Bottom===================================== */
+/* ======================================================================== */
+
+.RightBottomContainer {
+  grid-area: i;
+  display: flex;
+  flex-direction: column;
+  width: 21vw;
+  /* background-color: blue; */
+}
+.RbBlogHeadDiv {
+  margin: 0 0.4rem 0.9rem 0;
+  padding: 0rem ;
+  /* background-color: red; */
+}
+.RbBlogHeadDiv h1 {
+  margin: 0;
+  padding: 0;
+  /* display: flex; */
+  text-align: left;
+  font-size: 1.7rem;
+}
+.RbBlogBodyDiv {
+  margin: 0;
+  padding: 0;
+  /* background-color: yellow; */
+}
+.RbBlogBodyDiv p {
+  margin: 0;
+  padding: 0.2rem 0.6rem 1rem 0;
+  /* background-color: yellow; */
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+}
+/* ======================================================================== */
+/* ===========================Main Bottom================================== */
+/* ======================================================================== */
+
+.MbImageSizer {
+  position: relative;
+  max-width: 100%;
+  object-fit: fill;
+  
+}
+.MbImageDiv {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 30vh;
+}
+.MainBottomContainer {
+  grid-area: g;
+  display: flex;
+  flex-direction: column;
+  width: 21vw;
+  /* background-color: cyan; */
+}
+.MbBlogHeadDiv {
+  margin: 0.5rem 0.4rem 0.5rem 0;
+  padding: 0rem ;
+}
+.MbBlogHeadDiv h1 {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 1.7rem;
+}
+.MbBlogBodyDiv {
+  margin: 0;
+  padding: 0;
+  /* background-color: yellow; */
+}
+.MbBlogBodyDiv p {
+  margin: 0;
+  padding: 0.2rem 0.6rem 1rem 0;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+}
+/* ======================================================================== */
+/* ===========================Left Bottom================================== */
+/* ======================================================================== */
+.LeftBottomContainer {
+  grid-area: d;
+  display: flex;
+  flex-direction: column;
+  width: 21vw;
+  /* background-color: pink; */
+}
+.LbBlogHeadDiv {
+  margin: 0.5rem 0.4rem 0.5rem 0;
+  padding: 0rem ;
+}
+.LbBlogHeadDiv h1 {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 1.7rem;
+}
+.LbBlogBodyDiv {
+  margin: 0;
+  padding: 0;
+  /* background-color: yellow; */
+}
+.LbBlogBodyDiv p {
   margin: 0;
   padding: 0.2rem 0.6rem 1rem 0;
   text-align: left;
