@@ -16,7 +16,87 @@ a {
 }
 
 /* ======================================================================== */
+/* =============================Blog Page================================== */
+/* ======================================================================== */
+
+.blogContainer {
+  display: grid;
+  padding: 1vw;
+  width: 100vw;
+  height: 100vh;
+  grid-gap: 1vw;
+  /* grid-template-columns: repeat( 9, minmax(10vw, 1fr) ); */
+  grid-template-columns: repeat( 9, 10vw);
+  grid-template-rows: repeat( 9, minmax(10vh, 1fr) );
+  grid-template-areas: 
+    ". a . . . . b b b"
+    ". . . . . . . . ."
+    "c c e e e f f h h"
+    "c c e e e f f h h"
+    "c c e e e f f i i"
+    "c c e e e f f i i"
+    "d d e e e g g i i"
+    "d d e e e g g i i"
+    "d d e e e g g i i"
+    "j j j j j j j j k";
+}
+
+
+
+
+
+/* ======================================================================== */
 /* ===========================Main Featured================================ */
+/* ======================================================================== */
+
+.MfImageSizer {
+  position: relative;
+  max-width: 100%;
+  object-fit: fill;
+  
+}
+.MfImageDiv {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 40vh;
+}
+.MainFeaturedContainer {
+  grid-area: e;
+  display: flex;
+  flex-direction: column;
+  width: 32.25vw;
+  max-height: 80vh;
+  background-color: red;
+  box-sizing: content-box;
+}
+.MfBlogHeadDiv {
+  margin: 0.75rem 0.4rem 1rem 0;
+  padding: 0rem ;
+}
+.MfBlogHeadDiv h1 {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 1.7rem;
+}
+.MfBlogBodyDiv {
+  margin: 0;
+  padding: 0;
+  background-color: yellow;
+}
+.MfBlogBodyDiv p {
+  margin: 0;
+  padding: 0.3rem 0.8rem 1rem 0;
+   text-align: left;
+  font-size: 1.1rem;
+  line-height: 2.1rem;
+}
+
+
+/* ======================================================================== */
+/* ===========================Main Top===================================== */
 /* ======================================================================== */
 
 .MtImageSizer {
@@ -30,24 +110,22 @@ a {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 250px;
+  height: 30vh;
 }
-.MainFeaturedContainer {
+.MainTopContainer {
+  grid-area: f;
   display: flex;
   flex-direction: column;
-  width: 65vw;
-  max-width: 350px;
+  width: 21vw;
   background-color: green;
 }
 .MtBlogHeadDiv {
   margin: 0.5rem 0.4rem 0.5rem 0;
   padding: 0rem ;
-  /* background-color: red; */
 }
 .MtBlogHeadDiv h1 {
   margin: 0;
   padding: 0;
-  /* display: flex; */
   text-align: left;
   font-size: 1.7rem;
 }
@@ -59,14 +137,76 @@ a {
 .MtBlogBodyDiv p {
   margin: 0;
   padding: 0.2rem 0.6rem 1rem 0;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+}
+/* ======================================================================== */
+/* ===========================Left Top===================================== */
+/* ======================================================================== */
+
+.LeftTopContainer {
+  grid-area: c;
+  display: flex;
+  flex-direction: column;
+  width: 21vw;
+  background-color: blue;
+}
+.LtBlogHeadDiv {
+  margin: 0 0.4rem 0.9rem 0;
+  padding: 0rem ;
+  /* background-color: red; */
+}
+.LtBlogHeadDiv h1 {
+  margin: 0;
+  padding: 0;
+  /* display: flex; */
+  text-align: left;
+  font-size: 1.7rem;
+}
+.LtBlogBodyDiv {
+  margin: 0;
+  padding: 0;
+  background-color: yellow;
+}
+.LtBlogBodyDiv p {
+  margin: 0;
+  padding: 0.2rem 0.6rem 1rem 0;
   /* background-color: yellow; */
   text-align: left;
   font-size: 0.9rem;
   line-height: 1.6rem;
 }
 
-
 /* ======================================================================== */
-/* ===========================Main Top===================================== */
+/* ===========================Right Top===================================== */
 /* ======================================================================== */
-
+.RightTopContainer {
+  grid-area: h;
+  display: flex;
+  flex-direction: column;
+  width: 21vw;
+  background-color: pink;
+}
+.RtBlogHeadDiv {
+  margin: 0.5rem 0.4rem 0.5rem 0;
+  padding: 0rem ;
+}
+.RtBlogHeadDiv h1 {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 1.7rem;
+}
+.RtBlogBodyDiv {
+  margin: 0;
+  padding: 0;
+  background-color: yellow;
+}
+.RtBlogBodyDiv p {
+  margin: 0;
+  padding: 0.2rem 0.6rem 1rem 0;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+}

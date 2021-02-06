@@ -1,12 +1,10 @@
 import '../styles/globals.css'
-import MainFeatured from "./MainFeatured";
-import MainTop from './MainTop';
+import Blogpage from './BlogPage';
 
 function MyApp() {
   return (
     <div>
-      <MainFeatured/>
-      <MainTop/>
+      <Blogpage/>
     </div>
   )
 }
