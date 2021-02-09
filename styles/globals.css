@@ -27,9 +27,9 @@ a {
   background-color: #faf5ed;
   grid-gap: 2.5vw;
   /* grid-template-columns: repeat( 9, minmax(10vw, 1fr) ); */
-  grid-template-columns: repeat( 9, 7.778vw);
-  grid-template-rows: repeat( 9, minmax(10vh, 1fr) );
-  grid-template-areas: 
+  grid-template-columns: repeat(9, 7.778vw);
+  grid-template-rows: repeat(9, minmax(10vh, 1fr));
+  grid-template-areas:
     ". a . . . . b b b"
     ". . . . . . . . ."
     "c c e e e f f h h"
@@ -42,10 +42,6 @@ a {
     "j j j j j j j j k";
 }
 
-
-
-
-
 /* ======================================================================== */
 /* ===========================Main Featured================================ */
 /* ======================================================================== */
@@ -54,7 +50,6 @@ a {
   position: relative;
   max-width: 100%;
   object-fit: fill;
-  
 }
 .MfImageDiv {
   position: relative;
@@ -69,12 +64,12 @@ a {
   flex-direction: column;
   width: 28.34vw;
   max-height: 90vh;
-  /* background-color: red; */
+  background-color: red;
   box-sizing: content-box;
 }
 .MfBlogHeadDiv {
   margin: 0.75rem 0.4rem 1rem 0;
-  padding: 0rem ;
+  padding: 0rem;
 }
 .MfBlogHeadDiv h1 {
   margin: 0;
@@ -85,16 +80,15 @@ a {
 .MfBlogBodyDiv {
   margin: 0;
   padding: 0;
-  /* background-color: yellow; */
+  background-color: yellow;
 }
 .MfBlogBodyDiv p {
   margin: 0;
   padding: 0.3rem 0.8rem 1rem 0;
-   text-align: left;
+  text-align: left;
   font-size: 1.1rem;
   line-height: 2.1rem;
 }
-
 
 /* ======================================================================== */
 /* ===========================Main Top===================================== */
@@ -104,7 +98,6 @@ a {
   position: relative;
   max-width: 100%;
   object-fit: fill;
-  
 }
 .MtImageDiv {
   position: relative;
@@ -118,11 +111,11 @@ a {
   display: flex;
   flex-direction: column;
   width: 17.06vw;
-  /* background-color: green; */
+  background-color: green;
 }
 .MtBlogHeadDiv {
   margin: 0.5rem 0.4rem 0.5rem 0;
-  padding: 0rem ;
+  padding: 0rem;
 }
 .MtBlogHeadDiv h1 {
   margin: 0;
@@ -133,7 +126,7 @@ a {
 .MtBlogBodyDiv {
   margin: 0;
   padding: 0;
-  /* background-color: yellow; */
+  background-color: yellow;
 }
 .MtBlogBodyDiv p {
   margin: 0;
@@ -151,12 +144,12 @@ a {
   display: flex;
   flex-direction: column;
   width: 17.06vw;
-  /* background-color: blue; */
+  background-color: blue;
 }
 .LtBlogHeadDiv {
   margin: 0 0.4rem 0.9rem 0;
-  padding: 0rem ;
-  /* background-color: red; */
+  padding: 0rem;
+  background-color: red;
 }
 .LtBlogHeadDiv h1 {
   margin: 0;
@@ -168,12 +161,12 @@ a {
 .LtBlogBodyDiv {
   margin: 0;
   padding: 0;
-  /* background-color: yellow; */
+  background-color: yellow;
 }
 .LtBlogBodyDiv p {
   margin: 0;
   padding: 0.2rem 0.6rem 1rem 0;
-  /* background-color: yellow; */
+  background-color: yellow;
   text-align: left;
   font-size: 0.9rem;
   line-height: 1.6rem;
@@ -187,11 +180,11 @@ a {
   display: flex;
   flex-direction: column;
   width: 17.06vw;
-  /* background-color: pink; */
+  background-color: pink;
 }
 .RtBlogHeadDiv {
   margin: 0.5rem 0.4rem 0.5rem 0;
-  padding: 0rem ;
+  padding: 0rem;
 }
 .RtBlogHeadDiv h1 {
   margin: 0;
@@ -202,7 +195,7 @@ a {
 .RtBlogBodyDiv {
   margin: 0;
   padding: 0;
-  /* background-color: yellow; */
+  background-color: yellow;
 }
 .RtBlogBodyDiv p {
   margin: 0;
@@ -220,29 +213,29 @@ a {
   display: flex;
   flex-direction: column;
   width: 17.06vw;
-  /* background-color: blue; */
+  background-color: blue;
 }
 .RbBlogHeadDiv {
   margin: 0 0.4rem 0.9rem 0;
-  padding: 0rem ;
-  /* background-color: red; */
+  padding: 0rem;
+  background-color: red;
 }
 .RbBlogHeadDiv h1 {
   margin: 0;
   padding: 0;
-  /* display: flex; */
+  display: flex;
   text-align: left;
   font-size: 1.7rem;
 }
 .RbBlogBodyDiv {
   margin: 0;
   padding: 0;
-  /* background-color: yellow; */
+  background-color: yellow;
 }
 .RbBlogBodyDiv p {
   margin: 0;
   padding: 0.2rem 0.6rem 1rem 0;
-  /* background-color: yellow; */
+  background-color: yellow;
   text-align: left;
   font-size: 0.9rem;
   line-height: 1.6rem;
@@ -255,7 +248,6 @@ a {
   position: relative;
   max-width: 100%;
   object-fit: fill;
-  
 }
 .MbImageDiv {
   position: relative;
@@ -269,11 +261,11 @@ a {
   display: flex;
   flex-direction: column;
   width: 17.06vw;
-  /* background-color: cyan; */
+  background-color: cyan;
 }
 .MbBlogHeadDiv {
   margin: 0.5rem 0.4rem 0.5rem 0;
-  padding: 0rem ;
+  padding: 0rem;
 }
 .MbBlogHeadDiv h1 {
   margin: 0;
@@ -284,7 +276,7 @@ a {
 .MbBlogBodyDiv {
   margin: 0;
   padding: 0;
-  /* background-color: yellow; */
+  background-color: yellow;
 }
 .MbBlogBodyDiv p {
   margin: 0;
@@ -301,11 +293,11 @@ a {
   display: flex;
   flex-direction: column;
   width: 17.06vw;
-  /* background-color: pink; */
+  background-color: pink;
 }
 .LbBlogHeadDiv {
   margin: 0.5rem 0.4rem 0.5rem 0;
-  padding: 0rem ;
+  padding: 0rem;
 }
 .LbBlogHeadDiv h1 {
   margin: 0;
@@ -316,7 +308,7 @@ a {
 .LbBlogBodyDiv {
   margin: 0;
   padding: 0;
-  /* background-color: yellow; */
+  background-color: yellow;
 }
 .LbBlogBodyDiv p {
   margin: 0;
