@@ -1,0 +1,41 @@
+.MbImageSizer {
+  position: relative;
+  max-width: 100%;
+  object-fit: fill;
+}
+.MbImageDiv {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 30vh;
+}
+.MainBottomContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: cyan;
+  margin-bottom: 1rem;
+}
+.MbBlogHeadDiv {
+  margin: 0;
+  padding: 0;
+}
+.MbBlogHeadDiv h1 {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 1.2rem;
+}
+/* .MbBlogBodyDiv {
+  margin: 0;
+  padding: 0;
+  background-color: yellow;
+}
+.MbBlogBodyDiv p {
+  margin: 0;
+  padding: 0.2rem 0.6rem 1rem 0;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+} */

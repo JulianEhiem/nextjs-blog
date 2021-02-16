@@ -1,16 +1,10 @@
 import '../styles/globals.css'
-// import Blogpage from '../components/BlogPage';
 
-// function MyApp() {
-//   return (
-//     <div>
-//       <Blogpage/>
-//     </div>
-//   )
-// }
+import App from "../components/App";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+
+function MyApp(){
+  return <App />
 }
 
 export default MyApp
