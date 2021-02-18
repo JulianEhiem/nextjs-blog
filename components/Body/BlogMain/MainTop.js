@@ -8,7 +8,7 @@ export default function MainTop() {
         <Image src="/reader.jpg" alt="Woman reading a book" layout="fill" />
       </div>
       <div className={styles.MtBlogHeadDiv}>
-        <h1>Main top blog title that may be a few lines long</h1>
+        <h1>Blogpost #2 - MT</h1>
       </div>
     </div>
   );

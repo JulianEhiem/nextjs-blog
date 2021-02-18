@@ -8,7 +8,7 @@ export default function MainBottom() {
         <Image src="/reader.jpg" alt="Woman reading a book" layout="fill" />
       </div>
       <div className={styles.MbBlogHeadDiv}>
-        <h1>Main top blog title that may be a few lines long</h1>
+        <h1>Blogpost #3 - MB</h1>
       </div>
     </div>
   );

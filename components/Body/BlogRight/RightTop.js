@@ -4,7 +4,7 @@ export default function RightTop() {
   return (
     <div className={styles.RightTopContainer}>
       <div className={styles.RtBlogHeadDiv}>
-        <h1>Understanding Props</h1>
+        <h1>Blogpost #6 - RT</h1>
       </div>
       <div className={styles.RtBlogBodyDiv}>
         <p>

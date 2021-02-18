@@ -9,7 +9,6 @@ export default function BlogMain() {
       <MainFeatured />
       <MainTop />
       <MainBottom />
-      <h2>BlogMain</h2>
     </div>
   );
 }

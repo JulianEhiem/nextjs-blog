@@ -4,7 +4,7 @@ export default function LeftTop() {
   return (
     <div className={styles.LeftTopContainer}>
       <div className={styles.LtBlogHeadDiv}>
-        <h1>Why long headers may be too long to catch the readers attention</h1>
+        <h1>Blogpost #4 - LT</h1>
       </div>
       <div className={styles.LtBlogBodyDiv}>
         <p>

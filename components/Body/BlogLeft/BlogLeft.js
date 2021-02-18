@@ -7,7 +7,6 @@ export default function BlogLeft() {
     <div className={styles.blogLeftContainer}>
       <LeftTop />
       <LeftBottom />
-      <h2>BlogLeft</h2>
     </div>
   );
 }

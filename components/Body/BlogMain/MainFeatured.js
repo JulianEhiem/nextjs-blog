@@ -8,7 +8,7 @@ export default function MainFeatured() {
         <Image src="/reader.jpg" alt="Woman reading a book" layout="fill" />
       </div>
       <div className={styles.MfBlogHeadDiv}>
-        <h1>Understanding Props</h1>
+        <h1>Blogpost #1 - Featured</h1>
       </div>
       <div className={styles.MfBlogBodyDiv}>
         <p>

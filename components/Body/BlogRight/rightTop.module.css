@@ -2,27 +2,32 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: pink;
+  padding: 0.5rem 0.5rem 1rem;
+  margin-bottom: 1rem;
+  /* background-color: pink; */
 }
 .RtBlogHeadDiv {
-  margin: 0.5rem 0.4rem 0.5rem 0;
-  padding: 0rem;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  /* background-color: red; */
 }
 .RtBlogHeadDiv h1 {
   margin: 0;
   padding: 0;
   text-align: left;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
+  font-family: "Merriweather", serif;
 }
 .RtBlogBodyDiv {
   margin: 0;
   padding: 0;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 .RtBlogBodyDiv p {
   margin: 0;
   padding: 0.2rem 0.6rem 1rem 0;
   text-align: left;
-  font-size: 0.9rem;
-  line-height: 1.6rem;
+  font-size: 0.85rem;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.7rem;
 }

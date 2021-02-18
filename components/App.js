@@ -9,7 +9,6 @@ export default function App() {
       <Nav />
       <Title />
       <BlogBody />
-      <h1>App</h1>
     </div>
   );
 }

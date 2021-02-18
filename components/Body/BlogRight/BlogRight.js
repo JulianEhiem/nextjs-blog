@@ -7,7 +7,6 @@ export default function BlogRight() {
     <div className={styles.blogRightContainer}>
       <RightTop />
       <RightBottom />
-      <h2>BlogRight</h2>
     </div>
   );
 }

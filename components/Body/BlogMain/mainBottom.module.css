@@ -1,20 +1,16 @@
-.MbImageSizer {
-  position: relative;
-  max-width: 100%;
-  object-fit: fill;
-}
 .MbImageDiv {
   position: relative;
-  margin: 0;
+  margin-bottom: 0.5rem;
   padding: 0;
   width: 100%;
-  height: 30vh;
+  height: 35vh;
 }
 .MainBottomContainer {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: cyan;
+  padding: 0.5rem 0.5rem 1rem;
+  /* background-color: cyan; */
   margin-bottom: 1rem;
 }
 .MbBlogHeadDiv {
@@ -25,17 +21,6 @@
   margin: 0;
   padding: 0;
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-family: "Merriweather", serif;
 }
-/* .MbBlogBodyDiv {
-  margin: 0;
-  padding: 0;
-  background-color: yellow;
-}
-.MbBlogBodyDiv p {
-  margin: 0;
-  padding: 0.2rem 0.6rem 1rem 0;
-  text-align: left;
-  font-size: 0.9rem;
-  line-height: 1.6rem;
-} */

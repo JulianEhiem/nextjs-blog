@@ -4,7 +4,7 @@ export default function RightBottom() {
   return (
     <div className={styles.RightBottomContainer}>
       <div className={styles.RbBlogHeadDiv}>
-        <h1>Why long headers may be too long to catch the readers attention</h1>
+        <h1>Blogpost #7 - RB</h1>
       </div>
       <div className={styles.RbBlogBodyDiv}>
         <p>
