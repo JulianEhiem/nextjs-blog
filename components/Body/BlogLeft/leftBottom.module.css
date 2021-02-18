@@ -1,0 +1,28 @@
+.LeftBottomContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: pink;
+}
+.LbBlogHeadDiv {
+  margin: 0.5rem 0.4rem 0.5rem 0;
+  padding: 0rem;
+}
+.LbBlogHeadDiv h1 {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 1.7rem;
+}
+.LbBlogBodyDiv {
+  margin: 0;
+  padding: 0;
+  background-color: yellow;
+}
+.LbBlogBodyDiv p {
+  margin: 0;
+  padding: 0.2rem 0.6rem 1rem 0;
+  text-align: left;
+  font-size: 0.9rem;
+  line-height: 1.6rem;
+}
