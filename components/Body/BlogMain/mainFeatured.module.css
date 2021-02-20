@@ -51,7 +51,7 @@
 
     .MainFeaturedContainer {
       width: 60%;
-      padding: 1rem;
+      padding: 1.2rem;
       height: 100%;
       max-height: none;
       margin-bottom: 0;
@@ -62,7 +62,7 @@
 
     .blogBox{
       border-bottom: none;
-      border-right: 1.2px rgba(128, 128, 128, 0.76) solid;
+      border-right: 1.2px rgba(128, 128, 128, 0.15) solid;
     }
 
 }

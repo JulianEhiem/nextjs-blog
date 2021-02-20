@@ -32,5 +32,17 @@
   line-height: 1.7rem;
 }
 .blogBox{
-  border-bottom: 1.2px rgba(128, 128, 128, 0.76) solid;
+  border-bottom: 1.2px rgba(128, 128, 128, 0.15) solid;
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+   .RightTopContainer{
+     height: 22vh;
+     justify-content: center;
+   }
+
 }

@@ -25,7 +25,7 @@
   font-family: "Merriweather", serif;
 }
 .blogBox{
-  border-bottom: 1.2px rgba(128, 128, 128, 0.76) solid;
+  border-bottom: 1.2px rgba(128, 128, 128, 0.15) solid;
 }
 
 @media only screen 

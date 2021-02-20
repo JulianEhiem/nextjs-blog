@@ -11,9 +11,10 @@
 
     .blogLeftContainer{
       display: flex;
-      height: 23vh;
+      height: 22vh;
+      margin: 0.5rem;
       align-items: center;
-      border-bottom: 1.2px rgba(128, 128, 128, 0.76) solid;
+      border-bottom: 1.2px rgba(128, 128, 128, 0.15) solid;
     }
 }
 

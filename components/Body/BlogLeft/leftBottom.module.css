@@ -32,7 +32,7 @@
   line-height: 1.7rem;
 }
 .blogBox{
-  border-bottom: 1.2px rgba(128, 128, 128, 0.76) solid;
+  border-bottom: 1.2px rgba(128, 128, 128, 0.15) solid;
 }
 
 @media only screen 
@@ -44,7 +44,6 @@
       padding: 1rem;
       width: 50%;
       height: 18vh;
-      /* border-right: 1.2px rgba(128, 128, 128, 0.76) solid; */
     }
 
     .blogBox{

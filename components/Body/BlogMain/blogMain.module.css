@@ -17,14 +17,14 @@
       display: flex;
       width: 90%;
       height: 70vh;
-      margin: 0;
-      border-bottom: 1.2px rgba(128, 128, 128, 0.76) solid;
-      padding-bottom: 0.5rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 1px rgba(128, 128, 128, 0.15) solid;
+      padding-bottom: 0.7rem;
     }
     .mainSubgroupContainer{
       /* width: 275px; */
       width: 40%;
       height: 100%;
-      padding: 0.5rem;
+      padding: 0.7rem;
     }
 }
