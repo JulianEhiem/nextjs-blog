@@ -4,4 +4,16 @@
   margin: 0 0.5rem 0 0.5rem;
 }
 
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    .blogLeftContainer{
+      display: flex;
+      height: 23vh;
+      align-items: center;
+      border-bottom: 1.2px rgba(128, 128, 128, 0.76) solid;
+    }
+}
 

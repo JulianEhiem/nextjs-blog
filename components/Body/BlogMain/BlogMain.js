@@ -7,8 +7,10 @@ export default function BlogMain() {
   return (
     <div className={styles.blogMainContainer}>
       <MainFeatured />
-      <MainTop />
-      <MainBottom />
+      <div className={styles.mainSubgroupContainer}>
+        <MainTop />
+        <MainBottom />
+      </div>
     </div>
   );
 }

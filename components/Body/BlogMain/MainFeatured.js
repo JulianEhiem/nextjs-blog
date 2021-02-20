@@ -18,8 +18,7 @@ export default function MainFeatured() {
           <br></br>
           Contrary to popular belief, Lorem Ipsum is not simply random text. It
           has roots in a piece of classical Bonorum et Malorum" (The Extremes of
-          Good and Evil) by Cicero, written in 45 BC. This book is a treatise on
-          the theory of ethics, very popular during the Renaissance. The...
+          Good and Evil) by
         </p>
       </div>
     </div>
