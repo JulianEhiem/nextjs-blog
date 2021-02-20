@@ -2,7 +2,7 @@ import styles from "./rightTop.module.css";
 
 export default function RightTop() {
   return (
-    <div className={styles.RightTopContainer}>
+    <div className={`${styles.RightTopContainer} ${ styles.blogBox}`}>
       <div className={styles.RtBlogHeadDiv}>
         <h1>Blogpost #6 - RT</h1>
       </div>

@@ -3,7 +3,7 @@ import styles from "./mainTop.module.css";
 
 export default function MainTop() {
   return (
-    <div className={styles.MainTopContainer}>
+    <div className={`${styles.MainTopContainer} ${ styles.blogBox}`}>
       <div className={styles.MtImageDiv}>
         <Image src="/reader.jpg" alt="Woman reading a book" layout="fill" />
       </div>

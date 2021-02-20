@@ -2,7 +2,7 @@ import styles from "./leftTop.module.css";
 
 export default function LeftTop() {
   return (
-    <div className={styles.LeftTopContainer}>
+    <div className={`${styles.LeftTopContainer} ${ styles.blogBox}`}>
       <div className={styles.LtBlogHeadDiv}>
         <h1>Blogpost #4 - LT</h1>
       </div>

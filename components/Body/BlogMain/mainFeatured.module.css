@@ -40,3 +40,6 @@
   font-size: 1.1rem;
   line-height: 2.1rem;
 }
+.blogBox{
+  border-bottom: 1.2px rgba(128, 128, 128, 0.76) solid;
+}

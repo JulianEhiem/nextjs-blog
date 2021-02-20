@@ -3,7 +3,7 @@ import styles from "./mainFeatured.module.css";
 
 export default function MainFeatured() {
   return (
-    <div className={styles.MainFeaturedContainer}>
+    <div className={`${styles.MainFeaturedContainer} ${ styles.blogBox}`}>
       <div className={styles.MfImageDiv}>
         <Image src="/reader.jpg" alt="Woman reading a book" layout="fill" />
       </div>

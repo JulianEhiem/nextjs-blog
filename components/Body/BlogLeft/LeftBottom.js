@@ -2,7 +2,7 @@ import styles from "./leftBottom.module.css";
 
 export default function LeftBottom() {
   return (
-    <div className={styles.LeftBottomContainer}>
+    <div className={`${styles.LeftBottomContainer} ${ styles.blogBox}`}>
       <div className={styles.LbBlogHeadDiv}>
         <h1>Blogpost #5 - LB</h1>
       </div>

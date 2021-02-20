@@ -3,7 +3,7 @@ import styles from "./mainBottom.module.css";
 
 export default function MainBottom() {
   return (
-    <div className={styles.MainBottomContainer}>
+    <div className={`${styles.MainBottomContainer} ${ styles.blogBox}`}>
       <div className={styles.MbImageDiv}>
         <Image src="/reader.jpg" alt="Woman reading a book" layout="fill" />
       </div>

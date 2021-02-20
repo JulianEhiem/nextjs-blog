@@ -24,3 +24,6 @@
   font-size: 1.5rem;
   font-family: "Merriweather", serif;
 }
+.blogBox{
+  border-bottom: 1.2px rgba(128, 128, 128, 0.76) solid;
+}
