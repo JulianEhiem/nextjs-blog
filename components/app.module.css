@@ -2,6 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  /* background-color: rgba(141, 253, 253, 0.726); */
+  background-color: #f9f4ec;
   min-height: 93vh;
 }
