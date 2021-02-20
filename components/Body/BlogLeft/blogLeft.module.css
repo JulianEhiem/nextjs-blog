@@ -18,3 +18,12 @@
     }
 }
 
+@media screen 
+  and (min-device-width: 1025px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+  
+    .blogLeftContainer{
+      width: 25%;
+    }
+}
