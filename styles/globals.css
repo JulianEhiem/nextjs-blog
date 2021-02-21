@@ -1,7 +1,14 @@
+:root {
+  --lh: 1.7rem;
+}
+
 html,
 body {
+  display: flex;
   padding: 0;
   margin: 0;
+  justify-content: center;
+  background-color: #f9f4ec;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }

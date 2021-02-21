@@ -21,6 +21,8 @@
 .RtBlogBodyDiv {
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  height: calc(7 * var(--lh));
   /* background-color: yellow; */
 }
 .RtBlogBodyDiv p {
@@ -45,4 +47,16 @@
      justify-content: center;
    }
 
+}
+
+@media screen 
+  and (min-device-width: 1025px) 
+  /* and (max-device-width: 1600px)  */
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    .RightTopContainer{
+      height: 50%;
+      padding: 1rem;
+      
+    }
 }

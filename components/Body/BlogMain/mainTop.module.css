@@ -42,3 +42,15 @@
     }
 
 }
+@media screen 
+  and (min-device-width: 1025px) 
+  /* and (max-device-width: 1600px)  */
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    .MainTopContainer{
+      height: 50%;
+    }
+    .MtImageDiv {
+      height: 27vh;
+    }
+}

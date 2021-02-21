@@ -1,5 +1,5 @@
 .blogMainContainer {
-  /* background-color: rgb(255, 255, 100); */
+  background-color: rgb(255, 255, 100);
   width: 90%;
   margin: 0.5rem 0.5rem 0 0.5rem;
 }
@@ -22,7 +22,6 @@
       padding-bottom: 0.7rem;
     }
     .mainSubgroupContainer{
-      /* width: 275px; */
       width: 40%;
       height: 100%;
       padding: 0.7rem;
@@ -31,10 +30,19 @@
 
 @media screen 
   and (min-device-width: 1025px) 
-  and (max-device-width: 1600px) 
+  /* and (max-device-width: 1600px)  */
   and (-webkit-min-device-pixel-ratio: 1) { 
 
     .blogMainContainer{
-      width: 50vw;
+      display: flex;
+      order: 1;
+      width: 50%;
+      height: 80vh;
+      margin: 0 0.5rem;
+    }
+    .mainSubgroupContainer{
+      width: 40%;
+      height: 100%;
+      padding: 0.5rem;
     }
 }

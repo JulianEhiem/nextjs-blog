@@ -21,6 +21,8 @@
 .LtBlogBodyDiv {
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  height: calc(7 * var(--lh));
   /* background-color: yellow; */
 }
 .LtBlogBodyDiv p {
@@ -52,3 +54,20 @@
       border-bottom: none;
     }
 }
+
+@media screen 
+  and (min-device-width: 1025px) 
+  /* and (max-device-width: 1600px)  */
+  and (-webkit-min-device-pixel-ratio: 1) { 
+
+    .LeftTopContainer{
+      padding: 1rem;
+      width: 100%;
+      height: 50%;
+    }
+
+    .blogBox{
+      border-bottom: 1.2px rgba(128, 128, 128, 0.15) solid;;
+    }
+}
+
