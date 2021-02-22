@@ -15,7 +15,7 @@
   margin: 0;
   padding: 0;
   text-align: left;
-  font-size: 1.5rem;
+  font-size: min(1.7rem, 7.9vw);
   font-family: "Merriweather", serif;
 }
 .RbBlogBodyDiv {
@@ -30,9 +30,9 @@
   padding: 0.2rem 0.6rem 1rem 0;
   /* background-color: yellow; */
   text-align: left;
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-family: "Open Sans", sans-serif;
-  line-height: 1.7rem;
+  line-height: var(--lh);
 }
 
 @media only screen 
@@ -44,6 +44,9 @@
      height: 22vh;
      justify-content: center;
    }
+   .RbBlogBodyDiv{
+    height: calc(4 * var(--lh));
+  }
 
 }
 @media screen 
@@ -54,6 +57,9 @@
     .RightBottomContainer{
       height: 50%;
       padding: 1rem;
+    }
+    .RbBlogBodyDiv{
+      height: calc(7 * var(--lh));
     }
    
 }

@@ -1,7 +1,7 @@
 .blogMainContainer {
-  background-color: rgb(255, 255, 100);
+  /* background-color: rgb(255, 255, 100); */
   width: 90%;
-  /* max-width: 450px; */
+  max-width: 450px;
   margin: 0.5rem 0.5rem 0 0.5rem;
 }
 .mainSubgroupContainer{
@@ -40,11 +40,13 @@
       order: 1;
       width: 50%;
       height: 80vh;
+      max-width: none;
       margin: 0 0.5rem;
     }
     .mainSubgroupContainer{
       width: 40%;
       height: 100%;
       padding: 0.5rem;
+      overflow: hidden;
     }
 }

@@ -3,7 +3,8 @@
   margin-bottom: 0.5rem;
   padding: 0;
   width: 100%;
-  height: 35vh;
+  height: 63.7vw;
+  max-height: 301.5px;
 }
 .MainBottomContainer {
   display: flex;
@@ -21,8 +22,25 @@
   margin: 0;
   padding: 0;
   text-align: left;
-  font-size: 1.5rem;
+  font-size: min(1.5rem, 7.9vw);
   font-family: "Merriweather", serif;
+}
+
+.MbBlogBodyDiv{
+  display: none;
+  margin-top: 0.25rem;
+  padding: 0;
+  overflow: hidden;
+  /* background-color: yellow; */
+  font-family: "Open Sans", sans-serif;
+}
+
+.MbBlogBodyDiv p{
+  margin: 0;
+  padding: 0 0 0.5rem 0;
+  text-align: left;
+  font-size: 1rem;
+  line-height: var(--lh);
 }
 .blogBox{
   border-bottom: 1.2px rgba(128, 128, 128, 0.15) solid;
@@ -33,8 +51,9 @@
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 1) {
 
-    .MainTopContainer{
+    .MainBottomContainer{
       height: 50%;
+      
     }
 
    .MbImageDiv {
@@ -50,7 +69,7 @@
   /* and (max-device-width: 1600px)  */
   and (-webkit-min-device-pixel-ratio: 1) { 
 
-    .MainTopContainer{
+    .MainBottomContainer{
       height: 50%;
     }
 
@@ -61,6 +80,18 @@
     width: 100%;
     height: 11.77vw;
     max-height: 187.5px;
+    }
+
+    .MbBlogBodyDiv{
+      display: flex;
+      height: calc(2 * var(--lh));
+      padding-bottom: 1rem;
+      overflow: hidden;
+    }
+    .MbBlogBodyDiv p{
+      padding: 0;
+      height: calc(2 * var(--lh));
+      overflow: hidden;
     }
     .blogBox{
       border-bottom: none;

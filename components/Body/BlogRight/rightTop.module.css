@@ -15,7 +15,7 @@
   margin: 0;
   padding: 0;
   text-align: left;
-  font-size: 1.5rem;
+  font-size: min(1.7rem, 7.9vw);
   font-family: "Merriweather", serif;
 }
 .RtBlogBodyDiv {
@@ -29,9 +29,9 @@
   margin: 0;
   padding: 0.2rem 0.6rem 1rem 0;
   text-align: left;
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-family: "Open Sans", sans-serif;
-  line-height: 1.7rem;
+  line-height: var(--lh);
 }
 .blogBox{
   border-bottom: 1.2px rgba(128, 128, 128, 0.15) solid;
@@ -46,6 +46,9 @@
      height: 22vh;
      justify-content: center;
    }
+   .RtBlogBodyDiv{
+    height: calc(4 * var(--lh));
+  }
 
 }
 
@@ -58,5 +61,8 @@
       height: 50%;
       padding: 1rem;
       
+    }
+    .RtBlogBodyDiv{
+      height: calc(7 * var(--lh));
     }
 }
