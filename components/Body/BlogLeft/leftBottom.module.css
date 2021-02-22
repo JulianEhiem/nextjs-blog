@@ -3,13 +3,11 @@
   flex-direction: column;
   width: 100%;
   padding: 0.5rem 0.5rem 1rem;
-  /* background-color: pink; */
   margin-bottom: 1rem;
 }
 .LbBlogHeadDiv {
   margin: 0;
   padding-bottom: 0.5rem;
-  /* background-color: brown; */
 }
 .LbBlogHeadDiv h1 {
   margin: 0;
@@ -23,7 +21,6 @@
   padding: 0;
   overflow: hidden;
   height: calc(7 * var(--lh));
-  /* background-color: yellow; */
 }
 .LbBlogBodyDiv p {
   margin: 0;
@@ -58,7 +55,6 @@
 
 @media screen 
   and (min-device-width: 1025px) 
-  /* and (max-device-width: 1600px)  */
   and (-webkit-min-device-pixel-ratio: 1) { 
 
     .LeftBottomContainer{

@@ -3,13 +3,11 @@
   flex-direction: column;
   justify-items: center;
   align-items: center;
-  /* background-color: rgb(230, 111, 230); */
   padding: 0.25rem;
 }
 
 @media screen 
   and (min-device-width: 1025px) 
-  /* and (max-device-width: 1600px)  */
   and (-webkit-min-device-pixel-ratio: 1) { 
   
     .blogBodyContainer{

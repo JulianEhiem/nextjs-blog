@@ -3,13 +3,11 @@
   flex-direction: column;
   width: 100%;
   padding: 0.5rem 0.5rem 1rem;
-  /* background-color: blue; */
   margin-bottom: 1rem;
 }
 .LtBlogHeadDiv {
   margin: 0;
   padding-bottom: 0.5rem;
-  /* background-color: red; */
 }
 .LtBlogHeadDiv h1 {
   margin: 0;
@@ -23,12 +21,10 @@
   padding: 0;
   overflow: hidden;
   height: calc(7 * var(--lh));
-  /* background-color: yellow; */
 }
 .LtBlogBodyDiv p {
   margin: 0;
   padding: 0.2rem 0.6rem 1rem 0;
-  /* background-color: yellow; */
   text-align: left;
   font-size: 1rem;
   font-family: "Open Sans", sans-serif;
@@ -60,7 +56,6 @@
 
 @media screen 
   and (min-device-width: 1025px) 
-  /* and (max-device-width: 1600px)  */
   and (-webkit-min-device-pixel-ratio: 1) { 
 
     .LeftTopContainer{

@@ -1,5 +1,4 @@
 .blogLeftContainer {
-  /* background-color: rgb(100, 211, 255); */
   width: 90%;
   max-width: 450px;
   margin: 0 0.5rem 0 0.5rem;
@@ -22,7 +21,6 @@
 
 @media screen 
   and (min-device-width: 1025px) 
-  /* and (max-device-width: 1600px)  */
   and (-webkit-min-device-pixel-ratio: 1) { 
   
     .blogLeftContainer{
