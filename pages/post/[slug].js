@@ -1,8 +1,32 @@
-export const Post = ({ title, body, image }) => {
+import styles from '../../styles/post.module.css';
+import Nav from '../../components/Nav/Nav'
+import imageUrlBuilder from '@sanity/image-url';
+import BlockContent from '@sanity/block-content-to-react';
+import { useState, useEffect } from 'react';
+
+const Post = ({ title, body, image }) => {
+const [imageUrl, setImageUrl] =  useState('');
+
+useEffect(() => {
+  const imgBuilder = imageUrlBuilder({
+    projectId: 'nttcyj7x',
+    dataset: 'production',
+  });
+
+  setImageUrl(imgBuilder.image(image))
+}, [image]);
+
   return (
     <div>
-      <div>
-        <h1>{title}</h1>
+      <Nav/>
+      <div className = {styles.main}>
+        <h1 className = {styles.main}>{title}</h1>
+        {imageUrl && <img className = {styles.mainImage} src={imageUrl}/> }
+
+        <div className ={styles.body}> 
+          <BlockContent blocks={body}/>
+        </div>
+
       </div>
     </div>
   );
