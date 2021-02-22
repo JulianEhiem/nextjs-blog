@@ -1,6 +1,7 @@
 .blogRightContainer {
   background-color: rgb(245, 149, 60);
   width: 90%;
+  /* max-width: 450px; */
   margin: 0 0.5rem 0.5rem 0.5rem;
 }
 

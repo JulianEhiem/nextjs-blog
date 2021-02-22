@@ -80,6 +80,14 @@
       height: 100%;
       max-height: none;
     }
+    .MfImageDiv {
+      position: relative;
+      margin-bottom: 0.5rem;
+      padding: 0;
+      width: 100%;
+      height: 17.46vw;
+      max-height:262px ;
+    }
     .MfBlogBodyDiv{
       display: flex;
       height: 50%;
