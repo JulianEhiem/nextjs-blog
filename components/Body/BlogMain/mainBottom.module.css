@@ -38,7 +38,7 @@
     }
 
    .MbImageDiv {
-      height: 27vh;
+    height: 191.5px;
     }
     .blogBox{
       border-bottom: none;
@@ -55,7 +55,12 @@
     }
 
    .MbImageDiv {
-      height: 27vh;
+    position: relative;
+    margin-bottom: 0.5rem;
+    padding: 0;
+    width: 100%;
+    height: 11.77vw;
+    max-height: 187.5px;
     }
     .blogBox{
       border-bottom: none;
