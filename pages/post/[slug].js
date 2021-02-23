@@ -15,7 +15,8 @@ useEffect(() => {
 
   setImageUrl(imgBuilder.image(image))
 }, [image]);
-
+ 
+console.log(body)
   return (
     <div>
       <Nav/>
