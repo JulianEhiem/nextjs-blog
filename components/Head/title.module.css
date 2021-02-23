@@ -1,6 +1,7 @@
 .titleContainer {
   display: flex;
+  justify-content: center;
   margin-bottom: 1rem;
-  background-color: rgba(202, 248, 133, 0.932);
+  /* background-color: rgba(202, 248, 133, 0.932); */
   font-family: "Open Sans", sans-serif;
 }

@@ -8,7 +8,7 @@ export default function Title() {
 
   return (
     <div className={styles.titleContainer}>
-      <h1>hi</h1>
+      <h2>Latest posts</h2>
     </div>
   );
 }

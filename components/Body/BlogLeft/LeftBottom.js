@@ -1,14 +1,30 @@
 import styles from "./leftBottom.module.css";
+import { useContext } from "react";
+import { PostContext } from "../../PostContext";
+import BlockContent from '@sanity/block-content-to-react';
+import dummyFallBack from '../../DummyFallBack'
 
 export default function LeftBottom() {
+
+  const posts = useContext(PostContext)
+  const post = posts.mappedPosts
+
+  const title = post.length === 0 ? "Loading" : post[4].title;
+  const image = post.length === 0 ? "Loading" : post[4].mainImage;
+  const body = post.length === 0 ? dummyFallBack : post[4].body;
+
   return (
     <div className={`${styles.LeftBottomContainer} ${ styles.blogBox}`}>
       <div className={styles.LbBlogHeadDiv}>
-        <h1>Blogpost #5 - LB</h1>
+        {/* <h1>Blogpost #5 - LB</h1> */}
+        <h1>{title}</h1>
+
       </div>
       <div className={styles.LbBlogBodyDiv}>
         <p>
-          You can import a file right in a JavaScript module. This tells webpack
+        <BlockContent blocks={body}/>
+
+          {/* You can import a file right in a JavaScript module. This tells webpack
           to s simply dummy text of the printing and typesetting industry. Lorem
           Ipsum has been the industry's...
           You can import a file right in a JavaScript module. This tells webpack
@@ -31,7 +47,7 @@ export default function LeftBottom() {
           <br></br>
           Contrary to popular belief, Lorem Ipsum is not simply random text. It
           has roots in a piece of classical Bonorum et Malorum" (The Extremes of
-          Good and Evil) by
+          Good and Evil) by */}
           <br />
         </p>
       </div>

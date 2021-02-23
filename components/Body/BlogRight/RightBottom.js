@@ -1,14 +1,30 @@
 import styles from "./rightBottom.module.css";
+import { useContext } from "react";
+import { PostContext } from "../../PostContext";
+import BlockContent from '@sanity/block-content-to-react';
+import dummyFallBack from '../../DummyFallBack'
 
 export default function RightBottom() {
+
+  const posts = useContext(PostContext)
+  const post = posts.mappedPosts
+
+  const title = post.length === 0 ? "Loading" : post[6].title;
+  const image = post.length === 0 ? "Loading" : post[6].mainImage;
+  const body = post.length === 0 ? dummyFallBack : post[6].body;
+
   return (
     <div className={styles.RightBottomContainer}>
       <div className={styles.RbBlogHeadDiv}>
-        <h1>Blogpost #7 - RB</h1>
+        {/* <h1>Blogpost #7 - RB</h1> */}
+        <h1>{title}</h1>
+
       </div>
       <div className={styles.RbBlogBodyDiv}>
         <p>
-          You can import a file right in a JavaScript module. This tells webpack
+        <BlockContent blocks={body}/>
+
+          {/* You can import a file right in a JavaScript module. This tells webpack
           to s simply nce the 1500s, when an unknown printer took a galley of
           type and scrambled it to make a type specimen book. It has survived
           not only five centuries...
@@ -27,7 +43,7 @@ export default function RightBottom() {
           <br></br>
           Contrary to popular belief, Lorem Ipsum is not simply random text. It
           has roots in a piece of classical Bonorum et Malorum" (The Extremes of
-          Good and Evil) by
+          Good and Evil) by */}
         </p>
       </div>
     </div>

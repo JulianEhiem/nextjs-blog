@@ -6,9 +6,9 @@ const router = useRouter();
 
   return (
     <div className={styles.navContainer}>
-      <div onClick={() => router.push('/')}>Home</div>
-      <div target ="_blank" onClick={() => window.location.href = 'https://julianehiem.dev/'}>Portfolio</div>
-      <div onClick={() => window.location.href = 'https://github.com/JulianEhiem'}>Github</div>
+      <div onClick={() => router.push('/')}> <h3>Home</h3> </div>
+      <div target ="_blank" onClick={() => window.location.href = 'https://julianehiem.dev/'}> <h3>Portfolio</h3> </div>
+      <div onClick={() => window.location.href = 'https://github.com/JulianEhiem'}> <h3>Github</h3> </div>
     </div>
   );
 }
