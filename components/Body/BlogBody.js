@@ -24,10 +24,9 @@ export default function BlogBody() {
         <BlogRight />
       </div>
       <div className={styles.additionalPosts}>
-        {post.length < 7 ? <h2>Nothing here</h2> : 
-        post.slice(6).map(p => {
-          console.log(p);
-          <div className={styles.additionalPostsContainer}>
+        {post.length < 7 ? <h2>Nothing here</h2> :
+        post.slice(6).map((p, index) => (
+          <div key = {index} className={styles.additionalPostsContainer}>
             <div className={styles.additionalPostsImage}>
               <img src={p.mainImage} width="100%"/>
             </div>
@@ -40,9 +39,8 @@ export default function BlogBody() {
               </p>
             </div>
           </div>
-        })
-         }
-         hello
+        ))
+        }
       </div>
     </>
   );
