@@ -5,6 +5,22 @@
   align-items: center;
   padding: 0.25rem;
 }
+.additionalPostsContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: green;
+  width: 100%;
+  padding: 0.5rem 0.5rem 1rem;
+  margin-bottom: 1rem; 
+}
+.additionalPostsImage {
+  position: relative;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  width: 100%;
+  height: 63.7vw;
+  max-height: 301.5px;
+}
 
 @media screen 
   and (min-device-width: 1025px) 
