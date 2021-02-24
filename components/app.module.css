@@ -3,7 +3,7 @@
   flex-direction: column;
   /* justify-content: flex-start; */
   background-color: #f9f4ec;
-  min-height: 93vh;
+  min-height: 100vh;
   /* width: 100%; */
   max-width: 1500px;
   box-sizing: border-box;

@@ -14,14 +14,14 @@
   margin-bottom: 1rem;
 }
 .MtBlogHeadDiv {
-  margin: 0;
+  margin: 0.2rem 0;
   padding: 0;
 }
 .MtBlogHeadDiv h1 {
   margin: 0;
   padding: 0;
   text-align: left;
-  font-size: min(1.5rem, 7.9vw);
+  font-size: min(1.35rem, 7.9vw);
   font-family: "Merriweather", serif;
 }
 .MtBlogBodyDiv{
@@ -62,18 +62,18 @@
   and (-webkit-min-device-pixel-ratio: 1) { 
 
     .MainTopContainer{
-      height: 50%;
+      height: 49%;
     }
     .MtImageDiv {
       position: relative;
       margin-bottom: 0.5rem;
       padding: 0;
       width: 100%;
-      height: 11.77vw;
-      max-height: 187.5px;
+      height: 12.52vw;
+      max-height: 187.78px;
     }
     .MtBlogBodyDiv{
-      display: flex;
+      display: none;
       height: calc(2 * var(--lh));
     }
     .MtBlogBodyDiv p{
