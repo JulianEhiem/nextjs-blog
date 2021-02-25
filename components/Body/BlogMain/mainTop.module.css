@@ -4,14 +4,15 @@
   padding: 0;
   width: 100%;
   height: 63.7vw;
-  max-height: 301.5px;
+  max-height: 285px;
+  max-width: 380px;
 }
 .MainTopContainer {
   display: flex;
   flex-direction: column;
   width: 100%;
   padding: 0.5rem 0.5rem 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; 
 }
 .MtBlogHeadDiv {
   margin: 0.2rem 0;
@@ -53,7 +54,8 @@
     }
 
    .MtImageDiv {
-      height: 191.5px;
+    max-width: 265px;
+    height: 191.5px;
     }
 
 }

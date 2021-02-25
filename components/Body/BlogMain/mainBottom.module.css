@@ -3,8 +3,9 @@
   margin-bottom: 0.5rem;
   padding: 0;
   width: 100%;
+  max-width: 380px;
   height: 63.7vw;
-  max-height: 301.5px;
+  max-height: 285px;
 }
 .MainBottomContainer {
   display: flex;
@@ -55,6 +56,7 @@
     }
 
    .MbImageDiv {
+    max-width: 265px;
     height: 191.5px;
     }
     .blogBox{
