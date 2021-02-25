@@ -33,11 +33,11 @@ export default function BlogBody() {
             <div className={styles.additionalPostsTitle}>
               <h1>{p.title}</h1>
             </div>
-            <div className={styles.additionalPostsBody}>
+            {/* <div className={styles.additionalPostsBody}>
               <p>
-              <BlockContent blocks={p.body}/>
+              <BlockContent blocks={p.body} className={styles.postsBody}/>
               </p>
-            </div>
+            </div> */}
           </div>
         ))
         }

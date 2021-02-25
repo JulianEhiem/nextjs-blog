@@ -7,31 +7,102 @@
 }
 .additionalPosts {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 90%;
+  max-width: 450px;
+  padding:0.25rem 0.25rem 3rem 0.25rem;
+  /* box-sizing: content-box; */
   
 }
 .additionalPostsContainer {
   display: flex;
   flex-direction: column;
   background-color: green;
-  width: 350px;
+  width: 100%;
   padding: 0.5rem 0.5rem 1rem;
-  margin-bottom: 1rem; 
+  /* max-height: 50vh; */
+  box-sizing: content-box;
+  margin-bottom: 1rem;
 }
 .additionalPostsImage {
   position: relative;
   margin-bottom: 0.5rem;
   padding: 0;
   width: 100%;
-  height: 262.5px;
-  max-height: 301.5px;
+  height: 63.7vw;
+  max-height: 285px;
+  max-width: 380px;
 }
 .additionalPostsTitle {
   margin: 0;
 }
 .additionalPostsTitle h1{
-  margin: 0.5rem 0 0 ;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: min(1.35rem, 7.9vw);
+  font-family: "Merriweather", serif;
 }
+
+.postsBody{
+  height: calc(10 * var(--lh));
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    .additionalPosts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      width: 100%;
+      /* max-width: 450px; */
+      padding:0.25rem 0.25rem 3rem 0.25rem;
+      /* box-sizing: content-box; */
+      
+    }
+    .additionalPostsContainer {
+      display: flex;
+      flex-direction: column;
+      background-color: green;
+      width: 100%;
+      padding: 0.5rem 0.5rem 1rem;
+      /* max-height: 50vh; */
+      box-sizing: content-box;
+      margin-bottom: 1rem;
+    }
+    .additionalPostsImage {
+      position: relative;
+      margin-bottom: 0.5rem;
+      padding: 0;
+      width: 100%;
+      /* height: 63.7vw; */
+      /* max-height: 285px; */
+      /* max-width: 380px; */
+    }
+    .additionalPostsTitle {
+      margin: 0;
+    }
+    .additionalPostsTitle h1{
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      font-size: min(1.35rem, 7.9vw);
+      font-family: "Merriweather", serif;
+    }
+    
+    .postsBody{
+      height: calc(10 * var(--lh));
+    }
+
+  }
 
 @media screen 
   and (min-device-width: 1025px) 
@@ -43,6 +114,7 @@
       margin: 1rem;
       box-sizing: content-box;
     }
+    
 }
   
 
