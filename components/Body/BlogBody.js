@@ -23,6 +23,9 @@ export default function BlogBody() {
         <BlogLeft />
         <BlogRight />
       </div>
+      <div className={styles.titleContainer}>
+      <h2>Older posts</h2>
+    </div>
       <div className={styles.additionalPosts}>
         {post.length < 7 ? <h2>Nothing here</h2> :
         post.slice(6).map((p, index) => (
