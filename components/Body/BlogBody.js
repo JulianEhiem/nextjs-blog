@@ -4,7 +4,7 @@ import BlogLeft from "./BlogLeft/BlogLeft";
 import BlogMain from "./BlogMain/BlogMain";
 import { useContext } from "react";
 import { PostContext } from "../PostContext";
-import BlockContent from '@sanity/block-content-to-react';
+// import BlockContent from '@sanity/block-content-to-react';
 // import dummyFallBack from '../../DummyFallBack'
 
 export default function BlogBody() {
