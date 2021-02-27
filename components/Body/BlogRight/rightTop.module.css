@@ -22,7 +22,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  height: calc(7 * var(--lh));
+  height: calc(10 * var(--lh));
 }
 .RtBlogBodyDiv p {
   margin: 0;
