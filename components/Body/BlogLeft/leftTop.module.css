@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: max(30vh, 400px);
   padding: 0.5rem 0.5rem 1rem;
   margin-bottom: 1rem;
 }
@@ -28,6 +29,7 @@
   text-align: left;
   font-size: 1rem;
   font-family: "Open Sans", sans-serif;
+  /* line-height: var(--lh); */
   line-height: var(--lh);
 }
 .blogBox{
@@ -61,10 +63,13 @@
     .LeftTopContainer{
       padding: 1rem;
       width: 100%;
-      height: 50%;
+      /* height: 50%; */
+  height: max(20vh, 400px);
+
     }
     .LtBlogBodyDiv{
-      height: calc(7 * var(--lh));
+      height: calc(9 * var(--lh));
+      /* height: 10em; */
     }
 
     .blogBox{

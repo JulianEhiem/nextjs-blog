@@ -81,7 +81,8 @@
     .MainFeaturedContainer{
       width: 60%;
       padding: 1rem;
-      height: 100%;
+      height: max(45vh, 850px);
+
       max-height: none;
     }
     .MfImageDiv {
@@ -90,7 +91,7 @@
     }
     .MfBlogBodyDiv{
       display: flex;
-      height: calc(11 * var(--lh));
+      height: calc(14 * var(--lh));
       overflow: hidden;
     }
     .blogBox{

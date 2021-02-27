@@ -50,11 +50,11 @@
   and (-webkit-min-device-pixel-ratio: 1) { 
 
     .RightBottomContainer{
-      height: 50%;
+      height: max(20vh, 400px);
       padding: 1rem;
     }
     .RbBlogBodyDiv{
-      height: calc(7 * var(--lh));
+      height: calc(9 * var(--lh));
     }
    
 }

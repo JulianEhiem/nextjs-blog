@@ -35,9 +35,10 @@
       display: flex;
       order: 1;
       width: 50%;
-      height: 85vh;
+      height: max(45vh, 875px);
       max-width: none;
       margin: 0 0.5rem;
+      border-bottom: none;
     }
     .mainSubgroupContainer{
       width: 40%;

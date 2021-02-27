@@ -55,12 +55,12 @@
   and (-webkit-min-device-pixel-ratio: 1) { 
 
     .RightTopContainer{
-      height: 50%;
+      height: max(20vh, 400px);
       padding: 1rem;
       
     }
     .RtBlogBodyDiv{
-      height: calc(7 * var(--lh));
+      height: calc(9 * var(--lh));
     }
 }
  

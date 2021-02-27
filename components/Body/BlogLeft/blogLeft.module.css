@@ -2,6 +2,7 @@
   width: 90%;
   max-width: 450px;
   margin: 0 0.5rem 0 0.5rem;
+  height: 100%;
 }
 
 @media only screen 
@@ -26,7 +27,7 @@
     .blogLeftContainer{
       order: 0;
       width: 25%;
-      height: 80vh;
+      height: max(45vh, 850px);
       border-right: 1.2px rgba(128, 128, 128, 0.15) solid;
     }
 }

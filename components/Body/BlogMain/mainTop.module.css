@@ -64,7 +64,7 @@
   and (-webkit-min-device-pixel-ratio: 1) { 
 
     .MainTopContainer{
-      height: 49%;
+      height: max(20vh, 400px);
     }
     .MtImageDiv {
       position: relative;
@@ -75,7 +75,7 @@
       max-height: 187.78px;
     }
     .MtBlogBodyDiv{
-      display: none;
+      display: flex;
       height: calc(2 * var(--lh));
     }
     .MtBlogBodyDiv p{
