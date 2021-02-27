@@ -3,10 +3,12 @@ import styles from "./mainFeatured.module.css";
 import { useContext } from "react";
 import { PostContext } from "../../PostContext";
 import BlockContent from '@sanity/block-content-to-react';
+import { useRouter } from "next/router"
 import dummyFallBack from '../../DummyFallBack'
 
 
 export default function MainFeatured() {
+  const router = useRouter();
 
   const posts = useContext(PostContext)
   const post = posts.mappedPosts
@@ -22,7 +24,7 @@ export default function MainFeatured() {
 
   // console.log((post[0] === undefined) ? 'nothing here' : post[0].title )
   return (
-    <div className={`${styles.MainFeaturedContainer} ${ styles.blogBox}`}>
+    <div  onClick = {() => router.push(`/post/${post[0].slug.current}`)} className={`${styles.MainFeaturedContainer} ${ styles.blogBox}`}>
       <div className={styles.MfImageDiv}>
         {/* <Image src="/reader.jpg" alt="Woman reading a book" layout="fill" /> */}
         {/* <Image src={post.mappedPosts[0].mainImage} alt="Woman reading a book" layout="fill" /> */}

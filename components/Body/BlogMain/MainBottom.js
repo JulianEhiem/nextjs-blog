@@ -4,8 +4,11 @@ import { useContext } from "react";
 import { PostContext } from "../../PostContext";
 import BlockContent from '@sanity/block-content-to-react';
 import dummyFallBack from '../../DummyFallBack'
+import { useRouter } from "next/router"
+
 
 export default function MainBottom() {
+  const router = useRouter();
 
   const posts = useContext(PostContext)
   const post = posts.mappedPosts
@@ -15,7 +18,7 @@ export default function MainBottom() {
   const body = post.length === 0 ? dummyFallBack : post[2].body;
 
   return (
-    <div className={`${styles.MainBottomContainer} ${ styles.blogBox}`}>
+    <div onClick = {() => router.push(`/post/${post[2].slug.current}`)}  className={`${styles.MainBottomContainer} ${ styles.blogBox}`}>
       <div className={styles.MbImageDiv}>
         {/* <Image src="/reader.jpg" alt="Woman reading a book" layout="fill" /> */}
         <img src={image} width="100%" />

@@ -3,8 +3,11 @@ import { useContext } from "react";
 import { PostContext } from "../../PostContext";
 import BlockContent from '@sanity/block-content-to-react';
 import dummyFallBack from '../../DummyFallBack'
+import { useRouter } from "next/router"
+
 
 export default function RightBottom() {
+  const router = useRouter();
 
   const posts = useContext(PostContext)
   const post = posts.mappedPosts
@@ -14,7 +17,7 @@ export default function RightBottom() {
   const body = post.length === 0 ? dummyFallBack : post[6].body;
 
   return (
-    <div className={styles.RightBottomContainer}>
+    <div onClick = {() => router.push(`/post/${post[6].slug.current}`)}  className={styles.RightBottomContainer}>
       <div className={styles.RbBlogHeadDiv}>
         {/* <h1>Blogpost #7 - RB</h1> */}
         <h1>{title}</h1>

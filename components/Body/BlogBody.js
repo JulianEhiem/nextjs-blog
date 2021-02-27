@@ -4,11 +4,12 @@ import BlogLeft from "./BlogLeft/BlogLeft";
 import BlogMain from "./BlogMain/BlogMain";
 import { useContext } from "react";
 import { PostContext } from "../PostContext";
+import { useRouter } from "next/router"
 // import BlockContent from '@sanity/block-content-to-react';
 // import dummyFallBack from '../../DummyFallBack'
 
 export default function BlogBody() {
-
+  const router = useRouter();
   const posts = useContext(PostContext)
   const post = posts.mappedPosts
 
@@ -29,7 +30,7 @@ export default function BlogBody() {
       <div className={styles.additionalPosts}>
         {post.length < 7 ? <h2>Nothing here</h2> :
         post.slice(6).map((p, index) => (
-          <div key = {index} className={styles.additionalPostsContainer}>
+          <div onClick = {() => router.push(`/post/${p.slug.current}`)} key = {index} className={styles.additionalPostsContainer}>
             <div className={styles.additionalPostsImage}>
               <img src={p.mainImage} width="100%"/>
             </div>
