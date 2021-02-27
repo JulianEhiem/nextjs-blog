@@ -53,7 +53,7 @@
     .MainFeaturedContainer {
       width: 60%;
       padding: 1.2rem;
-      height: 100%;
+      height: max(30vh, 650px);
       max-height: none;
       margin-bottom: 0;
     }
@@ -64,7 +64,7 @@
     }
     .MfBlogBodyDiv{
       display: flex;
-      height: calc(6 * var(--lh));
+      height: calc(9 * var(--lh));
       overflow: hidden;
     }
 
@@ -82,7 +82,6 @@
       width: 60%;
       padding: 1rem;
       height: max(45vh, 850px);
-
       max-height: none;
     }
     .MfImageDiv {

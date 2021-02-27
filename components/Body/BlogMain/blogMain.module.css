@@ -15,7 +15,7 @@
     .blogMainContainer{
       display: flex;
       max-width: 800px;
-      height: 70vh;
+      height: max(40vh, 750px);
       margin-bottom: 0.5rem;
       border-bottom: 1px rgba(128, 128, 128, 0.15) solid;
       padding-bottom: 0.7rem;

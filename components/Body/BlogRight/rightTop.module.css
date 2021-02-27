@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 350px;
   padding: 0.5rem 0.5rem 1rem;
   margin-bottom: 1rem;
   /* background-color: pink; */
@@ -41,7 +42,7 @@
   and (-webkit-min-device-pixel-ratio: 1) {
 
    .RightTopContainer{
-     height: 22vh;
+     height: 250px;
      justify-content: center;
    }
    .RtBlogBodyDiv{
