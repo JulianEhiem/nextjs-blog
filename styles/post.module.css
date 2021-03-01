@@ -1,7 +1,7 @@
 .main{
     margin: auto;
     width: 750px;
-    max-width: calc(100vw - 50px);
+    max-width: calc(100vw - 90px);
 }
 
 .mainImage {
@@ -13,5 +13,5 @@
     text-indent: 50px;
     line-height: 45px;
     text-align: justify;
-    letter-spacing: 1.5px;
+    /* letter-spacing: 1px; */
 }
