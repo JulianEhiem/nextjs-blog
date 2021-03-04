@@ -8,3 +8,7 @@
   font-family: "Merriweather", serif;
   box-sizing: border-box;
 }
+
+.navContainer h3{
+  margin: 0.1rem;
+}
