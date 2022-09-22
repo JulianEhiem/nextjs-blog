@@ -98,6 +98,16 @@ const handleCloseNavMenu = (event) => {
                     {/*TODO: add personal icon*/}
                     <Adb />
                 </IconButton>
+                <Typography
+                    variant="h6"
+                    noWrap
+                    href="/"
+                    sx={{
+                        display:  {xs: "none", md: "flex"},
+                    }}
+                >
+                    Parse the Text
+                </Typography>
                 <Menu
                 id="menu-appbar"
                 anchorEl={anchorElNav}
