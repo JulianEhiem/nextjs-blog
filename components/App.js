@@ -5,10 +5,13 @@ import BlogBody from "./Body/BlogBody";
 
 export default function App() {
   return (
-    <div className={styles.appContainer}>
-      <Nav />
-      <Title />
-      <BlogBody />
-    </div>
+      <>
+          <div className={styles.texture}></div>
+          <div className={styles.appBackground}>
+              {/*<Nav />*/}
+              {/*<Title />*/}
+              {/*<BlogBody />*/}
+         </div>
+      </>
   );
 }
