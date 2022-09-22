@@ -1,9 +1,22 @@
+import * as React from 'react';
 import styles from "./nav.module.css";
 import { useRouter } from 'next/router'
 import MenuIcon from '@mui/icons-material/Menu';
-import {alpha, AppBar, Box, Button, Container, IconButton, styled, Toolbar} from "@mui/material";
+import {
+    alpha,
+    AppBar,
+    Box,
+    Button,
+    Container,
+    IconButton,
+    Menu,
+    MenuItem,
+    styled,
+    Toolbar,
+    Typography
+} from "@mui/material";
 import InputBase from '@mui/material/InputBase';
-import {Search} from "@mui/icons-material";
+import {Search, Adb} from "@mui/icons-material";
 
 const SearchBox = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -48,11 +61,19 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function Nav() {
+const [anchorElNav, setAnchorElNav] = React.useState(null);
 const router = useRouter();
 const pages = [
     {name: "Home", route: '/'},
     {name: "Portfolio", route: 'https://julianehiem.dev/'},
-    {name: "Github", route: 'https://github.com/JulianEhiem'}]
+    {name: "Github", route: 'https://github.com/JulianEhiem'}];
+
+const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+}
+const handleCloseNavMenu = (event) => {
+    setAnchorElNav(null);
+}
 
   return (
     // <div className={styles.navContainer}>
@@ -63,23 +84,55 @@ const pages = [
       <AppBar position="static" className={styles.appContainer}>
         <Container maxWidth="xl">
             <Toolbar disableGutters>
-                <Box>
-                    <IconButton>
-                        <MenuIcon />
-                    </IconButton>
-                    <Button variant="text" className={styles.menuButtons}>
-                        Hello
-                    </Button>
-                    <SearchBox>
-                        <SearchIconWrapper>
-                            <Search />
-                        </SearchIconWrapper>
-                        <StyledInputBase
-                            placeholder = "Search..."
-                            inputProps = {{'aria-label': 'search'}}
-                        />
-                    </SearchBox>
-                </Box>
+                <IconButton
+                    size="large"
+                    aria-label="menu options"
+                    aria-controls="menu-appbar"
+                    aria-haspopup="true"
+                    onClick={handleOpenNavMenu}
+                    color="inherit"
+                >
+                    <MenuIcon />
+                </IconButton>
+                <IconButton>
+                    {/*TODO: add personal icon*/}
+                    <Adb />
+                </IconButton>
+                <Menu
+                id="menu-appbar"
+                anchorEl={anchorElNav}
+                anchorOrigin={{
+                    vertical: 'bottom',
+                    horizontal: 'left',
+                }}
+                open={Boolean(anchorElNav)}
+                onClose={handleCloseNavMenu}
+                sx={{
+                    display: {xs: 'block', md: 'none'},
+                }}
+                >
+                    {pages.map((page) => (
+                        <MenuItem key={page.name} onClick={() => {
+                            if(page.name === "Home")router.push(page.route)
+                            window.location.href = page.route;
+                        }}>
+                            <Typography textAlign="center">{page.name}</Typography>
+                        </MenuItem>
+                        ))}
+                </Menu>
+                {/*<Button variant="text" className={styles.menuButtons}>*/}
+                {/*    Hello*/}
+                {/*</Button>*/}
+                <SearchBox>
+                    <SearchIconWrapper>
+                        <Search />
+                    </SearchIconWrapper>
+                    <StyledInputBase
+                        placeholder = "Search..."
+                        inputProps = {{'aria-label': 'search'}}
+                    />
+                </SearchBox>
+
             </Toolbar>
         </Container>
       </AppBar>
