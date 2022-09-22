@@ -7,7 +7,7 @@ import {
     AppBar,
     Box,
     Button,
-    Container,
+    Container, Grid,
     IconButton,
     Menu,
     MenuItem,
@@ -34,7 +34,7 @@ const SearchBox = styled('div')(({ theme }) => ({
 }));
 
 const SearchIconWrapper = styled('div')(({ theme }) => ({
-    padding: theme.spacing(0, 2),
+    padding: theme.spacing(0, theme.breakpoints.up('sm')? 1 : 2),
     height: '100%',
     position: 'absolute',
     pointerEvents: 'none',
@@ -48,7 +48,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     '& .MuiInputBase-input': {
         padding: theme.spacing(1, 1, 1, 0),
         // vertical padding + font size from searchIcon
-        paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+        paddingLeft: `calc(1em + ${theme.spacing(3)})`,
         transition: theme.transitions.create('width'),
         width: '100%',
         [theme.breakpoints.up('sm')]: {
@@ -84,30 +84,49 @@ const handleCloseNavMenu = (event) => {
       <AppBar position="static" className={styles.appContainer}>
         <Container maxWidth="xl">
             <Toolbar disableGutters>
-                <IconButton
-                    size="large"
-                    aria-label="menu options"
-                    aria-controls="menu-appbar"
-                    aria-haspopup="true"
-                    onClick={handleOpenNavMenu}
-                    color="inherit"
-                >
-                    <MenuIcon />
-                </IconButton>
-                <IconButton>
-                    {/*TODO: add personal icon*/}
-                    <Adb />
-                </IconButton>
-                <Typography
-                    variant="h6"
-                    noWrap
-                    href="/"
-                    sx={{
-                        display:  {xs: "none", md: "flex"},
-                    }}
-                >
-                    Parse the Text
-                </Typography>
+                <Grid container spacing={4} justifyContent="space-between" alignItems={"center"}>
+                    <Grid item>
+                        <IconButton
+                            size="large"
+                            aria-label="menu options"
+                            aria-controls="menu-appbar"
+                            aria-haspopup="true"
+                            onClick={handleOpenNavMenu}
+                            color="inherit"
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                    </Grid>
+                    <Grid item>
+                        <IconButton>
+                            {/*TODO: add personal icon*/}
+                            <Adb />
+                        </IconButton>
+                        <Typography
+                            variant="h6"
+                            noWrap
+                            href="/"
+                            sx={{
+                                display:  {xs: "none", md: "flex"},
+                            }}
+                        >
+                            Parse the Text
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={4}>
+                        <SearchBox>
+                            <SearchIconWrapper>
+                                <Search />
+                            </SearchIconWrapper>
+                            <StyledInputBase
+                                placeholder = "Search..."
+                                inputProps = {{'aria-label': 'search'}}
+                            />
+                        </SearchBox>
+                    </Grid>
+                </Grid>
+
+
                 <Menu
                 id="menu-appbar"
                 anchorEl={anchorElNav}
@@ -133,18 +152,15 @@ const handleCloseNavMenu = (event) => {
                 {/*<Button variant="text" className={styles.menuButtons}>*/}
                 {/*    Hello*/}
                 {/*</Button>*/}
-                <SearchBox>
-                    <SearchIconWrapper>
-                        <Search />
-                    </SearchIconWrapper>
-                    <StyledInputBase
-                        placeholder = "Search..."
-                        inputProps = {{'aria-label': 'search'}}
-                    />
-                </SearchBox>
+
 
             </Toolbar>
         </Container>
       </AppBar>
   );
 }
+//TODO: style for medium screens
+//TODO: style for large screens
+//TODO: change font and text color
+//TODO: remove background color
+//TODO: style menu
