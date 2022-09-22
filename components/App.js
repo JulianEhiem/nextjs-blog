@@ -8,7 +8,7 @@ export default function App() {
       <>
           <div className={styles.texture}></div>
           <div className={styles.appBackground}>
-              {/*<Nav />*/}
+              <Nav />
               {/*<Title />*/}
               {/*<BlogBody />*/}
          </div>

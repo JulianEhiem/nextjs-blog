@@ -13,3 +13,12 @@
   margin: 0.1rem;
   /* padding: 0.1rem; */
 }
+
+.appContainer{
+  background: lightblue;
+  box-shadow: none;
+}
+
+.menuButtons{
+  color: #fff;
+}
