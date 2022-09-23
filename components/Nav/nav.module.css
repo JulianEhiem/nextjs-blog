@@ -1,23 +1,6 @@
-.navContainer {
-  display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 1rem;
-  padding: 0.7rem;
-  background-color: rgb(71, 71, 71);
-  color: white;
-  font-family: "Merriweather", serif;
-  box-sizing: border-box;
-}
-
-.navContainer h3{
-  margin: 0.1rem;
-  /* padding: 0.1rem; */
-}
-
 .appContainer{
-  /*background: lightblue;*/
   background: transparent;
-    color: black;
+  color: black;
   box-shadow: none;
 }
 
@@ -28,7 +11,7 @@
     font-size: 1.1em;
 }
 
-.menuButtons:hover{
+.mark, .menuButtons:hover{
     background: linear-gradient(
             100deg,
             rgba(255, 221, 64, 0) 0.9%,
@@ -49,21 +32,5 @@
 }
 
 .mark {
-  background: linear-gradient(
-          100deg,
-          rgba(255, 221, 64, 0) 0.9%,
-          rgba(255, 221, 64, 1) 2.4%,
-          rgba(255, 221, 64, 0.5) 5.8%,
-          rgba(255, 221, 64, 0.1) 93%,
-          rgba(255, 221, 64, 0.7) 96%,
-          rgba(255, 221, 64, 0) 98%
-  ), linear-gradient(180deg, rgba(255, 221, 64, 0) 0%, rgba(
-                  255,
-                  221,
-                  64,
-                  0.3
-          ) 7.9%, rgba(255, 221, 64, 0) 15%);
-  border-radius: 0.125em;
-  box-decoration-break: clone;
   padding: 0 0.25em 0.125em 0.15em;
 }

@@ -18,12 +18,13 @@ import {
 import InputBase from '@mui/material/InputBase';
 import {Search, Adb} from "@mui/icons-material";
 
+// Creating custom styled components
 const SearchBox = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
+    backgroundColor: alpha(theme.palette.common.black, 0.15),
     '&:hover': {
-        backgroundColor: alpha(theme.palette.common.white, 0.25),
+        backgroundColor: alpha(theme.palette.common.black, 0.25),
     },
     marginLeft: 0,
     width: '100%',
@@ -61,6 +62,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function Nav() {
+    // Creating a component state for Menu open status
 const [anchorElNav, setAnchorElNav] = React.useState(null);
 const router = useRouter();
 const pages = [
@@ -75,18 +77,11 @@ const handleCloseNavMenu = (event) => {
     setAnchorElNav(null);
 }
 
-
   return (
-    // <div className={styles.navContainer}>
-    //   <div onClick={() => router.push('/')}> <h3>Home</h3> </div>
-    //   <div target ="_blank" onClick={() => window.location.href = 'https://julianehiem.dev/'}> <h3>Portfolio</h3> </div>
-    //   <div onClick={() => window.location.href = 'https://github.com/JulianEhiem'}> <h3>Github</h3> </div>
-    // </div>
       <AppBar position="static" className={styles.appContainer}>
         <Container maxWidth="xl">
             <Toolbar disableGutters>
                 <Grid container spacing={4} justifyContent="space-between" alignItems={"center"}>
-                    {/*<Grid item sx={{order: theme.breakpoints.up('sm') ? 1 : 3}}>*/}
                     <Grid item sx={{display: {xs: 'flex', sm: 'none'}, order: -1}}>
                         <IconButton
                             size="large"
@@ -106,6 +101,7 @@ const handleCloseNavMenu = (event) => {
                                     key={page.name}
                                     onClick={handleCloseNavMenu}
                                     href={page.route}
+                                    target={page.name !== "Home" ? "_blank" : ""}
                                     className={styles.menuButtons}
                                     sx={{ my: 2, mx: {sm: 1, md: 2, lg: 5}, color: 'white', display: 'block' }}
                                 >
@@ -143,8 +139,6 @@ const handleCloseNavMenu = (event) => {
                         </SearchBox>
                     </Grid>
                 </Grid>
-
-
                 <Menu
                 id="menu-appbar"
                 anchorEl={anchorElNav}
@@ -156,6 +150,12 @@ const handleCloseNavMenu = (event) => {
                 onClose={handleCloseNavMenu}
                 sx={{
                     display: {xs: 'block', md: 'none'},
+                    '& .MuiMenu-paper':{
+                        // color: 'red',
+                        background: 'transparent',
+                        fontFamily: "Abril Fatface, serif",
+                    },
+
                 }}
                 >
                     {pages.map((page) => (
@@ -167,17 +167,8 @@ const handleCloseNavMenu = (event) => {
                         </MenuItem>
                         ))}
                 </Menu>
-                {/*<Button variant="text" className={styles.menuButtons}>*/}
-                {/*    Hello*/}
-                {/*</Button>*/}
-
-
             </Toolbar>
         </Container>
-
       </AppBar>
   );
 }
-//TODO: change font and text color
-//TODO: remove background color
-//TODO: style menu
