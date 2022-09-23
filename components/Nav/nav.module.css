@@ -17,6 +17,7 @@
 .appContainer{
   background: lightblue;
   /*background: transparent;*/
+    color: black;
   box-shadow: none;
 }
 
@@ -41,5 +42,5 @@
           ) 7.9%, rgba(255, 221, 64, 0) 15%);
   border-radius: 0.125em;
   box-decoration-break: clone;
-  padding: 0.125em 0.25em 0.125em 0.15em;
+  padding: 0 0.25em 0.125em 0.15em;
 }
