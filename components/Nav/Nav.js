@@ -17,6 +17,7 @@ import {
 } from "@mui/material";
 import InputBase from '@mui/material/InputBase';
 import {Search, Adb} from "@mui/icons-material";
+import {useEffect} from "react";
 
 // Creating custom styled components
 const SearchBox = styled('div')(({ theme }) => ({
@@ -75,6 +76,14 @@ const handleOpenNavMenu = (event) => {
 const handleCloseNavMenu = (event) => {
     setAnchorElNav(null);
 }
+const handleResize = () => {
+    if (window.innerWidth > 600){
+        handleCloseNavMenu()
+    }
+}
+useEffect(() => {
+    window.addEventListener("resize", handleResize)
+})
 
   return (
       <AppBar position="static" className={styles.appContainer}>
