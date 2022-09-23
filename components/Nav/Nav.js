@@ -75,6 +75,7 @@ const handleCloseNavMenu = (event) => {
     setAnchorElNav(null);
 }
 
+
   return (
     // <div className={styles.navContainer}>
     //   <div onClick={() => router.push('/')}> <h3>Home</h3> </div>
@@ -125,7 +126,7 @@ const handleCloseNavMenu = (event) => {
                                 display:  {xs: "none", md: "inline-flex"},
                             }}
                         >
-                            Parse the Text
+                            Parsing the&nbsp;<span className={styles.mark}>Code</span>
                         </Typography>
                     </Grid>
                     <Grid item xs={4} sx={{ order: 3}}>
@@ -171,6 +172,7 @@ const handleCloseNavMenu = (event) => {
 
             </Toolbar>
         </Container>
+
       </AppBar>
   );
 }
