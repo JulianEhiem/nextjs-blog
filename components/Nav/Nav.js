@@ -61,8 +61,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
-export default function Nav() {
-    // Creating a component state for Menu open status
+export default function Nav() {// Creating a component state for Menu open status
 const [anchorElNav, setAnchorElNav] = React.useState(null);
 const router = useRouter();
 const pages = [
@@ -111,17 +110,19 @@ const handleCloseNavMenu = (event) => {
                         </Box>
                     </Grid>
                     <Grid item  sx={{order: {xs: 2, sm: 1}}}>
-                        <IconButton>
+                        <IconButton
+                            href="/"
+                        >
                             {/*TODO: add personal icon*/}
                             <Adb />
                         </IconButton>
                         <Typography
                             variant="h5"
                             noWrap
-                            href="/"
                             sx={{
                                 display:  {xs: "none", md: "inline-flex"},
                                 fontFamily: "Abril Fatface",
+                                cursor: "pointer",
                             }}
                         >
                             Parsing the&nbsp;<span className={styles.mark}>Code</span>
@@ -151,7 +152,6 @@ const handleCloseNavMenu = (event) => {
                 sx={{
                     display: {xs: 'block', md: 'none'},
                     '& .MuiMenu-paper':{
-                        // color: 'red',
                         background: 'transparent',
                         fontFamily: "Abril Fatface, serif",
                     },
