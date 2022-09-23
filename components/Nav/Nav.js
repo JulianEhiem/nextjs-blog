@@ -111,7 +111,7 @@ useEffect(() => {
                                     href={page.route}
                                     target={page.name !== "Home" ? "_blank" : ""}
                                     className={styles.menuButtons}
-                                    sx={{ my: 2, mx: {sm: 1, md: 2, lg: 5}, color: 'white', display: 'block' }}
+                                    sx={{ my: 2, mx: {sm: 1, md: 1, lg: 5}, color: 'white', display: 'block' }}
                                 >
                                     {page.name}
                                 </Button>
