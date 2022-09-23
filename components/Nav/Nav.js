@@ -85,7 +85,8 @@ const handleCloseNavMenu = (event) => {
         <Container maxWidth="xl">
             <Toolbar disableGutters>
                 <Grid container spacing={4} justifyContent="space-between" alignItems={"center"}>
-                    <Grid item>
+                    {/*<Grid item sx={{order: theme.breakpoints.up('sm') ? 1 : 3}}>*/}
+                    <Grid item sx={{display: {xs: 'flex', sm: 'none'}, order: -1}}>
                         <IconButton
                             size="large"
                             aria-label="menu options"
@@ -97,7 +98,21 @@ const handleCloseNavMenu = (event) => {
                             <MenuIcon />
                         </IconButton>
                     </Grid>
-                    <Grid item>
+                    <Grid item sx={{ display: { xs: 'none', sm: 'flex' }, order: 2}}>
+                        <Box sx={{ flexGrow: 1, display: 'flex'}}>
+                            {pages.map((page) => (
+                                <Button
+                                    key={page.name}
+                                    onClick={handleCloseNavMenu}
+                                    href={page.route}
+                                    sx={{ my: 2, mx: {sm: 1, md: 2, lg: 5}, color: 'white', display: 'block' }}
+                                >
+                                    {page.name}
+                                </Button>
+                            ))}
+                        </Box>
+                    </Grid>
+                    <Grid item  sx={{order: {xs: 2, sm: 1}}}>
                         <IconButton>
                             {/*TODO: add personal icon*/}
                             <Adb />
@@ -107,14 +122,14 @@ const handleCloseNavMenu = (event) => {
                             noWrap
                             href="/"
                             sx={{
-                                display:  {xs: "none", md: "flex"},
+                                display:  {xs: "none", md: "inline-flex"},
                             }}
                         >
                             Parse the Text
                         </Typography>
                     </Grid>
-                    <Grid item xs={4}>
-                        <SearchBox>
+                    <Grid item xs={4} sx={{ order: 3}}>
+                        <SearchBox sx={{maxWidth: '400px'}}>
                             <SearchIconWrapper>
                                 <Search />
                             </SearchIconWrapper>
@@ -159,8 +174,6 @@ const handleCloseNavMenu = (event) => {
       </AppBar>
   );
 }
-//TODO: style for medium screens
-//TODO: style for large screens
 //TODO: change font and text color
 //TODO: remove background color
 //TODO: style menu
