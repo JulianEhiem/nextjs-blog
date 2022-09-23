@@ -106,6 +106,7 @@ const handleCloseNavMenu = (event) => {
                                     key={page.name}
                                     onClick={handleCloseNavMenu}
                                     href={page.route}
+                                    className={styles.menuButtons}
                                     sx={{ my: 2, mx: {sm: 1, md: 2, lg: 5}, color: 'white', display: 'block' }}
                                 >
                                     {page.name}
@@ -119,11 +120,12 @@ const handleCloseNavMenu = (event) => {
                             <Adb />
                         </IconButton>
                         <Typography
-                            variant="h6"
+                            variant="h5"
                             noWrap
                             href="/"
                             sx={{
                                 display:  {xs: "none", md: "inline-flex"},
+                                fontFamily: "Abril Fatface",
                             }}
                         >
                             Parsing the&nbsp;<span className={styles.mark}>Code</span>
