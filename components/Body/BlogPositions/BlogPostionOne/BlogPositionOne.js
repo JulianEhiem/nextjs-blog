@@ -11,8 +11,10 @@ export default function BlogPositionOne(props) {
         <>
             <Box sx={{display: "flex"}} justifyContent="center">
                 <Card
+                    elevation={1}
                     sx={{
-                        maxWidth: 345
+                        maxWidth: 345,
+                        background: "transparent"
                 }}
 
                     onClick = {() => router.push(`/post/${props.post.slug.current}`)}>
@@ -23,15 +25,21 @@ export default function BlogPositionOne(props) {
                         image={props.post.mainImage}
                     />
                     <CardContent>
-                        <Typography gutterBottom variant="h5" component="div">
+                        <Typography
+                            variant="h6"
+                            component="div"
+                            sx={{
+                                fontFamily: "Abril Fatface, serif",
+                            }}
+                        >
                             {props.post.title}
                         </Typography>
                         <Typography
                             sx={{
-                                display: '-webkit-box',
+                                display: {xs: '-webkit-box', md:'-webkit-box'},
                                 overflow: 'hidden',
                                 WebkitBoxOrient: 'vertical',
-                                WebkitLineClamp: 1,
+                                WebkitLineClamp: 2,
                             }}
                             variant="body2"
                             color="text.secondary">
