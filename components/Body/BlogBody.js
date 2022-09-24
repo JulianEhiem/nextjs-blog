@@ -7,6 +7,13 @@ import { PostContext } from "../PostContext";
 import { useRouter } from "next/router"
 import {Box, Container, Grid, Typography} from "@mui/material";
 import BlogPageOne from "./BlogMain/BlogPageOne";
+import BlogPositionOne from "./BlogPositions/BlogPostionOne/BlogPositionOne";
+import BlogPositionTwo from "./BlogPositions/BlogPostionTwo/BlogPositionTwo";
+import BlogPositionThree from "./BlogPositions/BlogPostionThree/BlogPositionThree";
+import BlogPositionFour from "./BlogPositions/BlogPostionFour/BlogPositionFour";
+import BlogPositionFive from "./BlogPositions/BlogPostionFive/BlogPositionFive";
+import BlogPositionSix from "./BlogPositions/BlogPostionSix/BlogPositionSix";
+import BlogPositionSeven from "./BlogPositions/BlogPostionSeven/BlogPositionSeven";
 // import BlockContent from '@sanity/block-content-to-react';
 // import dummyFallBack from '../../DummyFallBack'
 
@@ -67,26 +74,32 @@ export default function BlogBody() {
               </Typography>
           </Box>
 
-        <Grid container spacing={2}>
-            <Grid item xs={12}>
-                <BlogPageOne />
-            </Grid>
-            <Grid item xs={12}>
-                1
-            </Grid>
-            <Grid item xs={12}>
-                1
-            </Grid>
-            <Grid item xs={12}>
-                1
-            </Grid>
-            <Grid item xs={12}>
-                1
-            </Grid>
-            <Grid item xs={12}>
-                1
-            </Grid>
-        </Grid>
+          {post.length ?
+              <h2>nothing</h2> :
+              <Grid container spacing={2}>
+              <Grid item xs={12}>
+              <BlogPositionOne />
+              </Grid>
+              <Grid item xs={12}>
+              <BlogPositionTwo />
+              </Grid>
+              <Grid item xs={12}>
+              <BlogPositionThree />
+              </Grid>
+              <Grid item xs={12}>
+              <BlogPositionFour />
+              </Grid>
+              <Grid item xs={12}>
+              <BlogPositionFive />
+              </Grid>
+              <Grid item xs={12}>
+              <BlogPositionSix />
+              </Grid>
+              <Grid item xs={12}>
+              <BlogPositionSeven />
+              </Grid>
+              </Grid>
+          }
       </Container>
     </>
   );

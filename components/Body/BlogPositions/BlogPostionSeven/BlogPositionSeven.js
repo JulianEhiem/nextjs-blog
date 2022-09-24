@@ -4,6 +4,9 @@ export default function BlogPositionSeven() {
 
     return (
         <>
+            <div>
+                hello 7
+            </div>
         </>
     );
 }

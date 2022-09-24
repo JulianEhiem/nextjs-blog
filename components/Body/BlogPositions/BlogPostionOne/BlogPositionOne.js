@@ -4,6 +4,9 @@ export default function BlogPositionOne() {
 
     return (
         <>
+            <div>
+                hello 1
+            </div>
         </>
     );
 }
