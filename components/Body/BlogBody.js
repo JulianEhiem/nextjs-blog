@@ -21,7 +21,7 @@ export default function BlogBody() {
   const router = useRouter();
   const posts = useContext(PostContext)
   const post = posts.mappedPosts
-
+// const post = [1,2]
   // const title = post.length === 0 ? "Loading" : post[0].title;
   // const image = post.length === 0 ? "Loading" : post[0].mainImage;
   // const body = post.length === 0 ? dummyFallBack : post[0].body;
@@ -57,7 +57,7 @@ export default function BlogBody() {
     {/*  </div>*/}
 
 
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" >
           <Box  my={4}>
               <Typography
                   variant="h6"
@@ -74,29 +74,29 @@ export default function BlogBody() {
               </Typography>
           </Box>
 
-          {post.length ?
+          {post.length === 0 ?
               <h2>nothing</h2> :
               <Grid container spacing={2}>
-              <Grid item xs={12}>
-              <BlogPositionOne />
+              <Grid item xs={12} justifyContent="center" alignItems="center">
+              <BlogPositionOne post={post[0]} />
               </Grid>
               <Grid item xs={12}>
-              <BlogPositionTwo />
+              <BlogPositionTwo post={post[1]} />
               </Grid>
               <Grid item xs={12}>
-              <BlogPositionThree />
+              <BlogPositionThree post={post[2]} />
               </Grid>
               <Grid item xs={12}>
-              <BlogPositionFour />
+              <BlogPositionFour post={post[3]} />
               </Grid>
               <Grid item xs={12}>
-              <BlogPositionFive />
+              <BlogPositionFive post={post[4]} />
               </Grid>
               <Grid item xs={12}>
-              <BlogPositionSix />
+              <BlogPositionSix post={post[5]} />
               </Grid>
               <Grid item xs={12}>
-              <BlogPositionSeven />
+              <BlogPositionSeven post={post[6]} />
               </Grid>
               </Grid>
           }

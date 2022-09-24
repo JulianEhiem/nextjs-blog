@@ -13,11 +13,6 @@ export default function App() {
               {/*<Title />*/}
               <BlogBody />
           </div>
-          <Container maxWidth="xl" sx={{zIndex: 2}}>
-              {/*<Nav />*/}
-              {/*/!*<Title />*!/*/}
-              {/*<BlogBody />*/}
-          </Container>
       </>
   );
 }
