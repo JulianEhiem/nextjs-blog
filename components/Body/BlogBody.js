@@ -83,22 +83,22 @@ export default function BlogBody() {
           {post.length === 0 ?
               <h2>nothing</h2> :
               <Grid container spacing={2}>
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} sm={6}>
               <BlogCard post={post[0]} />
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} sm={6}>
               <BlogCard post={post[1]} />
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} sm={6}>
               <BlogCard post={post[2]} />
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} sm={6}>
               <BlogCard post={post[3]} />
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} sm={6}>
               <BlogCard post={post[4]} />
               </Grid>
-              <Grid item xs={12} md={6}>
+              <Grid item xs={12} sm={6}>
               <BlogCard post={post[5]} />
               </Grid>
               <Grid item xs={12}>

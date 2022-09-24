@@ -15,7 +15,7 @@ export default function BlogCard(props) {
                 <Card
                     elevation={window.innerWidth > screenSizes.md ? 0 : 2}
                     sx={{
-                        maxWidth: {xs: 345, md: 500},
+                        maxWidth: {xs: 345, md: 450},
                         background: "transparent"
                     }}
 
@@ -23,7 +23,7 @@ export default function BlogCard(props) {
                     <CardMedia
                         component="img"
                         alt="green iguana"
-                        height="140"
+                        height={window.innerWidth < screenSizes.md ? 140: 220}
                         image={props.post.mainImage.toString()}
                     />
                     <CardContent>
