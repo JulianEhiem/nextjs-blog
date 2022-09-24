@@ -1,12 +1,12 @@
 import styles from "./blogMain.module.css";
 import MainTop from "./MainTop";
-import MainFeatured from "./MainFeatured";
+import BlogPageOne from "./BlogPageOne";
 import MainBottom from "./MainBottom";
 
 export default function BlogMain() {
   return (
     <div className={styles.blogMainContainer}>
-      <MainFeatured />
+      <BlogPageOne />
       <div className={styles.mainSubgroupContainer}>
         <MainTop />
         <MainBottom />

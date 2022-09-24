@@ -1,6 +1,6 @@
 import LeftTop from './LeftTop';
 import RightTop from './RightTop';
-import MainFeatured from './MainFeatured';
+import MainFeatured from './BlogPageOne';
 import MainTop from './MainTop';
 import RightBottom from './RightBottom';
 import MainBottom from './MainBottom';

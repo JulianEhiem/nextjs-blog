@@ -7,7 +7,7 @@ import { useRouter } from "next/router"
 import dummyFallBack from '../../DummyFallBack'
 
 
-export default function MainFeatured() {
+export default function BlogPageOne() {
   const router = useRouter();
 
   const posts = useContext(PostContext)
