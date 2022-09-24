@@ -1,8 +1,9 @@
+import * as React from 'react';
 import styles from "./blogBody.module.css";
 import BlogRight from "./BlogRight/BlogRight";
 import BlogLeft from "./BlogLeft/BlogLeft";
 import BlogMain from "./BlogMain/BlogMain";
-import { useContext } from "react";
+import {useContext, useEffect} from "react";
 import { PostContext } from "../PostContext";
 import { useRouter } from "next/router"
 import {Box, Container, Grid, Typography} from "@mui/material";
@@ -14,13 +15,18 @@ import BlogPositionFour from "./BlogPositions/BlogPostionFour/BlogPositionFour";
 import BlogPositionFive from "./BlogPositions/BlogPostionFive/BlogPositionFive";
 import BlogPositionSix from "./BlogPositions/BlogPostionSix/BlogPositionSix";
 import BlogPositionSeven from "./BlogPositions/BlogPostionSeven/BlogPositionSeven";
+import BlogCard from "./BlogCard";
 // import BlockContent from '@sanity/block-content-to-react';
 // import dummyFallBack from '../../DummyFallBack'
 
 export default function BlogBody() {
+    // const [windowSize, setWindowSize] = React.useState(window.innerWidth);
+    // useEffect(() => {
+    //     window.addEventListener('resize', setWindowSize(window.innerWidth))
+    // })
   const router = useRouter();
   const posts = useContext(PostContext)
-  const post = posts.mappedPosts
+  const post = posts.mappedPosts.reverse()
 // const post = [1,2]
   // const title = post.length === 0 ? "Loading" : post[0].title;
   // const image = post.length === 0 ? "Loading" : post[0].mainImage;
@@ -77,26 +83,26 @@ export default function BlogBody() {
           {post.length === 0 ?
               <h2>nothing</h2> :
               <Grid container spacing={2}>
-              <Grid item xs={12} justifyContent="center" alignItems="center">
-              <BlogPositionOne post={post[0]} />
+              <Grid item xs={12} md={6}>
+              <BlogCard post={post[0]} />
+              </Grid>
+              <Grid item xs={12} md={6}>
+              <BlogCard post={post[1]} />
+              </Grid>
+              <Grid item xs={12} md={6}>
+              <BlogCard post={post[2]} />
+              </Grid>
+              <Grid item xs={12} md={6}>
+              <BlogCard post={post[3]} />
+              </Grid>
+              <Grid item xs={12} md={6}>
+              <BlogCard post={post[4]} />
+              </Grid>
+              <Grid item xs={12} md={6}>
+              <BlogCard post={post[5]} />
               </Grid>
               <Grid item xs={12}>
-              <BlogPositionTwo post={post[1]} />
-              </Grid>
-              <Grid item xs={12}>
-              <BlogPositionThree post={post[2]} />
-              </Grid>
-              <Grid item xs={12}>
-              <BlogPositionFour post={post[3]} />
-              </Grid>
-              <Grid item xs={12}>
-              <BlogPositionFive post={post[4]} />
-              </Grid>
-              <Grid item xs={12}>
-              <BlogPositionSix post={post[5]} />
-              </Grid>
-              <Grid item xs={12}>
-              <BlogPositionSeven post={post[6]} />
+              <BlogCard post={post[6]} />
               </Grid>
               </Grid>
           }
