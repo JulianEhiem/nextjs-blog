@@ -6,7 +6,7 @@ import BlogMain from "./BlogMain/BlogMain";
 import {useContext, useEffect} from "react";
 import { PostContext } from "../PostContext";
 import { useRouter } from "next/router"
-import {Box, Container, Grid, Typography} from "@mui/material";
+import {Box, Container, Grid, styled, Typography} from "@mui/material";
 import BlogPageOne from "./BlogMain/BlogPageOne";
 import BlogPositionOne from "./BlogPositions/BlogPostionOne/BlogPositionOne";
 import BlogPositionTwo from "./BlogPositions/BlogPostionTwo/BlogPositionTwo";
@@ -18,6 +18,11 @@ import BlogPositionSeven from "./BlogPositions/BlogPostionSeven/BlogPositionSeve
 import BlogCard from "./BlogCard";
 // import BlockContent from '@sanity/block-content-to-react';
 // import dummyFallBack from '../../DummyFallBack'
+
+const StyledBox = styled(Box)(({theme}) => ({
+    height: 'unset',
+    background: "lightblue"
+}))
 
 export default function BlogBody() {
     // const [windowSize, setWindowSize] = React.useState(window.innerWidth);
@@ -63,7 +68,7 @@ export default function BlogBody() {
     {/*  </div>*/}
 
 
-      <Container maxWidth="xl" >
+      <Container id="main" maxWidth="xl" sx={{height: '100vh'}}>
           <Box  my={4}>
               <Typography
                   variant="h6"
@@ -82,29 +87,54 @@ export default function BlogBody() {
 
           {post.length === 0 ?
               <h2>nothing</h2> :
-              <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
-              <BlogCard post={post[0]} />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-              <BlogCard post={post[1]} />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-              <BlogCard post={post[2]} />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-              <BlogCard post={post[3]} />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-              <BlogCard post={post[4]} />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-              <BlogCard post={post[5]} />
-              </Grid>
-              <Grid item xs={12}>
-              <BlogCard post={post[6]} />
-              </Grid>
-              </Grid>
+  //             <Box
+  //                 sx={{
+  //                     display: 'grid',
+  //                     gridTemplateColumns: 'repeat(4, 1fr)',
+  //                     gap: 1,
+  //                     gridTemplateRows: 'auto',
+  //                     gridTemplateAreas: `"header header header header"
+  // "main main . sidebar"
+  // "footer footer footer footer"`,
+  //                 }}
+  //             >
+  //                 <Box sx={{ gridArea: 'header', bgcolor: 'primary.main' }} >Header</Box>
+  //                 <Box sx={{ gridArea: 'main', bgcolor: 'secondary.main' }}>Main</Box>
+  //                 <Box sx={{ gridArea: 'sidebar', bgcolor: 'error.main' }}>Sidebar</Box>
+  //                 <Box sx={{ gridArea: 'footer', bgcolor: 'warning.dark' }}>Footer</Box>
+  //             </Box>
+  //             <Grid container spacing={2} className={styles.gridLayout}>
+  //             <Grid item xs={12} sm={6} md={3}>
+  //             <BlogCard id="postA" post={post[0]} />
+  //             </Grid>
+  //             <Grid item xs={12} sm={6} md={4}>
+  //             <BlogCard id="postB" post={post[1]} />
+  //             </Grid>
+  //             <Grid item xs={12} sm={6} md={2}>
+  //             <BlogCard id="postC" post={post[2]} />
+  //             </Grid>
+  //             <Grid item xs={12} sm={6} md={3}>
+  //             <BlogCard id="postD" post={post[3]} />
+  //             </Grid>
+  //             <Grid item xs={12} sm={6}>
+  //             <BlogCard id="postE" post={post[4]} />
+  //             </Grid>
+  //             <Grid item xs={12} sm={6}>
+  //             <BlogCard id="postF" post={post[5]} />
+  //             </Grid>
+  //             <Grid item xs={12}>
+  //             <BlogCard id="postG" post={post[6]} />
+  //             </Grid>
+  //             </Grid>
+              <StyledBox container spacing={2} className={styles.gridLayout}>
+                    <BlogCard id="postA" post={post[0]} />
+                    <BlogCard id="postB" post={post[1]} />
+                    <BlogCard id="postC" post={post[2]} />
+                    <BlogCard id="postD" post={post[3]} />
+                    <BlogCard id="postE" post={post[4]} />
+                    <BlogCard id="postF" post={post[5]} />
+                    <BlogCard id="postG" post={post[6]} />
+              </StyledBox>
           }
       </Container>
     </>

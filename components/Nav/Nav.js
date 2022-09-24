@@ -17,7 +17,8 @@ import {
 } from "@mui/material";
 import InputBase from '@mui/material/InputBase';
 import {Search, Adb} from "@mui/icons-material";
-import {useEffect} from "react";
+import {useEffect, useLayoutEffect, useRef} from "react";
+
 
 // Creating custom styled components
 const SearchBox = styled('div')(({ theme }) => ({
@@ -64,6 +65,21 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function Nav() {// Creating a component state for Menu open status
 const [anchorElNav, setAnchorElNav] = React.useState(null);
+
+    const stickyHeader = useRef(document.getElementById('main'));
+    useLayoutEffect(() => {
+        const appBar = document.getElementById("appBar");
+        let fixedTop = stickyHeader.current.offsetTop;
+        const fixedHeader = () => {
+            if (window.scrollY > fixedTop) {
+                appBar.classList.add("fixedTop");
+            } else {
+                appBar.classList.remove("fixedTop");
+            }
+        };
+        window.addEventListener("scroll", fixedHeader);
+    }, []);
+
 const router = useRouter();
 const pages = [
     {name: "Home", route: '/'},
@@ -86,7 +102,7 @@ useEffect(() => {
 })
 
   return (
-      <AppBar position="static" className={styles.appContainer}>
+      <AppBar id="appBar" position="fixed" className={styles.appContainer}>
         <Container maxWidth="xl">
             <Toolbar disableGutters>
                 <Grid container spacing={4} justifyContent="space-between" alignItems={"center"}>
