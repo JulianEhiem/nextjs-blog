@@ -20,12 +20,15 @@ export default function BlogCard(props) {
                     }}
 
                     onClick = {() => router.push(`/post/${props.post.slug.current}`)}>
-                    <CardMedia
-                        component="img"
-                        alt="green iguana"
-                        height={window.innerWidth < screenSizes.md ? 140: 220}
-                        image={props.post.mainImage.toString()}
-                    />
+                    {props.format < 75 ? <></> :
+                        <CardMedia
+                            component="img"
+                            alt="green iguana"
+                            height={window.innerWidth < screenSizes.md ? 140: 220}
+                            image={props.post.mainImage.toString()}
+                        />
+                    }
+
                     <CardContent>
                         <Typography
                             variant="h6"
@@ -38,10 +41,10 @@ export default function BlogCard(props) {
                         </Typography>
                         <Typography
                             sx={{
-                                display: {xs: '-webkit-box', md:'-webkit-box'},
+                                display: {xs: '-webkit-box', md: `${props.format === 75 ? 'none' : '-webkit-box'}`},
                                 overflow: 'hidden',
                                 WebkitBoxOrient: 'vertical',
-                                WebkitLineClamp: 2,
+                                WebkitLineClamp: props.format === 100 || props.format === 50 ? 13 : 1,
                             }}
                             variant="body2"
                             color="text.secondary">

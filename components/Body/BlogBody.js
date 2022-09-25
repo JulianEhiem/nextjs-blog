@@ -127,13 +127,13 @@ export default function BlogBody() {
   //             </Grid>
   //             </Grid>
               <StyledBox container spacing={2} className={styles.gridLayout}>
-                    <BlogCard id="postA" post={post[0]} />
-                    <BlogCard id="postB" post={post[1]} />
-                    <BlogCard id="postC" post={post[2]} />
-                    <BlogCard id="postD" post={post[3]} />
-                    <BlogCard id="postE" post={post[4]} />
-                    <BlogCard id="postF" post={post[5]} />
-                    <BlogCard id="postG" post={post[6]} />
+                    <BlogCard id="postA" post={post[0]} format={50} />
+                    <BlogCard id="postB" post={post[1]} format={100} />
+                    <BlogCard id="postC" post={post[2]} format={75} />
+                    <BlogCard id="postD" post={post[3]} format={50} />
+                    <BlogCard id="postE" post={post[4]} format={50} />
+                    <BlogCard id="postF" post={post[5]} format={75} />
+                    <BlogCard id="postG" post={post[6]} format={50} />
               </StyledBox>
           }
       </Container>
