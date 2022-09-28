@@ -127,49 +127,59 @@ export default function BlogBody() {
               //         <BlogCard id="postG" post={post[6]}/>
               //     </Grid>
               // </Grid>
-              <Grid container spacing={2} direction={{xs: 'row', sm: 'row', md: 'column'}} columns={{md: 4}} justifyContent={"center"}>
-                  <Grid container item id="row1" spacing={2} md={3} direction={{xs: "row", md: 'column'}}>
-                      <Grid  item xs={12} sm={6} md={3}>
-                          {/*<BlogCard id="postA" post={post[0]}/>*/}
-                          <div style={{background: "red"}}>A</div>
-                      </Grid>
-                      <Grid item xs={12} sm={6} md={4}>
-                          {/*<BlogCard id="postB" post={post[1]}/>*/}
-                          <div style={{background: "lawngreen"}}>B</div>
-                      </Grid>
-                  </Grid>
-                  <Grid container item id="row2" sm={6} direction="column">
-                      <Grid item xs={12} sm={6} md={2}>
-                          {/*<BlogCard id="postC" post={post[2]}/>*/}
-                          <div style={{background: "lightblue"}}>C</div>
+              // <Grid container spacing={2} direction={{xs: 'row', sm: 'row', md: 'column'}} columns={{md: 4}} justifyContent={"center"}>
+              //     <Grid container item id="row1" spacing={2} md={3} direction={{xs: "row", md: 'column'}}>
+              //         <Grid  item xs={12} sm={6} md={12}>
+              //             {/*<BlogCard id="postA" post={post[0]}/>*/}
+              //             <div style={{background: "red"}}>A</div>
+              //         </Grid>
+              //         <Grid item xs={12} sm={6} md={12}>
+              //             {/*<BlogCard id="postB" post={post[1]}/>*/}
+              //             <div style={{background: "lawngreen"}}>B</div>
+              //         </Grid>
+              //     </Grid>
+              //     <Grid container item id="row2" sm={6} direction="column">
+              //         <Grid item xs={12} sm={6} md={2}>
+              //             {/*<BlogCard id="postC" post={post[2]}/>*/}
+              //             <div style={{background: "lightblue"}}>C</div>
+              //
+              //         </Grid>
+              //     </Grid>
+              //     <Grid container item id="row3" spacing={2} direction={{xs: "row", md: 'column'}}>
+              //         <Grid item xs={12} sm={6} md={3}>
+              //             {/*<BlogCard id="postD" post={post[3]}/>*/}
+              //             <div style={{background: "sandybrown"}}>D</div>
+              //
+              //         </Grid>
+              //         <Grid item xs={12} sm={6}>
+              //             {/*<BlogCard id="postE" post={post[4]}/>*/}
+              //             <div style={{background: "peachpuff"}}>E</div>
+              //
+              //         </Grid>
+              //     </Grid>
+              //     <Grid container item id="row4" spacing={2} direction={{xs: "row", md: 'column'}}>
+              //         <Grid item xs={12} sm={6}>
+              //             {/*<BlogCard id="postF" post={post[5]}/>*/}
+              //             <div style={{background: "yellow"}}>F</div>
+              //
+              //         </Grid>
+              //         <Grid item xs={12} sm={6}>
+              //             {/*<BlogCard id="postG" post={post[6]}/>*/}
+              //             <div style={{background: "lightgray"}}>G</div>
+              //
+              //         </Grid>
+              //     </Grid>
+              // </Grid>
+                <div className={styles.gridLayout}>
+                    <div id="postA" style={{background: 'red'}}>A</div>
+                    <div id="postB" style={{background: 'yellow'}}>B</div>
+                    <div id="postC" style={{background: 'orange'}}>C</div>
+                    <div id="postD" style={{background: 'lightblue'}}>D</div>
+                    <div id="postE" style={{background: 'plum'}}>E</div>
+                    <div id="postF" style={{background: 'sandybrown'}}>F</div>
+                    <div id="postG" style={{background: 'darksalmon'}}>G</div>
+                </div>
 
-                      </Grid>
-                  </Grid>
-                  <Grid container item id="row3" spacing={2} direction={{xs: "row", md: 'column'}}>
-                      <Grid item xs={12} sm={6} md={3}>
-                          {/*<BlogCard id="postD" post={post[3]}/>*/}
-                          <div style={{background: "sandybrown"}}>D</div>
-
-                      </Grid>
-                      <Grid item xs={12} sm={6}>
-                          {/*<BlogCard id="postE" post={post[4]}/>*/}
-                          <div style={{background: "peachpuff"}}>E</div>
-
-                      </Grid>
-                  </Grid>
-                  <Grid container item id="row4" spacing={2} direction={{xs: "row", md: 'column'}}>
-                      <Grid item xs={12} sm={6}>
-                          {/*<BlogCard id="postF" post={post[5]}/>*/}
-                          <div style={{background: "yellow"}}>F</div>
-
-                      </Grid>
-                      <Grid item xs={12} sm={6}>
-                          {/*<BlogCard id="postG" post={post[6]}/>*/}
-                          <div style={{background: "lightgray"}}>G</div>
-
-                      </Grid>
-                  </Grid>
-              </Grid>
           }
       </Container>
     </>

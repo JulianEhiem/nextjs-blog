@@ -284,6 +284,38 @@
 /*  !*#postF {grid-row: span 3; grid-column: 4}*!*/
 /*  !*#postG {grid-row: span 3; grid-column: 4}*!*/
 /*}*/
+.gridLayout{
+  /*display: grid;*/
+  columns: 3;
+  gap: 1.5rem;
+  grid-template-areas:
+    "A"
+    "A"
+    "C"
+    "D"
+    "E"
+    "F"
+    "G";
+}
+
+.gridLayout:last-child{
+  background-color: black;
+}
+  /*#postA {grid-area: A}*/
+  /*#postB {grid-area: B}*/
+  /*#postC {grid-area: C}*/
+  /*#postD {grid-area: D}*/
+  /*#postE {grid-area: E}*/
+  /*#postF {grid-area: F}*/
+  /*#postG {grid-area: G}*/
+
+
+/*@media (min-width: 900px) {*/
+/*  .gridLayout{*/
+
+/*  }*/
+/*}*/
+
 
 
 
