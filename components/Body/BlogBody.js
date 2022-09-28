@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styles from "./blogBody.module.css";
 import GridLayout, {Responsive, WidthProvider} from "react-grid-layout";
+import sizeMe from "react-sizeme";
 import BlogRight from "./BlogRight/BlogRight";
 import BlogLeft from "./BlogLeft/BlogLeft";
 import BlogMain from "./BlogMain/BlogMain";
@@ -27,14 +28,31 @@ const StyledBox = styled(Box)(({theme}) => ({
 
 const ResponsiveGridLayout = WidthProvider(Responsive)
 
-export default function BlogBody() {
-    // const [windowSize, setWindowSize] = React.useState(window.innerWidth);
-    // useEffect(() => {
-    //     window.addEventListener('resize', setWindowSize(window.innerWidth))
-    // })
+function BlogBody(props) {
+    const getLayouts = () => {
+        let layout;
+        switch (height){
+            case height < 601:
+                layout = layout3
+                break
+            case height < 901 && height > 600:
+                layout = layout2
+                break
+            case height > 900:
+                layout = layout1
+                break
+        }
+        return layout;
+    }
+    const [layout = getLayouts(), setLayout] = React.useState(layout);
+    useEffect(() => {
+        window.addEventListener('resize', setLayout(getLayouts()))
+    })
   const router = useRouter();
   const posts = useContext(PostContext)
   const post = posts.mappedPosts.reverse()
+
+    const {width, height} = props.size
 
     const layout1 = [
         {i: "postA", x: 0, y: 0, w: 3, h: 4},
@@ -46,16 +64,16 @@ export default function BlogBody() {
         {i: "postG", x: 9, y: 3, w: 3, h: 3},
     ]
     const layout2 = [
-        {i: "postA", x: 0, y: 0, w: 6, h: 3},
-        {i: "postB", x: 6, y: 0, w: 6, h: 3},
-        {i: "postC", x: 0, y: 3, w: 6, h: 3},
-        {i: "postD", x: 6, y: 3, w: 6, h: 3},
-        {i: "postE", x: 0, y: 6, w: 6, h: 3},
-        {i: "postF", x: 6, y: 6, w: 6, h: 3},
-        {i: "postG", x: 0, y: 9, w: 12, h: 6},
+        {i: "postA", x: 0, y: 0, w: 5, h: 2},
+        {i: "postB", x: 6, y: 0, w: 5, h: 2},
+        {i: "postC", x: 0, y: 3, w: 5, h: 2},
+        {i: "postD", x: 6, y: 3, w: 5, h: 2},
+        {i: "postE", x: 0, y: 6, w: 5, h: 2},
+        {i: "postF", x: 6, y: 6, w: 5, h: 2},
+        {i: "postG", x: 0, y: 9, w: 10, h: 4},
     ]
     const layout3 = [
-        {i: "postA", x: 0, y: 0, w: 12, h: 4},
+        {i: "postA", x: 0, y: 0, w: 6, h: 2},
         {i: "postB", x: 0, y: 4, w: 12, h: 4},
         {i: "postC", x: 0, y: 8, w: 12, h: 4},
         {i: "postD", x: 0, y: 12, w: 12, h: 4},
@@ -64,13 +82,16 @@ export default function BlogBody() {
         {i: "postG", x: 0, y: 24, w: 12, h: 4},
     ]
 
+
+
     const layouts = {lg: layout1, md: layout2, sm: layout3}
+    // const layouts = getLayouts();
 // const post = [1,2]
   // const title = post.length === 0 ? "Loading" : post[0].title;
   // const image = post.length === 0 ? "Loading" : post[0].mainImage;
   // const body = post.length === 0 ? dummyFallBack : post[0].body;
 
-    console.log(WidthProvider(Responsive))
+    // console.log(WidthProvider(Responsive))
 
   return (
     <>
@@ -207,18 +228,35 @@ export default function BlogBody() {
               // </Grid>
                 <ResponsiveGridLayout
                     className={styles.gridLayout}
-                    layout={layout1}
+                    isDraggable ={false}
+                    isResizable ={false}
+                    layouts={layouts}
                     breakpoints={{ lg: 1200, md: 900, sm: 600 }}
-                    cols={{lg: 12, md: 2, sm: 1}}
-                    width={1200}
+                    // cols={{lg: 12, md: 2, sm: 1}}
+                    // width={1200}
                 >
-                    <div key="postA" style={{background: 'red'}}>A</div>
-                    <div key="postB" style={{background: 'yellow'}}>B</div>
-                    <div key="postC" style={{background: 'orange'}}>C</div>
-                    <div key="postD" style={{background: 'lightblue'}}>D</div>
-                    <div key="postE" style={{background: 'plum'}}>E</div>
-                    <div key="postF" style={{background: 'sandybrown'}}>F</div>
-                    <div key="postG" style={{background: 'darksalmon'}}>G</div>
+
+                    <Box key="postA" style={{background: 'none'}}>
+                        <BlogCard id="postA" post={post[0]} />
+                    </Box>
+                    <div key="postB" style={{background: 'none'}}>
+                      <BlogCard id="postA" post={post[1]}/>
+                    </div>
+                    <div key="postC" style={{background: 'none'}}>
+                        <BlogCard id="postA" post={post[2]}/>
+                    </div>
+                    <div key="postD" style={{background: 'none'}}>
+                        <BlogCard id="postA" post={post[3]}/>
+                    </div>
+                    <div key="postE" style={{background: 'none'}}>
+                        <BlogCard id="postA" post={post[4]}/>
+                    </div>
+                    <div key="postF" style={{background: 'none'}}>
+                        <BlogCard id="postA" post={post[5]}/>
+                    </div>
+                    <div key="postG" style={{background: 'none'}}>
+                        <BlogCard id="postA" post={post[6]}/>
+                    </div>
                 </ResponsiveGridLayout>
 
           }
@@ -246,3 +284,5 @@ export default function BlogBody() {
 // {/*    <div id="postF" style={{background: 'sandybrown'}}>F</div>*/}
 // {/*    <div id="postG" style={{background: 'darksalmon'}}>G</div>*/}
 // {/*</div>*/}
+
+export default sizeMe({monitorHeight: true})(BlogBody);
