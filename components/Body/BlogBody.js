@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styles from "./blogBody.module.css";
+import GridLayout, {Responsive, WidthProvider} from "react-grid-layout";
 import BlogRight from "./BlogRight/BlogRight";
 import BlogLeft from "./BlogLeft/BlogLeft";
 import BlogMain from "./BlogMain/BlogMain";
@@ -24,6 +25,8 @@ const StyledBox = styled(Box)(({theme}) => ({
     background: "lightblue"
 }))
 
+const ResponsiveGridLayout = WidthProvider(Responsive)
+
 export default function BlogBody() {
     // const [windowSize, setWindowSize] = React.useState(window.innerWidth);
     // useEffect(() => {
@@ -32,10 +35,42 @@ export default function BlogBody() {
   const router = useRouter();
   const posts = useContext(PostContext)
   const post = posts.mappedPosts.reverse()
+
+    const layout1 = [
+        {i: "postA", x: 0, y: 0, w: 3, h: 4},
+        {i: "postB", x: 3, y: 0, w: 4, h: 6},
+        {i: "postC", x: 7, y: 0, w: 2, h: 3},
+        {i: "postD", x: 9, y: 0, w: 3, h: 3},
+        {i: "postE", x: 0, y: 4, w: 3, h: 2},
+        {i: "postF", x: 7, y: 3, w: 2, h: 3},
+        {i: "postG", x: 9, y: 3, w: 3, h: 3},
+    ]
+    const layout2 = [
+        {i: "postA", x: 0, y: 0, w: 6, h: 3},
+        {i: "postB", x: 6, y: 0, w: 6, h: 3},
+        {i: "postC", x: 0, y: 3, w: 6, h: 3},
+        {i: "postD", x: 6, y: 3, w: 6, h: 3},
+        {i: "postE", x: 0, y: 6, w: 6, h: 3},
+        {i: "postF", x: 6, y: 6, w: 6, h: 3},
+        {i: "postG", x: 0, y: 9, w: 12, h: 6},
+    ]
+    const layout3 = [
+        {i: "postA", x: 0, y: 0, w: 12, h: 4},
+        {i: "postB", x: 0, y: 4, w: 12, h: 4},
+        {i: "postC", x: 0, y: 8, w: 12, h: 4},
+        {i: "postD", x: 0, y: 12, w: 12, h: 4},
+        {i: "postE", x: 0, y: 16, w: 12, h: 4},
+        {i: "postF", x: 0, y: 20, w: 12, h: 4},
+        {i: "postG", x: 0, y: 24, w: 12, h: 4},
+    ]
+
+    const layouts = {lg: layout1, md: layout2, sm: layout3}
 // const post = [1,2]
   // const title = post.length === 0 ? "Loading" : post[0].title;
   // const image = post.length === 0 ? "Loading" : post[0].mainImage;
   // const body = post.length === 0 ? dummyFallBack : post[0].body;
+
+    console.log(WidthProvider(Responsive))
 
   return (
     <>
@@ -170,15 +205,21 @@ export default function BlogBody() {
               //         </Grid>
               //     </Grid>
               // </Grid>
-                <div className={styles.gridLayout}>
-                    <div id="postA" style={{background: 'red'}}>A</div>
-                    <div id="postB" style={{background: 'yellow'}}>B</div>
-                    <div id="postC" style={{background: 'orange'}}>C</div>
-                    <div id="postD" style={{background: 'lightblue'}}>D</div>
-                    <div id="postE" style={{background: 'plum'}}>E</div>
-                    <div id="postF" style={{background: 'sandybrown'}}>F</div>
-                    <div id="postG" style={{background: 'darksalmon'}}>G</div>
-                </div>
+                <ResponsiveGridLayout
+                    className={styles.gridLayout}
+                    layout={layout1}
+                    breakpoints={{ lg: 1200, md: 900, sm: 600 }}
+                    cols={{lg: 12, md: 2, sm: 1}}
+                    width={1200}
+                >
+                    <div key="postA" style={{background: 'red'}}>A</div>
+                    <div key="postB" style={{background: 'yellow'}}>B</div>
+                    <div key="postC" style={{background: 'orange'}}>C</div>
+                    <div key="postD" style={{background: 'lightblue'}}>D</div>
+                    <div key="postE" style={{background: 'plum'}}>E</div>
+                    <div key="postF" style={{background: 'sandybrown'}}>F</div>
+                    <div key="postG" style={{background: 'darksalmon'}}>G</div>
+                </ResponsiveGridLayout>
 
           }
       </Container>
