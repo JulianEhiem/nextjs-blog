@@ -237,25 +237,25 @@ function BlogBody(props) {
                 >
 
                     <Box key="postA" style={{background: 'none'}}>
-                        <BlogCard id="postA" post={post[0]} />
+                        <BlogCard id="postA" post={post[0]} format={50}/>
                     </Box>
                     <div key="postB" style={{background: 'none'}}>
-                      <BlogCard id="postA" post={post[1]}/>
+                      <BlogCard id="postA" post={post[1]} format={100}/>
                     </div>
                     <div key="postC" style={{background: 'none'}}>
-                        <BlogCard id="postA" post={post[2]}/>
+                        <BlogCard id="postA" post={post[2]} format={75}/>
                     </div>
                     <div key="postD" style={{background: 'none'}}>
-                        <BlogCard id="postA" post={post[3]}/>
+                        <BlogCard id="postA" post={post[3]} format={50}/>
                     </div>
                     <div key="postE" style={{background: 'none'}}>
-                        <BlogCard id="postA" post={post[4]}/>
+                        <BlogCard id="postA" post={post[4]} format={50}/>
                     </div>
                     <div key="postF" style={{background: 'none'}}>
-                        <BlogCard id="postA" post={post[5]}/>
+                        <BlogCard id="postA" post={post[5]} format={75}/>
                     </div>
                     <div key="postG" style={{background: 'none'}}>
-                        <BlogCard id="postA" post={post[6]}/>
+                        <BlogCard id="postA" post={post[6]} format={50}/>
                     </div>
                 </ResponsiveGridLayout>
 

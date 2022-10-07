@@ -14,7 +14,7 @@ export default function BlogPositionOne(props) {
                     elevation={1}
                     sx={{
                         maxWidth: 345,
-                        background: "transparent"
+                        background: "pink"
                 }}
 
                     onClick = {() => router.push(`/post/${props.post.slug.current}`)}>
