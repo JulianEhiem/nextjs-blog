@@ -35,7 +35,7 @@ function BlogBody(props) {
             case height < 601:
                 layout = layout3
                 break
-            case height < 901 && height > 600:
+            case height > 600 && height <= 900:
                 layout = layout2
                 break
             case height > 900:
@@ -50,7 +50,8 @@ function BlogBody(props) {
     })
   const router = useRouter();
   const posts = useContext(PostContext)
-  const post = posts.mappedPosts.reverse()
+  const tempPosts = posts.mappedPosts
+  const post = tempPosts.reverse()
 
     const {width, height} = props.size
 
@@ -64,16 +65,16 @@ function BlogBody(props) {
         {i: "postG", x: 9, y: 3, w: 3, h: 3},
     ]
     const layout2 = [
-        {i: "postA", x: 0, y: 0, w: 5, h: 2},
-        {i: "postB", x: 6, y: 0, w: 5, h: 2},
-        {i: "postC", x: 0, y: 3, w: 5, h: 2},
-        {i: "postD", x: 6, y: 3, w: 5, h: 2},
-        {i: "postE", x: 0, y: 6, w: 5, h: 2},
-        {i: "postF", x: 6, y: 6, w: 5, h: 2},
+        {i: "postA", x: 0, y: 0, w: 5, h: 2.5},
+        {i: "postB", x: 6, y: 0, w: 5, h: 2.5},
+        {i: "postC", x: 0, y: 3, w: 5, h: 2.5},
+        {i: "postD", x: 6, y: 3, w: 5, h: 2.5},
+        {i: "postE", x: 0, y: 6, w: 5, h: 2.5},
+        {i: "postF", x: 6, y: 6, w: 5, h: 2.5},
         {i: "postG", x: 0, y: 9, w: 10, h: 4},
     ]
     const layout3 = [
-        {i: "postA", x: 0, y: 0, w: 6, h: 2},
+        {i: "postA", x: 0, y: 0, w: 12, h: 2},
         {i: "postB", x: 0, y: 4, w: 12, h: 2},
         {i: "postC", x: 0, y: 8, w: 12, h: 2},
         {i: "postD", x: 0, y: 12, w: 12, h: 2},
@@ -236,10 +237,10 @@ function BlogBody(props) {
                     // width={1200}
                 >
 
-                    <Box key="postA" style={{background: 'blue'}}>
+                    <Box key="postA" style={{background: 'none'}}>
                         <BlogCard id="postA" post={post[0]} format={50}/>
                     </Box>
-                    <Box key="postB" style={{background: 'red'}}>
+                    <Box key="postB" style={{background: 'none'}}>
                       <BlogCard id="postA" post={post[1]} format={100}/>
                     </Box>
                     <div key="postC" style={{background: 'none'}}>

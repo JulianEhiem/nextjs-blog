@@ -15,16 +15,17 @@ export default function BlogCard(props) {
                 <Card
                     elevation={window.innerWidth > screenSizes.md ? 0 : 2}
                     sx={{
-                        maxWidth: {xs: 345, md: 450},
+                        // maxWidth: {xs: 345, md: 450},
+                        maxWidth: {xs: 345},
                         background: "transparent"
                     }}
 
                     onClick = {() => router.push(`/post/${props.post.slug.current}`)}>
-                    {(props.format < 75 && window.innerWidth > screenSizes.md) ? <></> :
+                    {(props.format < 75 && window.innerWidth > screenSizes.lg) ? <></> :
                         <CardMedia
                             component="img"
                             alt="green iguana"
-                            height={window.innerWidth < screenSizes.md ? 140: 220}
+                            height={window.innerWidth < screenSizes.md ? 160: 180}
                             image={props.post.mainImage.toString()}
                         />
                     }
