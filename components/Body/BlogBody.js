@@ -74,12 +74,12 @@ function BlogBody(props) {
     ]
     const layout3 = [
         {i: "postA", x: 0, y: 0, w: 6, h: 2},
-        {i: "postB", x: 0, y: 4, w: 12, h: 4},
-        {i: "postC", x: 0, y: 8, w: 12, h: 4},
-        {i: "postD", x: 0, y: 12, w: 12, h: 4},
-        {i: "postE", x: 0, y: 16, w: 12, h: 4},
-        {i: "postF", x: 0, y: 20, w: 12, h: 4},
-        {i: "postG", x: 0, y: 24, w: 12, h: 4},
+        {i: "postB", x: 0, y: 4, w: 12, h: 2},
+        {i: "postC", x: 0, y: 8, w: 12, h: 2},
+        {i: "postD", x: 0, y: 12, w: 12, h: 2},
+        {i: "postE", x: 0, y: 16, w: 12, h: 2},
+        {i: "postF", x: 0, y: 20, w: 12, h: 2},
+        {i: "postG", x: 0, y: 24, w: 12, h: 2},
     ]
 
 
@@ -236,12 +236,12 @@ function BlogBody(props) {
                     // width={1200}
                 >
 
-                    <Box key="postA" style={{background: 'none'}}>
+                    <Box key="postA" style={{background: 'blue'}}>
                         <BlogCard id="postA" post={post[0]} format={50}/>
                     </Box>
-                    <div key="postB" style={{background: 'none'}}>
+                    <Box key="postB" style={{background: 'red'}}>
                       <BlogCard id="postA" post={post[1]} format={100}/>
-                    </div>
+                    </Box>
                     <div key="postC" style={{background: 'none'}}>
                         <BlogCard id="postA" post={post[2]} format={75}/>
                     </div>
