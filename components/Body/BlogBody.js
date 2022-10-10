@@ -56,13 +56,13 @@ function BlogBody(props) {
     const {width, height} = props.size
 
     const layout1 = [
-        {i: "postA", x: 0, y: 0, w: 3, h: 4},
-        {i: "postB", x: 3, y: 0, w: 4, h: 6},
-        {i: "postC", x: 7, y: 0, w: 2, h: 3},
-        {i: "postD", x: 9, y: 0, w: 3, h: 3},
+        {i: "postA", x: 0, y: 0, w: 3, h: 3},
+        {i: "postB", x: 3, y: 0, w: 4, h: 5},
+        {i: "postC", x: 7, y: 0, w: 2, h: 2.5},
+        {i: "postD", x: 9, y: 0, w: 3, h: 2.5},
         {i: "postE", x: 0, y: 4, w: 3, h: 2},
-        {i: "postF", x: 7, y: 3, w: 2, h: 3},
-        {i: "postG", x: 9, y: 3, w: 3, h: 3},
+        {i: "postF", x: 7, y: 3, w: 2, h: 2.5},
+        {i: "postG", x: 9, y: 3, w: 3, h: 2.5},
     ]
     const layout2 = [
         {i: "postA", x: 0, y: 0, w: 5, h: 2.5},
@@ -237,25 +237,25 @@ function BlogBody(props) {
                     // width={1200}
                 >
 
-                    <Box key="postA" style={{background: 'none'}}>
+                    <Box key="postA" style={{background: 'purple'}}>
                         <BlogCard id="postA" post={post[0]} format={50}/>
                     </Box>
-                    <Box key="postB" style={{background: 'none'}}>
+                    <Box key="postB" style={{background: 'blue'}}>
                       <BlogCard id="postA" post={post[1]} format={100}/>
                     </Box>
-                    <div key="postC" style={{background: 'none'}}>
+                    <div key="postC" style={{background: 'green'}}>
                         <BlogCard id="postA" post={post[2]} format={75}/>
                     </div>
-                    <div key="postD" style={{background: 'none'}}>
+                    <div key="postD" style={{background: 'red'}}>
                         <BlogCard id="postA" post={post[3]} format={50}/>
                     </div>
-                    <div key="postE" style={{background: 'none'}}>
+                    <div key="postE" style={{background: 'sandybrown'}}>
                         <BlogCard id="postA" post={post[4]} format={50}/>
                     </div>
-                    <div key="postF" style={{background: 'none'}}>
+                    <div key="postF" style={{background: 'lightsalmon'}}>
                         <BlogCard id="postA" post={post[5]} format={75}/>
                     </div>
-                    <div key="postG" style={{background: 'none'}}>
+                    <div key="postG" style={{background: 'lightpink'}}>
                         <BlogCard id="postA" post={post[6]} format={50}/>
                     </div>
                 </ResponsiveGridLayout>
