@@ -65,13 +65,13 @@ function BlogBody(props) {
         {i: "postG", x: 9, y: 3, w: 3, h: 2.5},
     ]
     const layout2 = [
-        {i: "postA", x: 0, y: 0, w: 5, h: 2.5},
-        {i: "postB", x: 6, y: 0, w: 5, h: 2.5},
-        {i: "postC", x: 0, y: 3, w: 5, h: 2.5},
-        {i: "postD", x: 6, y: 3, w: 5, h: 2.5},
-        {i: "postE", x: 0, y: 6, w: 5, h: 2.5},
-        {i: "postF", x: 6, y: 6, w: 5, h: 2.5},
-        {i: "postG", x: 0, y: 9, w: 10, h: 4},
+        {i: "postA", x: 0, y: 0, w: 5, h: 2.1},
+        {i: "postB", x: 6, y: 0, w: 5, h: 2.1},
+        {i: "postC", x: 0, y: 3, w: 5, h: 2.1},
+        {i: "postD", x: 6, y: 3, w: 5, h: 2.1},
+        {i: "postE", x: 0, y: 6, w: 5, h: 2.1},
+        {i: "postF", x: 6, y: 6, w: 5, h: 2.1},
+        {i: "postG", x: 0, y: 9, w: 10, h: 2.1},
     ]
     const layout3 = [
         {i: "postA", x: 0, y: 0, w: 12, h: 2},
@@ -125,7 +125,7 @@ function BlogBody(props) {
     {/*  </div>*/}
 
 
-      <Container id="main" maxWidth="xl" sx={{height: 'unset'}}>
+      <Container id="main" maxWidth="xl" disableGutters sx={{height: 'unset'}}>
           <Box  my={4}>
               <Typography
                   variant="h6"
@@ -232,30 +232,30 @@ function BlogBody(props) {
                     isDraggable ={false}
                     isResizable ={false}
                     layouts={layouts}
-                    breakpoints={{ lg: 1200, md: 900, sm: 600 }}
+                    breakpoints={{ lg: 1199, md: 900, sm: 600 }}
                     // cols={{lg: 12, md: 2, sm: 1}}
                     // width={1200}
                 >
 
-                    <Box key="postA" style={{background: 'purple'}}>
-                        <BlogCard id="postA" post={post[0]} format={50}/>
+                    <Box key="postA" style={{background: 'none'}}>
+                        <BlogCard id="postA" post={post[0]} format={60}/>
                     </Box>
-                    <Box key="postB" style={{background: 'blue'}}>
+                    <Box key="postB" style={{background: 'none'}}>
                       <BlogCard id="postA" post={post[1]} format={100}/>
                     </Box>
-                    <div key="postC" style={{background: 'green'}}>
+                    <div key="postC" style={{background: 'none'}}>
                         <BlogCard id="postA" post={post[2]} format={75}/>
                     </div>
-                    <div key="postD" style={{background: 'red'}}>
+                    <div key="postD" style={{background: 'none'}}>
                         <BlogCard id="postA" post={post[3]} format={50}/>
                     </div>
-                    <div key="postE" style={{background: 'sandybrown'}}>
-                        <BlogCard id="postA" post={post[4]} format={50}/>
+                    <div key="postE" style={{background: 'none'}}>
+                        <BlogCard id="postA" post={post[4]} format={40}/>
                     </div>
-                    <div key="postF" style={{background: 'lightsalmon'}}>
+                    <div key="postF" style={{background: 'none'}}>
                         <BlogCard id="postA" post={post[5]} format={75}/>
                     </div>
-                    <div key="postG" style={{background: 'lightpink'}}>
+                    <div key="postG" style={{background: 'none'}}>
                         <BlogCard id="postA" post={post[6]} format={50}/>
                     </div>
                 </ResponsiveGridLayout>
