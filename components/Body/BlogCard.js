@@ -19,7 +19,10 @@ export default function BlogCard(props) {
                         // maxWidth: {xs: 345},
                         background: "transparent",
                         borderRadius: 0,
-                        cursor: "pointer"
+                        cursor: "pointer",
+                        ":hover": {
+                            transform: "scale(1.01, 1.01)",
+                        }
                     }}
 
                     onClick = {() => router.push(`/post/${props.post.slug.current}`)}>
