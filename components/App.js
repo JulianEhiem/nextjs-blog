@@ -12,6 +12,7 @@ export default function App() {
               <Nav />
               {/*<Title />*/}
               <BlogBody />
+              <div>Im a footer</div>
           </div>
       </>
   );
