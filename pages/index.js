@@ -11,7 +11,7 @@ import imageUrlBuilder from '@sanity/image-url';
 
 
 export default function Home({posts}) {
-console.log(posts)
+// console.log(posts)
   const [mappedPosts, setMappedPosts] = useState([]);
 
   useEffect(() => {

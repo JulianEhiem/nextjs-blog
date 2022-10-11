@@ -36,11 +36,11 @@ export default function BlogPageOne() {
         {/* <h1>zoom zoom</h1> */}
       </div>
       <div className={styles.MfBlogBodyDiv}>
-        <p>
+
           {/* {({body} === undefined)? "Loading Blogpost...": <BlockContent blocks={body}/>} */}
           <BlockContent blocks={body}/>
           {/* hello */}
-        </p>
+
         {/* <p>
           You can import a file right in a JavaScript module. This tells webpack
           to s simply dummy text of the printing and typesetting industry. a

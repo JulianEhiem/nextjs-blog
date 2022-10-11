@@ -23,7 +23,7 @@ export default function LeftTop() {
         <h1>{title}</h1>
       </div>
       <div className={styles.LtBlogBodyDiv}>
-        <p>
+
         <BlockContent blocks={body}/>
 
           {/* You can import a file right in a JavaScript module. This tells webpack
@@ -46,7 +46,6 @@ export default function LeftTop() {
           Contrary to popular belief, Lorem Ipsum is not simply random text. It
           has roots in a piece of classical Bonorum et Malorum" (The Extremes of
           Good and Evil) by */}
-        </p>
       </div>
     </div>
   );

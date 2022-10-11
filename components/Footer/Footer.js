@@ -5,7 +5,7 @@ import {GitHub, LinkedIn} from "@mui/icons-material";
 export default function Footer() {
 
     return(
-        <AppBar id="appBar" position="fixed-bottom" elevation={8} sx={{background: "transparent"}}>
+        <AppBar id="appBar" position="static" elevation={8} sx={{background: "transparent"}}>
             <Container maxWidth="xl">
                 <Toolbar sx={{justifyContent: "center"}}>
                     <Box flexDirection="row">

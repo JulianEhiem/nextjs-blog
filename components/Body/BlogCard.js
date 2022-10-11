@@ -60,6 +60,9 @@ export default function BlogCard(props) {
                             sx={{
                                 display: {xs: '-webkit-box', md: `${(props.format === 75 && window.innerWidth >= screenSizes.lg) ? 'none' : '-webkit-box'}`},
                                 overflow: 'hidden',
+                                fontFamily: "Roboto, Helvetica, Arial",
+                                fontWeight: 400,
+                                fontSize: "0.875rem",
                                 WebkitBoxOrient: 'vertical',
                                 // WebkitLineClamp: (props.format === 100 && window.innerWidth >= screenSizes.lg) || (props.format === 50 && window.innerWidth >= screenSizes.lg) ? 13 : 1,
                                 WebkitLineClamp: (window.innerWidth >= screenSizes.lg) ? () => {
@@ -75,7 +78,8 @@ export default function BlogCard(props) {
                                 lineHeight: 1.6,
                                 textAlign: "justify"
                             }}
-                            variant="body2"
+                            // variant="body2"
+                            variant="string"
                             color="text.secondary">
                             <BlockContent blocks={props.post.body} />
                         </Typography>

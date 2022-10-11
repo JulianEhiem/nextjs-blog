@@ -24,7 +24,6 @@ export default function LeftBottom() {
 
       </div>
       <div className={styles.LbBlogBodyDiv}>
-        <p>
         <BlockContent blocks={body}/>
 
           {/* You can import a file right in a JavaScript module. This tells webpack
@@ -52,7 +51,6 @@ export default function LeftBottom() {
           has roots in a piece of classical Bonorum et Malorum" (The Extremes of
           Good and Evil) by */}
           <br />
-        </p>
       </div>
     </div>
   );
