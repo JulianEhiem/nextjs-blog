@@ -3,6 +3,7 @@ import Nav from "./Nav/Nav";
 import Title from "./Head/Title";
 import BlogBody from "./Body/BlogBody";
 import {Box, Container} from "@mui/material";
+import Footer from "./Footer/Footer";
 
 export default function App() {
   return (
@@ -12,7 +13,7 @@ export default function App() {
               <Nav />
               {/*<Title />*/}
               <BlogBody />
-              <div>Im a footer</div>
+              <Footer />
           </div>
       </>
   );

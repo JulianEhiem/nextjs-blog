@@ -44,3 +44,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [ ] Create site logo
 - [ ] edit tab Icon
 - [ ] update site url
+
+## License
+
+This project, with exception to the blog posts content, is licensed under the [MIT](https://opensource.org/licenses/MIT) License.
