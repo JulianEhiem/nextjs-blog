@@ -35,7 +35,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## TODOS
 - [x] Refactor components
 - [ ] Create Scroll to elevate app bar
-- [ ] Create footer
+- [x] Create footer
 - [ ] Create older posts page
 - [ ] Edit posts page
 - [ ] Create a no posts page
@@ -44,6 +44,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [ ] Create site logo
 - [ ] edit tab Icon
 - [ ] update site url
+- [ ] optimize for performance and support in other browsers
+- [ ] refactor, lint and comment code
 
 ## License
 
