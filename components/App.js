@@ -4,6 +4,7 @@ import Title from "./Head/Title";
 import BlogBody from "./Body/BlogBody";
 import {Box, Container, Toolbar} from "@mui/material";
 import Footer from "./Footer/Footer";
+import OlderPosts from "../pages/OlderPosts";
 
 export default function App() {
   return (
@@ -13,7 +14,8 @@ export default function App() {
               <Nav />
               {/*<Title />*/}
               <Toolbar />
-              <BlogBody />
+              {/*<BlogBody />*/}
+              <OlderPosts />
               <Footer />
           </div>
       </>
