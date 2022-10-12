@@ -1,23 +1,13 @@
 import * as React from 'react';
+import {useContext, useEffect, useState} from 'react';
 import styles from "./blogBody.module.css";
-import GridLayout, {Responsive, WidthProvider} from "react-grid-layout";
+import {Responsive, WidthProvider} from "react-grid-layout";
 import sizeMe from "react-sizeme";
-import BlogRight from "./BlogRight/BlogRight";
-import BlogLeft from "./BlogLeft/BlogLeft";
-import BlogMain from "./BlogMain/BlogMain";
-import {useContext, useEffect} from "react";
-import { PostContext } from "../PostContext";
-import { useRouter } from "next/router"
-import {Box, Container, Grid, styled, Typography} from "@mui/material";
-import BlogPageOne from "./BlogMain/BlogPageOne";
-import BlogPositionOne from "./BlogPositions/BlogPostionOne/BlogPositionOne";
-import BlogPositionTwo from "./BlogPositions/BlogPostionTwo/BlogPositionTwo";
-import BlogPositionThree from "./BlogPositions/BlogPostionThree/BlogPositionThree";
-import BlogPositionFour from "./BlogPositions/BlogPostionFour/BlogPositionFour";
-import BlogPositionFive from "./BlogPositions/BlogPostionFive/BlogPositionFive";
-import BlogPositionSix from "./BlogPositions/BlogPostionSix/BlogPositionSix";
-import BlogPositionSeven from "./BlogPositions/BlogPostionSeven/BlogPositionSeven";
+import {PostContext} from "../PostContext";
+import {useRouter} from "next/router"
+import {Box, Button, Container, styled, Typography} from "@mui/material";
 import BlogCard from "./BlogCard";
+import {ArrowForwardIos} from "@mui/icons-material";
 // import BlockContent from '@sanity/block-content-to-react';
 // import dummyFallBack from '../../DummyFallBack'
 
@@ -45,14 +35,18 @@ function BlogBody(props) {
         return layout;
     }
     const [layout = getLayouts(), setLayout] = React.useState(layout);
+    const [display, setDisplay] = useState(false)
+
+
+
     useEffect(() => {
         window.addEventListener('resize', setLayout(getLayouts()))
     })
   const router = useRouter();
   const posts = useContext(PostContext)
-  const tempPosts = posts.mappedPosts
-  const post = tempPosts.reverse()
-
+  const post = posts.mappedPosts
+  const latestPosts = post.slice(-7)
+    const oldPosts = post.slice(0,-7)
     const {width, height} = props.size
 
     const layout1 = [
@@ -126,7 +120,7 @@ function BlogBody(props) {
 
 
       <Container id="main" maxWidth="xl" disableGutters sx={{height: 'unset'}}>
-          <Box  my={4}>
+          <Box  my={4} id="latestPosts">
               <Typography
                   variant="h6"
                   noWrap
@@ -238,29 +232,55 @@ function BlogBody(props) {
                 >
 
                     <Box key="postA" style={{background: 'none'}}>
-                        <BlogCard id="postA" post={post[0]} format={60}/>
+                        <BlogCard id="postA" post={latestPosts[0]} format={60}/>
                     </Box>
                     <Box key="postB" style={{background: 'none'}}>
-                      <BlogCard id="postA" post={post[1]} format={100}/>
+                      <BlogCard id="postA" post={latestPosts[1]} format={100}/>
                     </Box>
                     <div key="postC" style={{background: 'none'}}>
-                        <BlogCard id="postA" post={post[2]} format={75}/>
+                        <BlogCard id="postA" post={latestPosts[2]} format={75}/>
                     </div>
                     <div key="postD" style={{background: 'none'}}>
-                        <BlogCard id="postA" post={post[3]} format={50}/>
+                        <BlogCard id="postA" post={latestPosts[3]} format={50}/>
                     </div>
                     <div key="postE" style={{background: 'none'}}>
-                        <BlogCard id="postA" post={post[4]} format={40}/>
+                        <BlogCard id="postA" post={latestPosts[4]} format={40}/>
                     </div>
                     <div key="postF" style={{background: 'none'}}>
-                        <BlogCard id="postA" post={post[5]} format={75}/>
+                        <BlogCard id="postA" post={latestPosts[5]} format={75}/>
                     </div>
                     <div key="postG" style={{background: 'none'}}>
-                        <BlogCard id="postA" post={post[6]} format={50}/>
+                        <BlogCard id="postA" post={latestPosts[6]} format={50}/>
                     </div>
                 </ResponsiveGridLayout>
 
+
+
           }
+          <Box display="flex" justifyContent="end">
+              <Button variant="text" sx={{color: "purple", justifySelf: "end"}} onClick={() => setDisplay(true)}>
+                  Older posts
+                  <ArrowForwardIos fontSize={"small"}/>
+              </Button>
+          </Box>
+          <Box my={4} id="olderPosts">
+              {posts.length === 0 ? <h2>Nothing here</h2>:
+                  `${display}` === true &&  <React.Fragment>
+                      <Box sx={{display: "flex", gap: "1.3rem", flexWrap: "wrap", justifyContent: "center"}}>
+                      {oldPosts.map(post=>(
+                          <BlogCard post={post} format={75} />
+                      ))}
+                  </Box>
+                      <Box display="flex" justifyContent="end">
+                          <Button variant="text" sx={{color: "purple", justifySelf: "end"}} href="#latestPosts">
+                              Latest posts
+                              <ArrowForwardIos fontSize={"small"}/>
+                          </Button>
+                      </Box>
+                  </React.Fragment>
+
+              }
+          </Box>
       </Container>
     </>
   );

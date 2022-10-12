@@ -14,8 +14,7 @@ export default function App() {
               <Nav />
               {/*<Title />*/}
               <Toolbar />
-              {/*<BlogBody />*/}
-              <OlderPosts />
+              <BlogBody />
               <Footer />
           </div>
       </>
