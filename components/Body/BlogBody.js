@@ -8,6 +8,8 @@ import {useRouter} from "next/router"
 import {Box, Button, Container, styled, Typography} from "@mui/material";
 import BlogCard from "./BlogCard";
 import {ArrowForwardIos} from "@mui/icons-material";
+import Link from "next/link";
+import OlderPosts from "../../pages/OlderPosts";
 // import BlockContent from '@sanity/block-content-to-react';
 // import dummyFallBack from '../../DummyFallBack'
 
@@ -37,6 +39,7 @@ function BlogBody(props) {
     const [layout = getLayouts(), setLayout] = React.useState(layout);
     const [display, setDisplay] = useState(false)
 
+    console.log(display)
 
 
     useEffect(() => {
@@ -258,28 +261,25 @@ function BlogBody(props) {
 
           }
           <Box display="flex" justifyContent="end">
-              <Button variant="text" sx={{color: "purple", justifySelf: "end"}} onClick={() => setDisplay(true)}>
+              <Button variant="text" sx={{color: "purple", justifySelf: "end"}} onClick={() => setDisplay(!display)} >
                   Older posts
                   <ArrowForwardIos fontSize={"small"}/>
               </Button>
           </Box>
-          <Box my={4} id="olderPosts">
-              {posts.length === 0 ? <h2>Nothing here</h2>:
-                  `${display}` === true &&  <React.Fragment>
-                      <Box sx={{display: "flex", gap: "1.3rem", flexWrap: "wrap", justifyContent: "center"}}>
-                      {oldPosts.map(post=>(
-                          <BlogCard post={post} format={75} />
-                      ))}
-                  </Box>
-                      <Box display="flex" justifyContent="end">
-                          <Button variant="text" sx={{color: "purple", justifySelf: "end"}} href="#latestPosts">
-                              Latest posts
-                              <ArrowForwardIos fontSize={"small"}/>
-                          </Button>
-                      </Box>
+          <Box my={4} s sx={{display: {display} ? "block" : "none"}}>
+                 <React.Fragment>
+                  {/*    <Box sx={{display: "flex", gap: "1.3rem", flexWrap: "wrap", justifyContent: "center"}}>*/}
+                  {/*    {oldPosts.map(post=>(*/}
+                  {/*        <BlogCard post={post} format={75} />*/}
+                  {/*    ))}*/}
+                  {/*</Box>*/}
+                  {/*    <Box display="flex" justifyContent="end">*/}
+                  {/*        <Button variant="text" sx={{color: "purple", justifySelf: "end"}} >*/}
+                  {/*            Latest posts*/}
+                  {/*            <ArrowForwardIos fontSize={"small"}/>*/}
+                  {/*        </Button>*/}
+                  {/*    </Box>*/} Hello
                   </React.Fragment>
-
-              }
           </Box>
       </Container>
     </>
