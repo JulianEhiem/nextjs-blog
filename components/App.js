@@ -2,7 +2,7 @@ import styles from "./app.module.css";
 import Nav from "./Nav/Nav";
 import Title from "./Head/Title";
 import BlogBody from "./Body/BlogBody";
-import {Box, Container} from "@mui/material";
+import {Box, Container, Toolbar} from "@mui/material";
 import Footer from "./Footer/Footer";
 
 export default function App() {
@@ -12,6 +12,7 @@ export default function App() {
           <div className={styles.appBackground}>
               <Nav />
               {/*<Title />*/}
+              <Toolbar />
               <BlogBody />
               <Footer />
           </div>

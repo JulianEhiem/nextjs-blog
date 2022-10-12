@@ -34,7 +34,7 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 ## TODOS
 - [x] Refactor components
-- [ ] Create Scroll to elevate app bar
+- [x] Create Scroll to elevate app bar
 - [x] Create footer
 - [ ] Create older posts page
 - [ ] Edit posts page
