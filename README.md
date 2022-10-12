@@ -36,7 +36,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [x] Refactor components
 - [x] Create Scroll to elevate app bar
 - [x] Create footer
-- [ ] Create older posts page
+- [ ] Create older posts page (in progress)
 - [ ] Edit posts page
 - [ ] Create a no posts page
 - [ ] Implement Search feature

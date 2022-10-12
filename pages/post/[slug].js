@@ -3,6 +3,7 @@ import Nav from '../../components/Nav/Nav'
 import imageUrlBuilder from '@sanity/image-url';
 import BlockContent from '@sanity/block-content-to-react';
 import { useState, useEffect } from 'react';
+import {styled, Toolbar} from "@mui/material";
 
 const Post = ({ title, body, image }) => {
 const [imageUrl, setImageUrl] =  useState('');
@@ -15,11 +16,12 @@ useEffect(() => {
 
   setImageUrl(imgBuilder.image(image))
 }, [image]);
- 
-console.log(body)
+
+const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
   return (
     <div>
-      <Nav/>
+      <Nav />
+      <Offset/>
       <div className = {styles.main}>
         <h1 className = {styles.main}>{title}</h1>
         {imageUrl && <img className = {styles.mainImage} src={imageUrl}/> }
