@@ -8,15 +8,6 @@ import {useRouter} from "next/router"
 import {Box, Button, Container, styled, Typography} from "@mui/material";
 import BlogCard from "./BlogCard";
 import {ArrowForwardIos, KeyboardArrowDown, KeyboardArrowUp} from "@mui/icons-material";
-import Link from "next/link";
-import OlderPosts from "../../pages/OlderPosts";
-// import BlockContent from '@sanity/block-content-to-react';
-// import dummyFallBack from '../../DummyFallBack'
-
-const StyledBox = styled(Box)(({theme}) => ({
-    // height: '800px',
-    background: "lightblue"
-}))
 
 const ResponsiveGridLayout = WidthProvider(Responsive)
 
@@ -83,45 +74,8 @@ function BlogBody(props) {
 
 
     const layouts = {lg: layout1, md: layout2, sm: layout3}
-    // const layouts = getLayouts();
-// const post = [1,2]
-  // const title = post.length === 0 ? "Loading" : post[0].title;
-  // const image = post.length === 0 ? "Loading" : post[0].mainImage;
-  // const body = post.length === 0 ? dummyFallBack : post[0].body;
-
-    // console.log(WidthProvider(Responsive))
 
   return (
-    <>
-    {/*  <div className={styles.blogBodyContainer}>*/}
-    {/*    <BlogMain />*/}
-    {/*    <BlogLeft />*/}
-    {/*    <BlogRight />*/}
-    {/*  </div>*/}
-    {/*  <div className={styles.titleContainer}>*/}
-    {/*  <h2>Older posts</h2>*/}
-    {/*</div>*/}
-    {/*  <div className={styles.additionalPosts}>*/}
-    {/*    {post.length < 7 ? <h2>Nothing here</h2> :*/}
-    {/*    post.slice(6).map((p, index) => (*/}
-    {/*      <div onClick = {() => router.push(`/post/${p.slug.current}`)} key = {index} className={styles.additionalPostsContainer}>*/}
-    {/*        <div className={styles.additionalPostsImage}>*/}
-    {/*          <img src={p.mainImage} width="100%"/>*/}
-    {/*        </div>*/}
-    {/*        <div className={styles.additionalPostsTitle}>*/}
-    {/*          <h1>{p.title}</h1>*/}
-    {/*        </div>*/}
-    {/*        /!* <div className={styles.additionalPostsBody}>*/}
-    {/*          <p>*/}
-    {/*          <BlockContent blocks={p.body} className={styles.postsBody}/>*/}
-    {/*          </p>*/}
-    {/*        </div> *!/*/}
-    {/*      </div>*/}
-    {/*    ))*/}
-    {/*    }*/}
-    {/*  </div>*/}
-
-
       <Container id="main" maxWidth="xl" disableGutters sx={{height: 'unset'}}>
           <Box  my={4} id="latestPosts">
               <Typography
@@ -141,96 +95,11 @@ function BlogBody(props) {
 
           {post.length === 0 ?
               <h2>nothing</h2> :
-              //             <Box
-              //                 sx={{
-              //                     display: 'grid',
-              //                     gridTemplateColumns: 'repeat(4, 1fr)',
-              //                     gap: 1,
-              //                     gridTemplateRows: 'auto',
-              //                     gridTemplateAreas: `"header header header header"
-              // "main main . sidebar"
-              // "footer footer footer footer"`,
-              //                 }}
-              //             >
-              //                 <Box sx={{ gridArea: 'header', bgcolor: 'primary.main' }} >Header</Box>
-              //                 <Box sx={{ gridArea: 'main', bgcolor: 'secondary.main' }}>Main</Box>
-              //                 <Box sx={{ gridArea: 'sidebar', bgcolor: 'error.main' }}>Sidebar</Box>
-              //                 <Box sx={{ gridArea: 'footer', bgcolor: 'warning.dark' }}>Footer</Box>
-              //             </Box>
-              //             <Grid container spacing={2} className={styles.gridLayout}>
-              // <Grid container spacing={2}>
-              //     <Grid  item xs={12} sm={6} md={3}>
-              //         <BlogCard id="postA" post={post[0]}/>
-              //     </Grid>
-              //     <Grid item xs={12} sm={6} md={4}>
-              //         <BlogCard id="postB" post={post[1]}/>
-              //     </Grid>
-              //     <Grid item xs={12} sm={6} md={2}>
-              //         <BlogCard id="postC" post={post[2]}/>
-              //     </Grid>
-              //     <Grid item xs={12} sm={6} md={3}>
-              //         <BlogCard id="postD" post={post[3]}/>
-              //     </Grid>
-              //     <Grid item xs={12} sm={6}>
-              //         <BlogCard id="postE" post={post[4]}/>
-              //     </Grid>
-              //     <Grid item xs={12} sm={6}>
-              //         <BlogCard id="postF" post={post[5]}/>
-              //     </Grid>
-              //     <Grid item xs={12}>
-              //         <BlogCard id="postG" post={post[6]}/>
-              //     </Grid>
-              // </Grid>
-              // <Grid container spacing={2} direction={{xs: 'row', sm: 'row', md: 'column'}} columns={{md: 4}} justifyContent={"center"}>
-              //     <Grid container item id="row1" spacing={2} md={3} direction={{xs: "row", md: 'column'}}>
-              //         <Grid  item xs={12} sm={6} md={12}>
-              //             {/*<BlogCard id="postA" post={post[0]}/>*/}
-              //             <div style={{background: "red"}}>A</div>
-              //         </Grid>
-              //         <Grid item xs={12} sm={6} md={12}>
-              //             {/*<BlogCard id="postB" post={post[1]}/>*/}
-              //             <div style={{background: "lawngreen"}}>B</div>
-              //         </Grid>
-              //     </Grid>
-              //     <Grid container item id="row2" sm={6} direction="column">
-              //         <Grid item xs={12} sm={6} md={2}>
-              //             {/*<BlogCard id="postC" post={post[2]}/>*/}
-              //             <div style={{background: "lightblue"}}>C</div>
-              //
-              //         </Grid>
-              //     </Grid>
-              //     <Grid container item id="row3" spacing={2} direction={{xs: "row", md: 'column'}}>
-              //         <Grid item xs={12} sm={6} md={3}>
-              //             {/*<BlogCard id="postD" post={post[3]}/>*/}
-              //             <div style={{background: "sandybrown"}}>D</div>
-              //
-              //         </Grid>
-              //         <Grid item xs={12} sm={6}>
-              //             {/*<BlogCard id="postE" post={post[4]}/>*/}
-              //             <div style={{background: "peachpuff"}}>E</div>
-              //
-              //         </Grid>
-              //     </Grid>
-              //     <Grid container item id="row4" spacing={2} direction={{xs: "row", md: 'column'}}>
-              //         <Grid item xs={12} sm={6}>
-              //             {/*<BlogCard id="postF" post={post[5]}/>*/}
-              //             <div style={{background: "yellow"}}>F</div>
-              //
-              //         </Grid>
-              //         <Grid item xs={12} sm={6}>
-              //             {/*<BlogCard id="postG" post={post[6]}/>*/}
-              //             <div style={{background: "lightgray"}}>G</div>
-              //
-              //         </Grid>
-              //     </Grid>
-              // </Grid>
                 <ResponsiveGridLayout
-                    className={styles.gridLayout}
                     isDraggable ={false}
                     isResizable ={false}
                     layouts={layouts}
-                    breakpoints={{ lg: 1199, md: 900, sm: 600 }}
-                >
+                    breakpoints={{ lg: 1199, md: 900, sm: 600 }}>
 
                     <Box key="postA" style={{background: 'none'}}>
                         <BlogCard id="postA" post={latestPosts[0]} format={60}/>
@@ -285,7 +154,6 @@ function BlogBody(props) {
 
 
       </Container>
-    </>
   );
 }
 export default sizeMe({monitorHeight: true})(BlogBody);
