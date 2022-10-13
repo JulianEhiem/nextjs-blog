@@ -230,8 +230,6 @@ function BlogBody(props) {
                     isResizable ={false}
                     layouts={layouts}
                     breakpoints={{ lg: 1199, md: 900, sm: 600 }}
-                    // cols={{lg: 12, md: 2, sm: 1}}
-                    // width={1200}
                 >
 
                     <Box key="postA" style={{background: 'none'}}>
@@ -260,48 +258,34 @@ function BlogBody(props) {
 
 
           }
-          <Box display="flex" justifyContent="end" sx={{position: "sticky",top: 0}} >
-              <Button variant="text" sx={{color: "purple", justifySelf: "end"}} onClick={() => setDisplay(!display)} href={!display ? "#latestPosts" : "#olderPosts"} >
-                  {display ? "Latest" : "Older"} posts
+              <Box display={display ? "none" : "flex"} justifyContent="end">
+                  <Button variant="text" sx={{color: "purple", justifySelf: "end"}} onClick={() => setDisplay(!display)} href={!display ? "#latestPosts" : "#olderPosts"} >
+                      {display ? "Latest" : "Older"} posts
+                      {display ?
+                          <KeyboardArrowUp fontSize={"small"}/>:
+                          <KeyboardArrowDown fontSize={"small"}/>
+                      }
+                  </Button>
+              </Box>
+              <Box my={4} sx={{display: {display} ? "block" : "none"}}>
                   {display ?
-                      <KeyboardArrowUp fontSize={"small"}/>:
-                      <KeyboardArrowDown fontSize={"small"}/>
-                  }
-              </Button>
-          </Box>
-          <Box my={4} s sx={{display: {display} ? "block" : "none"}}>
-              {display ?
-                  <React.Fragment>
-                      <Box id="olderPosts" sx={{display: "flex", gap: "1.3rem", flexWrap: "wrap", justifyContent: "center"}}>
-                          {oldPosts.map(post=>(
-                              <BlogCard post={post} format={75} />
-                          ))}
-                      </Box>
-                  </React.Fragment> : <></>}
-          </Box>
+                      <React.Fragment>
+                          <Box id="olderPosts" sx={{display: "flex", gap: "1.3rem", flexWrap: "wrap", justifyContent: "center"}}>
+                              {oldPosts.map(post=>(
+                                  <BlogCard post={post} format={75} />
+                              ))}
+                          </Box>
+                          <Box display="flex" justifyContent="end">
+                              <Button variant="text" sx={{color: "purple", justifySelf: "end"}} onClick={() => setDisplay(!display)} href="#latestPosts" >
+                                  Latest posts <KeyboardArrowUp fontSize={"small"}/>
+                              </Button>
+                          </Box>
+                      </React.Fragment> : <></>}
+              </Box>
+
+
       </Container>
     </>
   );
 }
-//
-// //             <StyledBox container spacing={2} className={styles.gridLayout}>
-// {/*<BlogCard id="postA" post={post[0]} format={50} />*/}
-// {/*<BlogCard id="postB" post={post[1]} format={100} />*/}
-// {/*<BlogCard id="postC" post={post[2]} format={75} />*/}
-// {/*<BlogCard id="postD" post={post[3]} format={50} />*/}
-// {/*<BlogCard id="postE" post={post[4]} format={50} />*/}
-// {/*<BlogCard id="postF" post={post[5]} format={75} />*/}
-// {/*<BlogCard id="postG" post={post[6]} format={50} />*/}
-// {/*</StyledBox>*/}
-// }
-// {/*<div className={styles.gridLayout}>*/}
-// {/*    <div id="postA" style={{background: 'red'}}>A</div>*/}
-// {/*    <div id="postB" style={{background: 'yellow'}}>B</div>*/}
-// {/*    <div id="postC" style={{background: 'orange'}}>C</div>*/}
-// {/*    <div id="postD" style={{background: 'lightblue'}}>D</div>*/}
-// {/*    <div id="postE" style={{background: 'plum'}}>E</div>*/}
-// {/*    <div id="postF" style={{background: 'sandybrown'}}>F</div>*/}
-// {/*    <div id="postG" style={{background: 'darksalmon'}}>G</div>*/}
-// {/*</div>*/}
-
 export default sizeMe({monitorHeight: true})(BlogBody);

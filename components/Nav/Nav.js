@@ -71,7 +71,7 @@ const ElevationScroll = (props) => {
     })
     return React.cloneElement(children, {
         // elevation: trigger ? 4 : 0,
-        style: {background: trigger ? "transparent" : "transparent", boxShadow: trigger ? "0 5px 5px  -3px rgb(0 0 0 /20%)" : "none" }
+        style: {background: trigger ? "#f9f4ec" : "transparent", boxShadow: trigger ? "0 5px 5px  -3px rgb(0 0 0 /20%)" : "none" }
     })
 }
 
