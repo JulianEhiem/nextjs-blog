@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import App from "../components/App";
 import {PostContext} from "../components/PostContext"
 import imageUrlBuilder from '@sanity/image-url';
-import OlderPosts from "./OlderPosts";
 
 // import PostContentProvider from "../components/PostContext";
 
