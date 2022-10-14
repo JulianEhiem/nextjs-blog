@@ -30,7 +30,6 @@ function BlogBody(props) {
     const [layout = getLayouts(), setLayout] = React.useState(layout);
     const [display, setDisplay] = useState(false)
 
-    console.log(display)
 
 
     useEffect(() => {
@@ -138,7 +137,7 @@ function BlogBody(props) {
                       <React.Fragment>
                           <Box id="olderPosts" sx={{display: "flex", gap: "1.3rem", flexWrap: "wrap", justifyContent: "center"}}>
                               {oldPosts.map(post=>(
-                                  <BlogCard post={post} format={75} />
+                                  <BlogCard post={post} key={post._id} format={75} />
                               ))}
                           </Box>
                           <Box display="flex" justifyContent="end">

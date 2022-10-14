@@ -38,7 +38,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [x] Create footer
 - [x] Create older posts page (in progress)
   - [x] add toggle for older posts
-- [ ] Edit posts page
+- [x] Edit posts page
 - [ ] Create a no posts page
 - [ ] Implement Search feature
 - [ ] edit external linked appearance
