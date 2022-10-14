@@ -3,7 +3,9 @@ import Nav from '../../components/Nav/Nav'
 import imageUrlBuilder from '@sanity/image-url';
 import BlockContent from '@sanity/block-content-to-react';
 import { useState, useEffect } from 'react';
-import {styled, Toolbar} from "@mui/material";
+import {Box, Container, styled, Toolbar, Typography} from "@mui/material";
+import Footer from "../../components/Footer/Footer";
+import * as React from "react";
 
 const Post = ({ title, body, image }) => {
 const [imageUrl, setImageUrl] =  useState('');
@@ -19,19 +21,66 @@ useEffect(() => {
 
 const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
   return (
-    <div>
+    <>
+      <Box  sx={{display: "flex", width: "100vw",  minHeight: "100vh", padding: "2rem", justifyContent: "center"}}>
       <Nav />
       <Offset/>
-      <div className = {styles.main}>
-        <h1 className = {styles.main}>{title}</h1>
-        {imageUrl && <img className = {styles.mainImage} src={imageUrl}/> }
+        <Box sx={{display: "block", maxWidth: 900, marginTop: "3rem"}}>
+          <Typography
+              variant="h5"
+              component="div"
+              sx={{
+                display: "flex",
+                fontFamily: "Abril Fatface, serif",
+                fontSize: "1.65rem",
+                justifyContent: "center",
+              }}
+          >
+            {title}
+          </Typography>
+          <Container maxWidth="xl">
+            {imageUrl &&
+                <Box sx={{display: "flex", justifyContent: "center", minWidth: 300, maxWidth:900, maxHeight: 450, margin: "2rem auto"}}>
+                  <img style={{width:"100%", objectFit: "cover"}} src={imageUrl} alt={"blog image"}/>
+                </Box>
 
-        <div className ={styles.body}> 
-          <BlockContent blocks={body}/>
-        </div>
+            }
+            <Typography
+                sx={{
+                  overflow: 'hidden',
+                  fontFamily: "Roboto, Helvetica, Arial",
+                  fontWeight: 400,
+                  // fontSize: "0.875rem",
+                  fontSize: "1rem",
+                  WebkitBoxOrient: 'vertical',
+                  // WebkitLineClamp: (props.format === 100 && window.innerWidth >= screenSizes.lg) || (props.format === 50 && window.innerWidth >= screenSizes.lg) ? 13 : 1,
+                  WebkitLineClamp: 10,
+                  lineHeight: 1.9,
+                  textAlign: "justify"
+                }}
+                // variant="body2"
+                variant="string"
+                color="text.secondary">
+              <BlockContent blocks={body}/>
+            </Typography>
+          </Container>
 
-      </div>
-    </div>
+        </Box>
+      {/*<div className = {styles.main}>*/}
+      {/*  <h1 className = {styles.main}>{title}</h1>*/}
+      {/*  <div className = {styles.mainImage} >*/}
+      {/*    {imageUrl && <img src={imageUrl} style={{objectFit: "fill", width: "100%"}}/> }*/}
+      {/*  </div>*/}
+
+
+      {/*  <div className ={styles.body}>*/}
+      {/*    <BlockContent blocks={body}/>*/}
+      {/*  </div>*/}
+
+      {/*</div>*/}
+      </Box>
+      <Footer />
+    </>
   );
 };
 

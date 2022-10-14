@@ -1,7 +1,7 @@
 .main{
     margin: auto;
     width: 750px;
-    max-width: calc(100vw - 90px);
+    /*max-width: calc(100vw - 90px);*/
 }
 
 .main h1{
@@ -10,8 +10,10 @@
 }
 
 .mainImage {
-    margin-top: 1rem;
-    width: 100%;
+    display: block;
+    margin: 1rem auto;
+    width: 80vw;
+    max-width: inherit;
 }
 
 .body p{
