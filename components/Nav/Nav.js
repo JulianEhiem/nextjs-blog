@@ -105,7 +105,7 @@ useEffect(() => {
   return (
           <ElevationScroll props >
 
-                  <AppBar id="appBar" position="fixed" className={styles.appContainer} sx={{top: 0}} >
+                  <AppBar id="appBar" position="fixed" className={styles.appContainer} sx={{top: 0, background: "transparent"}} >
                       <Container maxWidth="xl">
                           <Toolbar disableGutters>
                               <Grid container spacing={4} justifyContent="space-between" alignItems={"center"}>
