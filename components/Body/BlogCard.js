@@ -11,7 +11,7 @@ export default function BlogCard(props) {
 
     return (
         <>
-            <Box sx={{display: "flex", marginX: "0.5rem"}} justifyContent="center">
+            <Box sx={{display: "flex", marginX: "0.6rem"}} justifyContent="center">
                 <Card
                     elevation={window.innerWidth > screenSizes.md ? 0 : 2}
                     sx={{
@@ -50,6 +50,7 @@ export default function BlogCard(props) {
                             component="div"
                             sx={{
                                 fontFamily: "Abril Fatface, serif",
+                                fontSize: "1.65rem"
 
                             }}
                         >
@@ -62,20 +63,21 @@ export default function BlogCard(props) {
                                 overflow: 'hidden',
                                 fontFamily: "Roboto, Helvetica, Arial",
                                 fontWeight: 400,
-                                fontSize: "0.875rem",
+                                // fontSize: "0.875rem",
+                                fontSize: "1rem",
                                 WebkitBoxOrient: 'vertical',
                                 // WebkitLineClamp: (props.format === 100 && window.innerWidth >= screenSizes.lg) || (props.format === 50 && window.innerWidth >= screenSizes.lg) ? 13 : 1,
                                 WebkitLineClamp: (window.innerWidth >= screenSizes.lg) ? () => {
                                     switch(props.format){
-                                        case 100: return 12;
+                                        case 100: return 10;
                                         case 75: return 1;
-                                        case 60: return 14
-                                        case 50: return 12;
-                                        case 40: return 8
+                                        case 60: return 11;
+                                        case 50: return 9;
+                                        case 40: return 6
 
                             }
                                 }: 1,
-                                lineHeight: 1.6,
+                                lineHeight: 1.9,
                                 textAlign: "justify"
                             }}
                             // variant="body2"

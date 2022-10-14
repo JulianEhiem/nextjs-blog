@@ -76,7 +76,7 @@ function BlogBody(props) {
     const layouts = {lg: layout1, md: layout2, sm: layout3}
 
   return (
-      <Container id="main" maxWidth="xl" disableGutters sx={{height: 'unset'}}>
+      <Container id="main" maxWidth="xl" disableGutters sx={{height: 'unset', inset: "2rem"}}>
           <Box  my={4} id="latestPosts">
               <Typography
                   variant="h6"
@@ -123,9 +123,6 @@ function BlogBody(props) {
                         <BlogCard id="postA" post={latestPosts[6]} format={50}/>
                     </div>
                 </ResponsiveGridLayout>
-
-
-
           }
               <Box display={display ? "none" : "flex"} justifyContent="end">
                   <Button variant="text" sx={{color: "purple", justifySelf: "end"}} onClick={() => setDisplay(!display)} href={!display ? "#latestPosts" : "#olderPosts"} >
@@ -151,8 +148,6 @@ function BlogBody(props) {
                           </Box>
                       </React.Fragment> : <></>}
               </Box>
-
-
       </Container>
   );
 }
