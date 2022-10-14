@@ -44,13 +44,13 @@ function BlogBody(props) {
     const {width, height} = props.size
 
     const layout1 = [
-        {i: "postA", x: 0, y: 0, w: 3, h: 3},
+        {i: "postA", x: 0.2, y: 0, w: 2.8, h: 3},
         {i: "postB", x: 3, y: 0, w: 4, h: 5},
         {i: "postC", x: 7, y: 0, w: 2, h: 2.5},
-        {i: "postD", x: 9, y: 0, w: 3, h: 2.5},
-        {i: "postE", x: 0, y: 4, w: 3, h: 2},
+        {i: "postD", x: 9, y: 0, w: 2.8, h: 2.5},
+        {i: "postE", x: 0.2, y: 4, w: 2.8, h: 2},
         {i: "postF", x: 7, y: 3, w: 2, h: 2.5},
-        {i: "postG", x: 9, y: 3, w: 3, h: 2.5},
+        {i: "postG", x: 9, y: 3, w: 2.8, h: 2.5},
     ]
     const layout2 = [
         {i: "postA", x: 0, y: 0, w: 5, h: 2.1},
@@ -76,7 +76,7 @@ function BlogBody(props) {
     const layouts = {lg: layout1, md: layout2, sm: layout3}
 
   return (
-      <Container id="main" maxWidth="xl" disableGutters sx={{height: 'unset', inset: "2rem"}}>
+      <Container id="main" maxWidth="xl" disableGutters sx={{height: 'unset', margin: "auto", boxSizing: "border-box"}}>
           <Box  my={4} id="latestPosts">
               <Typography
                   variant="h6"
@@ -105,22 +105,22 @@ function BlogBody(props) {
                         <BlogCard id="postA" post={latestPosts[0]} format={60}/>
                     </Box>
                     <Box key="postB" style={{background: 'none'}}>
-                      <BlogCard id="postA" post={latestPosts[1]} format={100}/>
+                      <BlogCard id="postB" post={latestPosts[1]} format={100}/>
                     </Box>
                     <div key="postC" style={{background: 'none'}}>
-                        <BlogCard id="postA" post={latestPosts[2]} format={75}/>
+                        <BlogCard id="postC" post={latestPosts[2]} format={75}/>
                     </div>
                     <div key="postD" style={{background: 'none'}}>
-                        <BlogCard id="postA" post={latestPosts[3]} format={50}/>
+                        <BlogCard id="postD" post={latestPosts[3]} format={50}/>
                     </div>
                     <div key="postE" style={{background: 'none'}}>
-                        <BlogCard id="postA" post={latestPosts[4]} format={40}/>
+                        <BlogCard id="postE" post={latestPosts[4]} format={40}/>
                     </div>
                     <div key="postF" style={{background: 'none'}}>
-                        <BlogCard id="postA" post={latestPosts[5]} format={75}/>
+                        <BlogCard id="postF" post={latestPosts[5]} format={75}/>
                     </div>
                     <div key="postG" style={{background: 'none'}}>
-                        <BlogCard id="postA" post={latestPosts[6]} format={50}/>
+                        <BlogCard id="postG" post={latestPosts[6]} format={50}/>
                     </div>
                 </ResponsiveGridLayout>
           }

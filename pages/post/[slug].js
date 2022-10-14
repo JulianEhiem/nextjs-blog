@@ -27,12 +27,12 @@ const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
       <Offset/>
         <Box sx={{display: "block", maxWidth: 900, marginTop: "3rem"}}>
           <Typography
-              variant="h5"
+              variant="h4"
               component="div"
               sx={{
                 display: "flex",
                 fontFamily: "Abril Fatface, serif",
-                fontSize: "1.65rem",
+                // fontSize: "1.65rem",
                 justifyContent: "center",
               }}
           >
@@ -50,17 +50,13 @@ const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
                   overflow: 'hidden',
                   fontFamily: "Roboto, Helvetica, Arial",
                   fontWeight: 400,
-                  // fontSize: "0.875rem",
                   fontSize: "1rem",
                   WebkitBoxOrient: 'vertical',
-                  // WebkitLineClamp: (props.format === 100 && window.innerWidth >= screenSizes.lg) || (props.format === 50 && window.innerWidth >= screenSizes.lg) ? 13 : 1,
-                  WebkitLineClamp: 10,
                   lineHeight: 1.9,
                   textAlign: "justify"
                 }}
-                // variant="body2"
                 variant="string"
-                color="text.secondary">
+               >
               <BlockContent blocks={body}/>
             </Typography>
           </Container>
