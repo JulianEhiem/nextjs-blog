@@ -1,16 +1,12 @@
 // import MyApp from './_app'
 import { useState, useEffect } from 'react';
-import App from "../components/App";
-import {PostContext} from "../components/PostContext"
 import imageUrlBuilder from '@sanity/image-url';
+import App from '../components/App';
+import { PostContext } from '../components/PostContext';
 
 // import PostContentProvider from "../components/PostContext";
 
-
-
-
-
-export default function Home({posts}) {
+export default function Home({ posts }) {
 // console.log(posts)
   const [mappedPosts, setMappedPosts] = useState([]);
 
@@ -22,12 +18,10 @@ export default function Home({posts}) {
       });
 
       setMappedPosts(
-        posts.map(p => {
-          return {
-            ...p,
-            mainImage: imgBuilder.image(p.mainImage).width(800).height(600),
-          }
-        })
+        posts.map((p) => ({
+          ...p,
+          mainImage: imgBuilder.image(p.mainImage).width(800).height(600),
+        })),
       );
     } else {
       setMappedPosts([]);
@@ -35,32 +29,30 @@ export default function Home({posts}) {
   }, [posts]);
   return (
     <div>
-      <PostContext.Provider value={{mappedPosts, useEffect}}>
-        <App/>
+      <PostContext.Provider value={{ mappedPosts, useEffect }}>
+        <App />
       </PostContext.Provider>
     </div>
   );
 }
 
-export const getServerSideProps = async pageContext => {
+export const getServerSideProps = async (pageContext) => {
   const query = encodeURIComponent('*[ _type == "post" ]');
   const url = `https://nttcyj7x.api.sanity.io/v1/data/query/production?query=${query}`;
-  const result = await fetch(url).then(res => res.json());
+  const result = await fetch(url).then((res) => res.json());
 
   if (!result.result || !result.result.length) {
     return {
       props: {
         posts: [],
-      }
-    }
-  } else {
-    return {
-      props: {
-        posts: result.result,
-      }
-    }
+      },
+    };
   }
+  return {
+    props: {
+      posts: result.result,
+    },
+  };
+
   // console.log(posts)
 };
-
-
