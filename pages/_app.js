@@ -1,17 +1,10 @@
-// import '../styles/globals.css'
-// // import App from "../components/App";
+import React from 'react';
+import '../styles/globals.css';
 
-
-// function MyApp(){
-//   return <>Nothing Here</>
-// }
-
-// export default MyApp
-
-import '../styles/globals.css'
-
+// eslint-disable-next-line react/prop-types
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;

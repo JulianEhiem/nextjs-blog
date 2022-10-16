@@ -1,16 +1,14 @@
-// import MyApp from './_app'
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import imageUrlBuilder from '@sanity/image-url';
 import App from '../components/App';
 import { PostContext } from '../components/PostContext';
 
-// import PostContentProvider from "../components/PostContext";
-
+// eslint-disable-next-line react/prop-types
 export default function Home({ posts }) {
-// console.log(posts)
   const [mappedPosts, setMappedPosts] = useState([]);
 
   useEffect(() => {
+    // eslint-disable-next-line react/prop-types
     if (posts.length) {
       const imgBuilder = imageUrlBuilder({
         projectId: 'nttcyj7x',
@@ -18,6 +16,7 @@ export default function Home({ posts }) {
       });
 
       setMappedPosts(
+        // eslint-disable-next-line react/prop-types
         posts.map((p) => ({
           ...p,
           mainImage: imgBuilder.image(p.mainImage).width(800).height(600),
@@ -29,6 +28,7 @@ export default function Home({ posts }) {
   }, [posts]);
   return (
     <div>
+      {/* eslint-disable-next-line react/jsx-no-constructed-context-values */}
       <PostContext.Provider value={{ mappedPosts, useEffect }}>
         <App />
       </PostContext.Provider>
@@ -36,7 +36,7 @@ export default function Home({ posts }) {
   );
 }
 
-export const getServerSideProps = async (pageContext) => {
+export const getServerSideProps = async () => {
   const query = encodeURIComponent('*[ _type == "post" ]');
   const url = `https://nttcyj7x.api.sanity.io/v1/data/query/production?query=${query}`;
   const result = await fetch(url).then((res) => res.json());
@@ -53,6 +53,4 @@ export const getServerSideProps = async (pageContext) => {
       posts: result.result,
     },
   };
-
-  // console.log(posts)
 };

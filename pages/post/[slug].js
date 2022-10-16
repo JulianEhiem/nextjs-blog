@@ -2,12 +2,13 @@ import imageUrlBuilder from '@sanity/image-url';
 import BlockContent from '@sanity/block-content-to-react';
 import { useState, useEffect } from 'react';
 import {
-  Box, Container, styled, Toolbar, Typography,
+  Box, Container, styled, Typography,
 } from '@mui/material';
 import * as React from 'react';
 import Footer from '../../components/Footer/Footer';
 import Nav from '../../components/Nav/Nav';
 
+// eslint-disable-next-line react/prop-types
 function Post({ title, body, image }) {
   const [imageUrl, setImageUrl] = useState('');
 
@@ -49,7 +50,7 @@ function Post({ title, body, image }) {
                   display: 'flex', justifyContent: 'center', minWidth: 300, maxWidth: 900, maxHeight: 450, margin: '2rem auto',
                 }}
                 >
-                  <img style={{ width: '100%', objectFit: 'cover' }} src={imageUrl} alt="blog image" />
+                  <img style={{ width: '100%', objectFit: 'cover' }} src={imageUrl} alt="blog" />
                 </Box>
                 )}
             <Typography

@@ -1,4 +1,7 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import React from 'react';
+import Document, {
+  Html, Head, Main, NextScript,
+} from 'next/document';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -11,8 +14,8 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
-            <link rel="preconnect" href="https://fonts.googleapis.com"/>
-            <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet"/>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet" />
           <link
             href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap"
             rel="stylesheet"
