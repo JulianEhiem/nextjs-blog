@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import {
-  Box, Card, CardContent, CardMedia, Typography, styled,
+  Box, Card, CardContent, CardMedia, Typography,
 } from '@mui/material';
 import BlockContent from '@sanity/block-content-to-react';
 import * as React from 'react';
@@ -9,9 +9,15 @@ const screenSizes = {
   sm: 600, md: 900, lg: 1200, xl: 1536,
 };
 
-export default function BlogCard(props) {
+// eslint-disable-next-line react/prop-types
+export default function BlogCard({
+  // eslint-disable-next-line react/prop-types
+  format, post: {
+  // eslint-disable-next-line react/prop-types
+    body, mainImage, slug, title,
+  },
+}) {
   const router = useRouter();
-
   return (
     <Box sx={{ display: 'flex', marginX: '0.6rem' }} justifyContent="center">
       <Card
@@ -26,9 +32,11 @@ export default function BlogCard(props) {
             transform: 'scale(1.01, 1.01)',
           },
         }}
-        onClick={() => router.push(`/post/${props.post.slug.current}`)}
+        /* eslint-disable-next-line react/prop-types */
+        onClick={() => router.push(`/post/${slug.current}`)}
       >
-        {(props.format < 75 && window.innerWidth > screenSizes.lg) ? <></>
+        {/* eslint-disable-next-line react/jsx-no-useless-fragment */}
+        {(format < 75 && window.innerWidth > screenSizes.lg) ? <></>
           : (
             <CardMedia
               component="img"
@@ -37,12 +45,13 @@ export default function BlogCard(props) {
                             // height={{xs: "160px", lg: "50px"}}
                             // height= "50"
               sx={{
-                height: props.format === 75 ? 250 : 'unset',
+                height: format === 75 ? 250 : 'unset',
                 maxHeight: { xs: 160, lg: 350 },
                 marginBottom: { lg: '1rem' },
                 // borderRadius: 0
               }}
-              image={props.post.mainImage.toString()}
+                // eslint-disable-next-line react/destructuring-assignment,react/prop-types
+              image={mainImage.toString()}
             />
           )}
 
@@ -56,26 +65,25 @@ export default function BlogCard(props) {
 
             }}
           >
-            {props.post.title}
-            {/* A really really really really really long title that seemingly has no end but will end soon enough */}
+            {title}
           </Typography>
           <Typography
             sx={{
-              display: { xs: '-webkit-box', md: `${(props.format === 75 && window.innerWidth >= screenSizes.lg) ? 'none' : '-webkit-box'}` },
+              display: { xs: '-webkit-box', md: `${(format === 75 && window.innerWidth >= screenSizes.lg) ? 'none' : '-webkit-box'}` },
               overflow: 'hidden',
               fontFamily: 'Roboto, Helvetica, Arial',
               fontWeight: 400,
               // fontSize: "0.875rem",
               fontSize: '1rem',
               WebkitBoxOrient: 'vertical',
-              // WebkitLineClamp: (props.format === 100 && window.innerWidth >= screenSizes.lg) || (props.format === 50 && window.innerWidth >= screenSizes.lg) ? 13 : 1,
               WebkitLineClamp: (window.innerWidth >= screenSizes.lg) ? () => {
-                switch (props.format) {
+                switch (format) {
                   case 100: return 10;
                   case 75: return 1;
                   case 60: return 11;
                   case 50: return 9;
                   case 40: return 6;
+                  default: return 1;
                 }
               } : 1,
               lineHeight: 1.9,
@@ -85,7 +93,7 @@ export default function BlogCard(props) {
             variant="string"
             color="text.secondary"
           >
-            <BlockContent blocks={props.post.body} />
+            <BlockContent blocks={body} />
           </Typography>
         </CardContent>
       </Card>
