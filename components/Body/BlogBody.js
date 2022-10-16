@@ -111,13 +111,14 @@ function BlogBody(props) {
 
   useEffect(() => {
     window.addEventListener('resize', setLayout(getLayouts()));
-  });
+  }, [layout]);
   useRouter();
   const posts = useContext(PostContext);
   const post = posts.mappedPosts;
   const latestPosts = post.slice(-7);
   const oldPosts = post.slice(0, -7);
 
+  // console.log(post);
   return (
     <Container id="main" maxWidth="xl" disableGutters sx={{ height: 'unset', margin: 'auto', boxSizing: 'border-box' }}>
       <Box my={4} id="latestPosts">
@@ -189,8 +190,8 @@ function BlogBody(props) {
                   display: 'flex', gap: '1.3rem', flexWrap: 'wrap', justifyContent: 'center',
                 }}
               >
-                {oldPosts.map(() => (
-                  <BlogCard post={post} key={post.id} format={75} />
+                {oldPosts.map((oldPost) => (
+                  <BlogCard post={oldPost} key={oldPost.title} format={75} />
                 ))}
               </Box>
               <Box display="flex" justifyContent="end">

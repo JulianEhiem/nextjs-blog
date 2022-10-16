@@ -9,15 +9,15 @@ const screenSizes = {
   sm: 600, md: 900, lg: 1200, xl: 1536,
 };
 
-// eslint-disable-next-line react/prop-types
 export default function BlogCard({
   // eslint-disable-next-line react/prop-types
   format, post: {
-  // eslint-disable-next-line react/prop-types
+    // eslint-disable-next-line react/prop-types
     body, mainImage, slug, title,
   },
 }) {
   const router = useRouter();
+  // console.log(props.post);
   return (
     <Box sx={{ display: 'flex', marginX: '0.6rem' }} justifyContent="center">
       <Card
@@ -35,25 +35,23 @@ export default function BlogCard({
         /* eslint-disable-next-line react/prop-types */
         onClick={() => router.push(`/post/${slug.current}`)}
       >
-        {/* eslint-disable-next-line react/jsx-no-useless-fragment */}
-        {(format < 75 && window.innerWidth > screenSizes.lg) ? <></>
-          : (
-            <CardMedia
-              component="img"
-              alt="green iguana"
+        {!(format < 75 && window.innerWidth > screenSizes.lg) ? (
+          <CardMedia
+            component="img"
+            alt="green iguana"
                             // height={window.innerWidth < screenSizes.md ? 160: 180}
                             // height={{xs: "160px", lg: "50px"}}
                             // height= "50"
-              sx={{
-                height: format === 75 ? 250 : 'unset',
-                maxHeight: { xs: 160, lg: 350 },
-                marginBottom: { lg: '1rem' },
-                // borderRadius: 0
-              }}
+            sx={{
+              height: format === 75 ? 250 : 'unset',
+              maxHeight: { xs: 160, lg: 350 },
+              marginBottom: { lg: '1rem' },
+            // borderRadius: 0
+            }}
                 // eslint-disable-next-line react/destructuring-assignment,react/prop-types
-              image={mainImage.toString()}
-            />
-          )}
+            image={mainImage.toString()}
+          />
+        ) : <div />}
 
         <CardContent sx={{ padding: { lg: '0 0 24px' } }}>
           <Typography
@@ -76,6 +74,7 @@ export default function BlogCard({
               // fontSize: "0.875rem",
               fontSize: '1rem',
               WebkitBoxOrient: 'vertical',
+              // eslint-disable-next-line consistent-return
               WebkitLineClamp: (window.innerWidth >= screenSizes.lg) ? () => {
                 switch (format) {
                   case 100: return 10;
@@ -83,7 +82,8 @@ export default function BlogCard({
                   case 60: return 11;
                   case 50: return 9;
                   case 40: return 6;
-                  default: return 1;
+                  default:
+                    break;
                 }
               } : 1,
               lineHeight: 1.9,
