@@ -4,9 +4,10 @@ export default function BrandLogo() {
   return (
   // eslint-disable-next-line react/react-in-jsx-scope
     <svg
-      viewBox="0 0 612 792"
-      // viewBox="0 0 20 20"
+      // viewBox="0 0 612 792"
+      viewBox="0 0 350 540 "
       className={styles.main}
+      // enableBackground="none"
       xmlSpace="preserve"
     >
       <style type="text/css" />

@@ -22,6 +22,7 @@ import { Logo } from '../../public/vercel.svg';
 // import { ReactComponent as Logo } from '../../public/BlogLogo-01.svg';
 import styles from './nav.module.css';
 import BrandLogo from './BrandLogo';
+import BrandLogo2 from './BrandLogo2';
 
 // Creating custom styled components
 const SearchBox = styled('div')(({ theme }) => ({
@@ -161,31 +162,29 @@ export default function Nav() { // Creating a component state for Menu open stat
               </Grid>
               <Grid item sx={{ order: { xs: 2, sm: 1 } }}>
                 <IconButton
+                  sx={{
+                    borderRadius: '15%',
+                  }}
                   href="/"
                 >
-                  {/* TODO: add personal icon */}
-                  <Icon sx={{ fontSize: '5rem', padding: '-5px', background: 'red' }}>
-                    <BrandLogo />
-                  </Icon>
-                  {/* <SvgIcon component={Logo} viewBox="0 0 10 10" /> */}
-                  {/* <img src={Logo} alt="Brand Logo" width="25px" height="25px" /> */}
-                  {/* <Icon> */}
-                  {/*  <img src="./../public/vercel.svg" alt="Brand Logo" width="25px" height="25px" /> */}
-                  {/* </Icon> */}
-                  {/* <Adb /> */}
+                  <SvgIcon sx={{ fontSize: '4rem' }} viewBox="12 8 10 15">
+                    <BrandLogo2 />
+                  </SvgIcon>
+                  <Typography
+                    variant="h5"
+                    noWrap
+                    sx={{
+                      display: { xs: 'none', md: 'inline-flex' },
+                      fontFamily: 'Abril Fatface',
+                      cursor: 'pointer',
+                      color: '#000',
+                    }}
+                  >
+                    Parsing the&nbsp;
+                    <span className={styles.mark}>Code</span>
+                  </Typography>
                 </IconButton>
-                <Typography
-                  variant="h5"
-                  noWrap
-                  sx={{
-                    display: { xs: 'none', md: 'inline-flex' },
-                    fontFamily: 'Abril Fatface',
-                    cursor: 'pointer',
-                  }}
-                >
-                  Parsing the&nbsp;
-                  <span className={styles.mark}>Code</span>
-                </Typography>
+
               </Grid>
               <Grid item xs={4} sx={{ order: 3 }}>
                 <SearchBox sx={{ maxWidth: '400px' }}>

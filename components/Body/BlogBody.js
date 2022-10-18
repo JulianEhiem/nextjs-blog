@@ -206,7 +206,7 @@ function BlogBody(props) {
         // eslint-disable-next-line react/jsx-no-useless-fragment
           ) : <></>}
       </Box>
-      <BrandLogo width="60px" />
+      <BrandLogo />
     </Container>
   );
 }
