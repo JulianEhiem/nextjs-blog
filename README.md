@@ -43,7 +43,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [ ] Implement Search feature
 - [ ] edit external linked appearance
 - [x] Create site logo
-- [ ] edit tab Icon
+- [x] edit tab Icon
 - [ ] update site url
 - [ ] optimize for performance and support in other browsers
 - [ ] refactor, lint and comment code
