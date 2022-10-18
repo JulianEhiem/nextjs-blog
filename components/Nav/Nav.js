@@ -152,7 +152,7 @@ export default function Nav() { // Creating a component state for Menu open stat
                       target={page.name !== 'Home' ? '_blank' : ''}
                       className={styles.menuButtons}
                       sx={{
-                        my: 2, mx: { sm: 1, md: 1, lg: 5 }, color: 'white', display: 'block',
+                        my: 2, mx: { sm: 1, md: 1, lg: 5 }, color: '#000', display: 'block',
                       }}
                     >
                       {page.name}

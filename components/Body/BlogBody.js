@@ -9,7 +9,6 @@ import {
 import { KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material';
 import BlogCard from './BlogCard';
 import { PostContext } from '../PostContext';
-import BrandLogo from '../Nav/BrandLogo';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -119,9 +118,15 @@ function BlogBody(props) {
   const latestPosts = post.slice(-7);
   const oldPosts = post.slice(0, -7);
 
-  // console.log(post);
   return (
-    <Container id="main" maxWidth="xl" disableGutters sx={{ height: 'unset', margin: 'auto', boxSizing: 'border-box' }}>
+    <Container
+      id="main"
+      maxWidth="xl"
+      disableGutters
+      sx={{
+        height: 'unset', margin: 'auto', boxSizing: 'border-box', minHeight: '90vh',
+      }}
+    >
       <Box my={4} id="latestPosts">
         <Typography
           variant="h6"
@@ -172,13 +177,10 @@ function BlogBody(props) {
           </ResponsiveGridLayout>
         )}
       <Box display={display ? 'none' : 'flex'} justifyContent="end">
-        <Button variant="text" sx={{ color: 'purple', justifySelf: 'end' }} onClick={() => setDisplay(!display)} href={!display ? '#latestPosts' : '#olderPosts'}>
-          {display ? 'Latest' : 'Older'}
+        <Button variant="text" sx={{ color: 'purple', justifySelf: 'end', marginRight: '2rem' }} onClick={() => setDisplay(!display)} href="#olderPosts">
+          Older Posts
           {' '}
-          posts
-          {display
-            ? <KeyboardArrowUp fontSize="small" />
-            : <KeyboardArrowDown fontSize="small" />}
+          <KeyboardArrowDown fontSize="small" />
         </Button>
       </Box>
       <Box my={4} sx={{ display: display === true ? 'block' : 'none' }}>
@@ -206,7 +208,6 @@ function BlogBody(props) {
         // eslint-disable-next-line react/jsx-no-useless-fragment
           ) : <></>}
       </Box>
-      <BrandLogo />
     </Container>
   );
 }
