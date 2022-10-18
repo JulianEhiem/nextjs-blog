@@ -198,7 +198,7 @@ function BlogBody(props) {
                 ))}
               </Box>
               <Box display="flex" justifyContent="end">
-                <Button variant="text" sx={{ color: 'purple', justifySelf: 'end' }} onClick={() => setDisplay(!display)} href="#latestPosts">
+                <Button variant="text" sx={{ color: 'purple', justifySelf: 'end', marginRight: '2rem' }} onClick={() => setDisplay(!display)} href="#latestPosts">
                   Latest posts
                   {' '}
                   <KeyboardArrowUp fontSize="small" />

@@ -42,7 +42,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [ ] Create a no posts page
 - [ ] Implement Search feature
 - [ ] edit external linked appearance
-- [ ] Create site logo
+- [x] Create site logo
 - [ ] edit tab Icon
 - [ ] update site url
 - [ ] optimize for performance and support in other browsers
