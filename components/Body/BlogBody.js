@@ -9,6 +9,7 @@ import {
 import { KeyboardArrowDown, KeyboardArrowUp } from '@mui/icons-material';
 import BlogCard from './BlogCard';
 import { PostContext } from '../PostContext';
+import BrandLogo from '../Nav/BrandLogo';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -205,6 +206,7 @@ function BlogBody(props) {
         // eslint-disable-next-line react/jsx-no-useless-fragment
           ) : <></>}
       </Box>
+      <BrandLogo width="60px" />
     </Container>
   );
 }
