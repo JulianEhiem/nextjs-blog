@@ -183,14 +183,16 @@ function BlogBody(props) {
           <KeyboardArrowDown fontSize="small" />
         </Button>
       </Box>
-      <Box my={4} sx={{ display: display === true ? 'block' : 'none' }}>
+      <Box my={4} sx={{ display: display === true ? 'block' : 'none', paddingX: '2rem' }}>
         {display
           ? (
             <>
               <Box
                 id="olderPosts"
                 sx={{
-                  display: 'flex', gap: '1.3rem', flexWrap: 'wrap', justifyContent: 'center',
+                  display: 'grid',
+                  gap: '3rem',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 250px), 1fr))',
                 }}
               >
                 {oldPosts.map((oldPost) => (

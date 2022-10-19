@@ -66,7 +66,7 @@ export default function BlogCard({
             <Image
               src={mainImage.toString()}
               layout="responsive"
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: 'cover', objectPosition: '50% 50%' }}
               width={widthProvider()}
               height={heightProvider()}
             />
