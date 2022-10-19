@@ -8,8 +8,10 @@ import * as React from 'react';
 import Footer from '../../components/Footer/Footer';
 import Nav from '../../components/Nav/Nav';
 
-// eslint-disable-next-line react/prop-types
-function Post({ title, body, image }) {
+function Post({
+  // eslint-disable-next-line react/prop-types
+  title, body, image,
+}) {
   const [imageUrl, setImageUrl] = useState('');
 
   useEffect(() => {
@@ -20,7 +22,6 @@ function Post({ title, body, image }) {
 
     setImageUrl(imgBuilder.image(image));
   }, [image]);
-
   const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
   return (
     <>
@@ -50,7 +51,7 @@ function Post({ title, body, image }) {
                   display: 'flex', justifyContent: 'center', minWidth: 300, maxWidth: 900, maxHeight: 450, margin: '2rem auto',
                 }}
                 >
-                  <img style={{ width: '100%', objectFit: 'cover' }} src={imageUrl} alt="blog" />
+                  <img style={{ width: '100%', objectFit: 'cover' }} src={imageUrl} alt={title} />
                 </Box>
                 )}
             <Typography
