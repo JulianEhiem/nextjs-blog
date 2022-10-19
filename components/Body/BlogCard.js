@@ -65,10 +65,10 @@ export default function BlogCard({
           >
             <Image
               src={mainImage.toString()}
+              alt={slug}
               layout="responsive"
               width={widthProvider()}
               height={heightProvider()}
-              placeholder="blur"
               priority={format >= 75}
             />
           </CardMedia>
