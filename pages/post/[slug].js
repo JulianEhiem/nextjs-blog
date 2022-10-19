@@ -70,17 +70,6 @@ function Post({ title, body, image }) {
           </Container>
 
         </Box>
-        {/* <div className = {styles.main}> */}
-        {/*  <h1 className = {styles.main}>{title}</h1> */}
-        {/*  <div className = {styles.mainImage} > */}
-        {/*    {imageUrl && <img src={imageUrl} style={{objectFit: "fill", width: "100%"}}/> } */}
-        {/*  </div> */}
-
-        {/*  <div className ={styles.body}> */}
-        {/*    <BlockContent blocks={body}/> */}
-        {/*  </div> */}
-
-        {/* </div> */}
       </Box>
       <Footer />
     </>

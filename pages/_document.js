@@ -11,7 +11,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html>
+      <Html lang="en">
         <Head>
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,7 +20,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap"
             rel="stylesheet"
           />
-          <title>Parsing the Code</title>
           <link rel="icon" type="image/svg" sizes="196x196" href="/BlogLogo-nb.ico" />
         </Head>
         <body>
