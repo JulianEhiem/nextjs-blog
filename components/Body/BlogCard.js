@@ -4,6 +4,7 @@ import {
 } from '@mui/material';
 import BlockContent from '@sanity/block-content-to-react';
 import * as React from 'react';
+import Image from 'next/image';
 
 const screenSizes = {
   sm: 600, md: 900, lg: 1200, xl: 1536,
@@ -17,17 +18,33 @@ export default function BlogCard({
   },
 }) {
   const router = useRouter();
-  // console.log(props.post);
+
+  const widthProvider = () => {
+    if (window.innerWidth > 1200) {
+      if (format === 75) return 225;
+      return 450;
+    }
+    return 345;
+  };
+
+  const heightProvider = () => {
+    if (window.innerWidth > 1200) {
+      if (format === 75) return 250;
+      return 335;
+    }
+    return 160;
+  };
+
   return (
-    <Box sx={{ display: 'flex', marginX: '0.6rem' }} justifyContent="center">
+    <Box sx={{ display: 'flex', marginX: '0.5rem' }} justifyContent="center">
       <Card
         elevation={window.innerWidth > screenSizes.md ? 0 : 2}
         sx={{
-          maxWidth: { xs: 345, lg: 450 },
-          // maxWidth: {xs: 345},
+          maxWidth: { xs: 345, lg: 'unset' },
           background: 'transparent',
           borderRadius: 0,
           cursor: 'pointer',
+          width: '100%',
           ':hover': {
             transform: 'scale(1.01, 1.01)',
           },
@@ -37,20 +54,23 @@ export default function BlogCard({
       >
         {!(format < 75 && window.innerWidth > screenSizes.lg) ? (
           <CardMedia
-            component="img"
-            alt="green iguana"
-                            // height={window.innerWidth < screenSizes.md ? 160: 180}
-                            // height={{xs: "160px", lg: "50px"}}
-                            // height= "50"
             sx={{
+              position: 'relative',
               height: format === 75 ? 250 : 'unset',
               maxHeight: { xs: 160, lg: 350 },
-              marginBottom: { lg: '1rem' },
-            // borderRadius: 0
+              marginBottom: { lg: '1.2rem' },
+              overflowY: 'hidden',
+              width: '100%',
             }}
-                // eslint-disable-next-line react/destructuring-assignment,react/prop-types
-            image={mainImage.toString()}
-          />
+          >
+            <Image
+              src={mainImage.toString()}
+              layout="responsive"
+              style={{ objectFit: 'cover' }}
+              width={widthProvider()}
+              height={heightProvider()}
+            />
+          </CardMedia>
         ) : <div />}
 
         <CardContent sx={{ padding: { lg: '0 0 24px' } }}>
@@ -60,7 +80,6 @@ export default function BlogCard({
             sx={{
               fontFamily: 'Abril Fatface, serif',
               fontSize: '1.65rem',
-
             }}
           >
             {title}
@@ -71,7 +90,6 @@ export default function BlogCard({
               overflow: 'hidden',
               fontFamily: 'Roboto, Helvetica, Arial',
               fontWeight: 400,
-              // fontSize: "0.875rem",
               fontSize: '1rem',
               WebkitBoxOrient: 'vertical',
               // eslint-disable-next-line consistent-return
@@ -89,7 +107,6 @@ export default function BlogCard({
               lineHeight: 1.9,
               textAlign: 'justify',
             }}
-                            // variant="body2"
             variant="string"
             color="text.secondary"
           >
