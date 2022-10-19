@@ -40,48 +40,48 @@ function BlogBody(props) {
   ];
   const layout2 = [
     {
-      i: 'postA', x: 0, y: 0, w: 5, h: 2.1,
+      i: 'postA', x: 0, y: 0, w: 5, h: 2.7,
     },
     {
-      i: 'postB', x: 6, y: 0, w: 5, h: 2.1,
+      i: 'postB', x: 6, y: 0, w: 5, h: 2.7,
     },
     {
-      i: 'postC', x: 0, y: 3, w: 5, h: 2.1,
+      i: 'postC', x: 0, y: 3, w: 5, h: 2.7,
     },
     {
-      i: 'postD', x: 6, y: 3, w: 5, h: 2.1,
+      i: 'postD', x: 6, y: 3, w: 5, h: 2.7,
     },
     {
-      i: 'postE', x: 0, y: 6, w: 5, h: 2.1,
+      i: 'postE', x: 0, y: 6, w: 5, h: 2.7,
     },
     {
-      i: 'postF', x: 6, y: 6, w: 5, h: 2.1,
+      i: 'postF', x: 6, y: 6, w: 5, h: 2.7,
     },
     {
-      i: 'postG', x: 0, y: 9, w: 10, h: 2.1,
+      i: 'postG', x: 0, y: 9, w: 10, h: 2.7,
     },
   ];
   const layout3 = [
     {
-      i: 'postA', x: 0, y: 0, w: 12, h: 2,
+      i: 'postA', x: 0, y: 0, w: 12, h: 3,
     },
     {
-      i: 'postB', x: 0, y: 4, w: 12, h: 2,
+      i: 'postB', x: 0, y: 4, w: 12, h: 3,
     },
     {
-      i: 'postC', x: 0, y: 8, w: 12, h: 2,
+      i: 'postC', x: 0, y: 8, w: 12, h: 3,
     },
     {
-      i: 'postD', x: 0, y: 12, w: 12, h: 2,
+      i: 'postD', x: 0, y: 12, w: 12, h: 3,
     },
     {
-      i: 'postE', x: 0, y: 16, w: 12, h: 2,
+      i: 'postE', x: 0, y: 16, w: 12, h: 3,
     },
     {
-      i: 'postF', x: 0, y: 20, w: 12, h: 2,
+      i: 'postF', x: 0, y: 20, w: 12, h: 3,
     },
     {
-      i: 'postG', x: 0, y: 24, w: 12, h: 2,
+      i: 'postG', x: 0, y: 24, w: 12, h: 3,
     },
   ];
 

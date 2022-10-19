@@ -32,7 +32,7 @@ export default function BlogCard({
       if (format === 75) return 250;
       return 335;
     }
-    return 160;
+    return 250;
   };
 
   return (
@@ -56,10 +56,10 @@ export default function BlogCard({
           <CardMedia
             sx={{
               position: 'relative',
-              height: format === 75 ? 250 : 'unset',
-              maxHeight: { xs: 160, lg: 350 },
+              height: (format === 75 && window.innerWidth > screenSizes.lg) ? 250 : 'unset',
+              maxHeight: { xs: 'unset', lg: 350 },
               marginBottom: { lg: '1.2rem' },
-              overflowY: 'hidden',
+              overflowY: { xs: 'hidden', lg: 'hidden' },
               width: '100%',
             }}
           >
