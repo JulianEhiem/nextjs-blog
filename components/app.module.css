@@ -22,7 +22,7 @@
 
 .texture {
   position: fixed;
-  background:  url("../public/wrinkled-paper.png") no-repeat center/400%;
+  background:  url("../public/wrinkled-paper.webp") no-repeat center/400%;
   opacity: 0.15;
   z-index: -2;
   top: 0;
