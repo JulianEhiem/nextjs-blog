@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function BrandLogo2() {
   return (
     <svg x="0" y="0" viewBox="0 0 612 792" xmlSpace="preserve" enableBackground="new 0 0 612 792" height="34" width="34">
