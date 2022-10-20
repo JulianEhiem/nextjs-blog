@@ -1,6 +1,14 @@
 {
   "functions": {
-    "api/*.js": {
+    "api/hello": {
+      "memory": 3008,
+      "maxDuration": 30
+    },
+    "index": {
+      "memory": 3008,
+      "maxDuration": 30
+    },
+    "post/[slug]": {
       "memory": 3008,
       "maxDuration": 30
     }
