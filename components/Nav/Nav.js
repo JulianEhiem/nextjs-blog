@@ -51,7 +51,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(3)})`,
+    paddingLeft: `calc(1em + ${theme.spacing(2)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('sm')]: {
@@ -105,7 +105,7 @@ export default function Nav() { // Creating a component state for Menu open stat
       <AppBar id="appBar" position="fixed" className={styles.appContainer} sx={{ top: 0, background: 'transparent' }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Grid container spacing={4} justifyContent="space-between" alignItems="center">
+            <Grid container spacing={3} justifyContent="space-between" alignItems="center">
               <Grid item sx={{ display: { xs: 'flex', sm: 'none' }, order: -1 }}>
                 <IconButton
                   size="large"
@@ -143,15 +143,18 @@ export default function Nav() { // Creating a component state for Menu open stat
                   }}
                   href="/"
                 >
-                  <SvgIcon sx={{ fontSize: '4rem' }} viewBox="12 8 10 15">
+                  <SvgIcon sx={{ fontSize: { xs: '2.5rem', md: '4rem' } }} viewBox="12 8 10 15">
                     <BrandLogo2 />
                   </SvgIcon>
                   <Typography
                     variant="h5"
                     noWrap
                     sx={{
-                      display: { xs: 'none', md: 'inline-flex' },
+                      display: { xs: 'inline-flex', md: 'inline-flex' },
                       fontFamily: 'Abril Fatface',
+                      overflowWrap: { xs: 'break-word' },
+                      fontSize: { xs: '15px', md: 'unset' },
+                      flexDirection: { xs: 'column', md: 'unset' },
                       cursor: 'pointer',
                       color: '#000',
                     }}
@@ -162,7 +165,7 @@ export default function Nav() { // Creating a component state for Menu open stat
                 </IconButton>
 
               </Grid>
-              <Grid item xs={4} sx={{ order: 3 }}>
+              <Grid item xs={3} sx={{ order: 3 }}>
                 <SearchBox sx={{ maxWidth: '400px' }}>
                   <SearchIconWrapper>
                     <Search />
