@@ -48,8 +48,6 @@ export default function BlogCard({
   // const imageURL = `${mainImage.toString()}&w=${widthProvider()}&h=${heightProvider()}`;
   // eslint-disable-next-line max-len
   const imageURL = imgBuilder.image(mainImage).width(widthProvider()).height(heightProvider()).toString();
-  // console.log(imageURL);
-  // console.log(imageURL);
 
   return (
     <Box sx={{ display: 'flex', marginX: '0.5rem' }} justifyContent="center">
