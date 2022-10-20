@@ -5,6 +5,7 @@ import {
 import BlockContent from '@sanity/block-content-to-react';
 import * as React from 'react';
 import Image from 'next/image';
+import imageUrlBuilder from '@sanity/image-url';
 
 const screenSizes = {
   sm: 600, md: 900, lg: 1200, xl: 1536,
@@ -35,6 +36,17 @@ export default function BlogCard({
     return 250;
   };
 
+  const imgBuilder = imageUrlBuilder({
+    projectId: 'nttcyj7x',
+    dataset: 'production',
+  });
+
+  // const imageURL = `${mainImage.toString()}&w=${widthProvider()}&h=${heightProvider()}`;
+  // eslint-disable-next-line max-len
+  const imageURL = imgBuilder.image(mainImage).width(widthProvider()).height(heightProvider()).toString();
+  // console.log(imageURL);
+  // console.log(imageURL);
+
   return (
     <Box sx={{ display: 'flex', marginX: '0.5rem' }} justifyContent="center">
       <Card
@@ -64,7 +76,7 @@ export default function BlogCard({
             }}
           >
             <Image
-              src={mainImage.toString()}
+              src={imageURL}
               alt={slug}
               layout="responsive"
               width={widthProvider()}

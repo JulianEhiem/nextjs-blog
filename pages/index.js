@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import imageUrlBuilder from '@sanity/image-url';
 import App from '../components/App';
 import { PostContext } from '../components/PostContext';
 
@@ -10,16 +9,17 @@ export default function Home({ posts }) {
   useEffect(() => {
     // eslint-disable-next-line react/prop-types
     if (posts.length) {
-      const imgBuilder = imageUrlBuilder({
-        projectId: 'nttcyj7x',
-        dataset: 'production',
-      });
+    //   const imgBuilder = imageUrlBuilder({
+    //     projectId: 'nttcyj7x',
+    //     dataset: 'production',
+    //   });
 
       setMappedPosts(
         // eslint-disable-next-line react/prop-types
         posts.map((p) => ({
           ...p,
-          mainImage: imgBuilder.image(p.mainImage).width(800).height(600),
+          // mainImage: imgBuilder.image(p.mainImage).width(800).height(600),
+          // mainImage: imgBuilder.image(p.mainImage),
         })),
       );
     } else {
