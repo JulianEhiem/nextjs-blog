@@ -15,29 +15,31 @@ const ResponsiveGridLayout = WidthProvider(Responsive);
 function BlogBody(props) {
   // eslint-disable-next-line react/destructuring-assignment,react/prop-types
   const { height } = props.size;
-  const layout1 = [
+  const inSafari = navigator.userAgent.match(/AppleWebKit/) && !navigator.userAgent.match(/Chrome/);
+  const layout3 = [
     {
-      i: 'postA', x: 0.2, y: 0, w: 2.8, h: 3,
+      i: 'postA', x: 0, y: 0, w: 12, h: 3,
     },
     {
-      i: 'postB', x: 3, y: 0, w: 4, h: 5,
+      i: 'postB', x: 0, y: 4, w: 12, h: 3,
     },
     {
-      i: 'postC', x: 7, y: 0, w: 2, h: 2.5,
+      i: 'postC', x: 0, y: 8, w: 12, h: 3,
     },
     {
-      i: 'postD', x: 9, y: 0, w: 2.8, h: 2.5,
+      i: 'postD', x: 0, y: 12, w: 12, h: 3,
     },
     {
-      i: 'postE', x: 0.2, y: 4, w: 2.8, h: 2,
+      i: 'postE', x: 0, y: 16, w: 12, h: 3,
     },
     {
-      i: 'postF', x: 7, y: 3, w: 2, h: 2.5,
+      i: 'postF', x: 0, y: 20, w: 12, h: 3,
     },
     {
-      i: 'postG', x: 9, y: 3, w: 2.8, h: 2.5,
+      i: 'postG', x: 0, y: 24, w: 12, h: 3,
     },
   ];
+
   const layout2 = [
     {
       i: 'postA', x: 0, y: 0, w: 5, h: 2.7,
@@ -61,27 +63,28 @@ function BlogBody(props) {
       i: 'postG', x: 0, y: 9, w: 10, h: 2.7,
     },
   ];
-  const layout3 = [
+
+  const layout1 = inSafari ? layout2 : [
     {
-      i: 'postA', x: 0, y: 0, w: 12, h: 3,
+      i: 'postA', x: 0.2, y: 0, w: 2.8, h: 3,
     },
     {
-      i: 'postB', x: 0, y: 4, w: 12, h: 3,
+      i: 'postB', x: 3, y: 0, w: 4, h: 5,
     },
     {
-      i: 'postC', x: 0, y: 8, w: 12, h: 3,
+      i: 'postC', x: 7, y: 0, w: 2, h: 2.5,
     },
     {
-      i: 'postD', x: 0, y: 12, w: 12, h: 3,
+      i: 'postD', x: 9, y: 0, w: 2.8, h: 2.5,
     },
     {
-      i: 'postE', x: 0, y: 16, w: 12, h: 3,
+      i: 'postE', x: 0.2, y: 4, w: 2.8, h: 2,
     },
     {
-      i: 'postF', x: 0, y: 20, w: 12, h: 3,
+      i: 'postF', x: 7, y: 3, w: 2, h: 2.5,
     },
     {
-      i: 'postG', x: 0, y: 24, w: 12, h: 3,
+      i: 'postG', x: 9, y: 3, w: 2.8, h: 2.5,
     },
   ];
 

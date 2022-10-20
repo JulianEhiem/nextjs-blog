@@ -6,6 +6,7 @@ import BlockContent from '@sanity/block-content-to-react';
 import * as React from 'react';
 import Image from 'next/image';
 import imageUrlBuilder from '@sanity/image-url';
+import styles from './blogCard.module.css';
 
 const screenSizes = {
   sm: 600, md: 900, lg: 1200, xl: 1536,
@@ -19,6 +20,8 @@ export default function BlogCard({
   },
 }) {
   const router = useRouter();
+
+  const largeScreen = window.innerWidth > screenSizes.lg;
 
   const widthProvider = () => {
     if (window.innerWidth > 1200) {
@@ -64,11 +67,11 @@ export default function BlogCard({
         /* eslint-disable-next-line react/prop-types */
         onClick={() => router.push(`/post/${slug.current}`)}
       >
-        {!(format < 75 && window.innerWidth > screenSizes.lg) ? (
+        {!(format < 75 && largeScreen) ? (
           <CardMedia
             sx={{
               position: 'relative',
-              height: (format === 75 && window.innerWidth > screenSizes.lg) ? 250 : 'unset',
+              height: (format === 75 && largeScreen) ? 250 : 'unset',
               maxHeight: { xs: 'unset', lg: 350 },
               marginBottom: { lg: '1.2rem' },
               overflowY: { xs: 'hidden', lg: 'hidden' },
@@ -98,8 +101,9 @@ export default function BlogCard({
             {title}
           </Typography>
           <Typography
+            // className={styles.blogBody}
             sx={{
-              display: { xs: '-webkit-box', md: `${(format === 75 && window.innerWidth >= screenSizes.lg) ? 'none' : '-webkit-box'}` },
+              display: { xs: '-webkit-inline-box', md: `${(format === 75 && largeScreen) ? 'none' : '-webkit-inline-box'}` },
               overflow: 'hidden',
               fontFamily: 'Roboto, Helvetica, Arial',
               fontWeight: 400,
@@ -119,10 +123,13 @@ export default function BlogCard({
               } : 1,
               lineHeight: 1.9,
               textAlign: 'justify',
+              marginBottom: 0,
             }}
             variant="string"
             color="text.secondary"
           >
+            { navigator.userAgent.match(/AppleWebKit/) && !navigator.userAgent.match(/Chrome/)
+              ? 'this is safari brower and only safari brower' : ''}
             <BlockContent blocks={body} />
           </Typography>
         </CardContent>
