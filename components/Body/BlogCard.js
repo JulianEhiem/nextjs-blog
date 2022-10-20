@@ -129,8 +129,6 @@ export default function BlogCard({
             variant="string"
             color="text.secondary"
           >
-            { navigator.userAgent.match(/AppleWebKit/) && !navigator.userAgent.match(/Chrome/)
-              ? 'this is safari brower and only safari brower' : ''}
             <BlockContent blocks={body} />
           </Typography>
         </CardContent>
