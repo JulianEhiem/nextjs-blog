@@ -39,15 +39,14 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [x] Create older posts page (in progress)
   - [x] add toggle for older posts
 - [x] Edit posts page
-- [ ] Create a no posts page
-- [ ] Implement Search feature
-- [ ] edit external linked appearance
 - [x] Create site logo
 - [x] edit tab Icon
 - [x] update site url
 - [x] optimize for performance
 - [x] support in other browsers
+- [ ] add publish date to posts
 - [ ] refactor, lint and comment code
+- [ ] Implement Search feature
 
 ## License
 
