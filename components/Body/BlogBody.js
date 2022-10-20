@@ -206,7 +206,7 @@ function BlogBody(props) {
           </ResponsiveGridLayout>
         )}
       <Box display={display ? 'none' : 'flex'} justifyContent="end">
-        <Button variant="text" sx={{ color: 'purple', justifySelf: 'end', marginRight: '2rem' }} onClick={() => setDisplay(!display)} href="#olderPosts">
+        <Button variant="text" sx={{ color: 'purple', justifySelf: 'end', margin: { xs: '2rem 0', md: '2rem' } }} onClick={() => setDisplay(!display)} href="#olderPosts">
           Older Posts
           {' '}
           <KeyboardArrowDown fontSize="small" />
@@ -229,7 +229,7 @@ function BlogBody(props) {
                 ))}
               </Box>
               <Box display="flex" justifyContent="end">
-                <Button variant="text" sx={{ color: 'purple', justifySelf: 'end', marginRight: '2rem' }} onClick={() => setDisplay(!display)} href="#latestPosts">
+                <Button variant="text" sx={{ color: 'purple', justifySelf: 'end', margin: { xs: '2rem 0', md: '2rem' } }} onClick={() => setDisplay(!display)} href="#latestPosts">
                   Latest posts
                   {' '}
                   <KeyboardArrowUp fontSize="small" />
