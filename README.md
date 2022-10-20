@@ -44,7 +44,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [ ] edit external linked appearance
 - [x] Create site logo
 - [x] edit tab Icon
-- [ ] update site url
+- [x] update site url
 - [x] optimize for performance
 - [x] support in other browsers
 - [ ] refactor, lint and comment code
