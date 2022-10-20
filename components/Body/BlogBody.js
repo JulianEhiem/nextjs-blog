@@ -15,7 +15,9 @@ const ResponsiveGridLayout = WidthProvider(Responsive);
 function BlogBody(props) {
   // eslint-disable-next-line react/destructuring-assignment,react/prop-types
   const { height } = props.size;
+
   const inSafari = navigator.userAgent.match(/AppleWebKit/) && !navigator.userAgent.match(/Chrome/);
+
   const layout3 = [
     {
       i: 'postA', x: 0, y: 0, w: 12, h: 3,
@@ -64,7 +66,31 @@ function BlogBody(props) {
     },
   ];
 
-  const layout1 = inSafari ? layout2 : [
+  const safariLayout = [
+    {
+      i: 'postA', x: 0, y: 0, w: 5, h: 4,
+    },
+    {
+      i: 'postB', x: 6, y: 0, w: 5, h: 4,
+    },
+    {
+      i: 'postC', x: 0, y: 3, w: 5, h: 4,
+    },
+    {
+      i: 'postD', x: 6, y: 3, w: 5, h: 4,
+    },
+    {
+      i: 'postE', x: 0, y: 6, w: 5, h: 4,
+    },
+    {
+      i: 'postF', x: 6, y: 6, w: 5, h: 4,
+    },
+    {
+      i: 'postG', x: 3, y: 9, w: 6, h: 4,
+    },
+  ];
+
+  const layout1 = inSafari ? safariLayout : [
     {
       i: 'postA', x: 0.2, y: 0, w: 2.8, h: 3,
     },

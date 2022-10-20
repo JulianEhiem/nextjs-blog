@@ -1,14 +1,1 @@
-.blogBody {
-   display: -webkit-box;
-   overflow: hidden;
-   font-family: Roboto, Helvetica, Arial, serif;
-   font-weight: 400;
-   font-size: 1rem;
-   -webkit-box-orient: vertical;
 
-
-}
-.blogBody::after {
-   content: " \A\A";
-   white-space: pre;
-}

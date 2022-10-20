@@ -6,7 +6,6 @@ import BlockContent from '@sanity/block-content-to-react';
 import * as React from 'react';
 import Image from 'next/image';
 import imageUrlBuilder from '@sanity/image-url';
-import styles from './blogCard.module.css';
 
 const screenSizes = {
   sm: 600, md: 900, lg: 1200, xl: 1536,
@@ -21,7 +20,9 @@ export default function BlogCard({
 }) {
   const router = useRouter();
 
-  const largeScreen = window.innerWidth > screenSizes.lg;
+  const inSafari = navigator.userAgent.match(/AppleWebKit/) && !navigator.userAgent.match(/Chrome/);
+
+  const largeScreen = inSafari ? false : window.innerWidth >= screenSizes.lg;
 
   const widthProvider = () => {
     if (window.innerWidth > 1200) {
@@ -34,7 +35,7 @@ export default function BlogCard({
   const heightProvider = () => {
     if (window.innerWidth > 1200) {
       if (format === 75) return 250;
-      return 335;
+      return inSafari ? 250 : 335;
     }
     return 250;
   };
@@ -103,14 +104,14 @@ export default function BlogCard({
           <Typography
             // className={styles.blogBody}
             sx={{
-              display: { xs: '-webkit-inline-box', md: `${(format === 75 && largeScreen) ? 'none' : '-webkit-inline-box'}` },
+              display: { xs: '-webkit-inline-box', md: `${((format === 75 && largeScreen) || inSafari) ? 'none' : '-webkit-inline-box'}` },
               overflow: 'hidden',
               fontFamily: 'Roboto, Helvetica, Arial',
               fontWeight: 400,
               fontSize: '1rem',
               WebkitBoxOrient: 'vertical',
               // eslint-disable-next-line consistent-return
-              WebkitLineClamp: (window.innerWidth >= screenSizes.lg) ? () => {
+              WebkitLineClamp: (largeScreen) ? () => {
                 switch (format) {
                   case 100: return 10;
                   case 75: return 1;
