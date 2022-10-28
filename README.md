@@ -46,7 +46,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [x] support in other browsers
 - [ ] add publish date to posts
 - [ ] refactor, lint and comment code
-- [ ] Implement Search feature
+
 
 ## License
 
