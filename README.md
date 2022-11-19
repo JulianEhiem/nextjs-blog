@@ -46,6 +46,12 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [x] support in other browsers
 - [ ] add publish date to posts
 - [ ] refactor, lint and comment code
+- [ ] fix visual hierarchy on mobile screens with page header
+- [ ] Remove the search bar
+- [ ] Add tags to posts  
+- [ ] Add "time to read" to posts 
+- [ ] Add date published to posts
+- [ ] [Add disqus for discussions](https://greengocloud.com/2018/08/28/How-to-Make-a-Fast-and-Cheap-Serverless-Blog/)
 
 
 ## License
